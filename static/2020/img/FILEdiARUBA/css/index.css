@@ -1,0 +1,1649 @@
+/*Telefoni*/
+@media (min-width: 200px)  {
+
+  h4 {
+    font-size: 50px;
+    padding: 10px;
+  }
+
+  p{
+    font-size: 35px;
+  }
+
+  .card-img-top {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    padding: 35px;
+  }
+
+
+  #skills {
+    background-color:#CFCFCF;
+  }
+
+  #info1,#info2,#info3,#info4,#info5,#info6{
+    height:15%;
+   }
+
+
+   .fa {   /*FOOTER CELLULARE*/
+       margin-top: 30px;
+       margin-left: 20px;
+        margin-right: 20px;
+       opacity: 0.4;
+       transition: 1s;
+       -webkit-transition: 1s;
+   }
+
+
+   #myname{
+       font-size: 90px;
+       text-align: center;
+       top:40%;
+       position: absolute;
+   }
+   #student{
+     font-size: 50px;
+     text-align: center;
+     top:54%;
+     position: absolute;
+   }
+   #university{
+     font-size: 27px;
+     text-align: center;
+     top:62%;
+     position: absolute;
+   }
+   #pr-did{
+     font-size: 33px;
+    }
+
+
+
+
+/*INIZIO SKILLS CELLULARE*/
+
+    #skills-item{margin-left: 10px; margin-right: 10px; margin-bottom:40px;}
+
+    .vc_col-sm-4{width:900px;margin:auto;}
+
+    #skill-box-1{height:250px; }
+    #skill-box-1 {margin-bottom:30px;}
+    #skill-box-1 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px;}
+    #skill-box-1 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+    #skill-box-2{height:250px;}
+    #skill-box-2 {margin-bottom:30px;}
+    #skill-box-2 .icon-box-title {font-family: 'Caveat Brush';  margin-top:-40px;}
+    #skill-box-2 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+    #skill-box-3{height:250px;}
+    #skill-box-3 {margin-bottom:30px;}
+    #skill-box-3 .icon-box-title {font-family: 'Caveat Brush';   margin-top:-40px;}
+    #skill-box-3 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+    #skill-box-4{height:250px;}
+    #skill-box-4 {margin-bottom:30px;}
+    #skill-box-4 .icon-box-title {font-family: 'Caveat Brush';  margin-top:-40px;}
+    #skill-box-4 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+    #skill-box-5{height:250px;}
+    #skill-box-5 {margin-bottom:30px;}
+    #skill-box-5 .icon-box-title {font-family: 'Caveat Brush';  margin-top:-40px;}
+    #skill-box-5 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+
+    #skill-box-6{height:300px;}
+    #skill-box-6 {margin-bottom:30px;}
+    #skill-box-6 .icon-box-title {font-family: 'Caveat Brush';  margin-top:-40px;}
+    #skill-box-6 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+
+/*FINE SKILL CELLULARE*/
+
+
+
+
+/*Inizio Pub Cellulare*/
+
+    #pub-photo{position:relative; top:40px;height:400px; width:300px;}
+    #pub1-info{ text-align: center; top:-50px;}
+    #pub1-title{color:red; font-size: 70px;}
+    #pub1-read{color:red; font-size: 50px;}
+
+
+/*FINE Pub Cellulare*/
+
+
+/*INIZIO LAVORI CELLULARE*/
+
+
+    /*spazio tra scheda e quella sotto*/
+    #Job-box-1 {margin-bottom:30px;}
+    /*titolo:font grandezza e spessore*/
+    #Job-box-1 .icon-box-title {margin-top: 30px;}
+    /*icona a cerchio, colore*/
+    #Job-box-1 .mk-main-ico {background-image: linear-gradient(#00FF00, red);   color:#ffffff;}
+    /*titolo card*/
+    #Job-box-1 #title{font-size:60px; color:#00FF00;
+    /*background: -webkit-linear-gradient(green, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */}
+
+
+
+    #Job-box-1 a{font-size:30px;}
+    #Job-box-1 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+
+    /*altezza card*/
+    #job-box-1 {height:1300px;}
+
+
+
+    #Job-box-2 {margin-bottom:30px;}
+    #Job-box-2 .icon-box-title { margin-top: 30px;}
+    #Job-box-2 .mk-main-ico {background-color:green;color:#ffffff;}
+    #Job-box-2 #title{font-size:60px; color:green;}
+    #Job-box-2 a{font-size:30px;}
+    #Job-box-2 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-2 {height:1300px;}
+
+    #Job-box-3 {margin-bottom:30px;}
+    #Job-box-3 .icon-box-title {margin-top: 30px;}
+    #Job-box-3 .mk-main-ico {background-color:red;color:#ffffff;}
+    #Job-box-3 #title{font-size:60px;  color:red; }
+    #Job-box-3 a{font-size:30px;}
+    #Job-box-3 .card-img-top { transition: all 0.3s; height:450px; width:300px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-3 {height:1300px; }
+
+    #Job-box-4 {margin-bottom:30px;}
+    #Job-box-4 .icon-box-title {margin-top: 30px;}
+    #Job-box-4 .mk-main-ico {background-color:blue;color:#ffffff;}
+    #Job-box-4 #title{font-size:60px; color:blue;}
+    #Job-box-4 a{font-size:30px;}
+    #Job-box-4 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-4 {height:1300px; }
+
+
+    #Job-box-5 {margin-bottom:30px;}
+    #Job-box-5 .icon-box-title {margin-top: 30px;}
+    #Job-box-5 .mk-main-ico {background-color:black;color:#ffffff;}
+    #Job-box-5 #title{font-size:60px; color:black;}
+    #Job-box-5 a{font-size:30px;}
+    #Job-box-5 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-5 {height:1300px; }
+
+    #Job-box-6 {margin-bottom:30px;}
+    #Job-box-6 .icon-box-title {margin-top: 30px;}
+    #Job-box-6 .mk-main-ico {background-color:#2D795D;color:#ffffff;}
+    #Job-box-6 #title{font-size:60px; color:#2D795D;}
+    #Job-box-6 a{font-size:30px;}
+    #Job-box-6 .card-img-top { transition: all 0.3s; height:450px; width:300px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-6 {height:1300px; }
+
+
+    #Job-box-7 {margin-bottom:30px;}
+    #Job-box-7 .icon-box-title {margin-top: 30px;}
+    #Job-box-7 .mk-main-ico {background-color:#2D795D;color:#ffffff;}
+    #Job-box-7 #title{font-size:60px; color:#2D795D;}
+    #Job-box-7 a{font-size:30px;}
+    #Job-box-7 .card-img-top { transition: all 0.3s; height:450px; width:300px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-7 {height:1300px; }
+    /*#Job-box-7 .card-img-top {
+    transition: all 0.3s;
+    width:200px;
+    margin-bottom: 12px;
+    padding: 10px;
+    }*/
+
+    #Job-box-8 {margin-bottom:30px;}
+    #Job-box-8 .icon-box-title {margin-top: 30px;}
+    #Job-box-8 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+    #Job-box-8 #title{font-size:60px; color:#097ef6;}
+    #Job-box-8 a{font-size:30px;}
+    #job-box-8 {height:1300px; }
+    #Job-box-8 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+
+    #Job-box-9 {margin-bottom:30px;}
+    #Job-box-9 .icon-box-title {margin-top: 30px;}
+    #Job-box-9 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+    #Job-box-9 #title{font-size:60px; color:#097ef6;}
+    #Job-box-9 a{font-size:30px;}
+    #job-box-9 {height:1300px; }
+    #Job-box-9 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+
+
+    #Job-box-10 {margin-bottom:30px;}
+    #Job-box-10 .icon-box-title {margin-top: 30px;}
+    #Job-box-10 .mk-main-ico {background-color:black;color:#ffffff;}
+    #Job-box-10 #title{font-size:60px; color:black;}
+    #Job-box-10 a{font-size:30px;}
+    #Job-box-10 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-10 {height:1300px; }
+
+
+    #Job-box-11 {margin-bottom:30px;}
+    #Job-box-11 .icon-box-title {margin-top: 30px;}
+    #Job-box-11 .mk-main-ico {background-image: linear-gradient(black, red);   color:#ffffff;}
+    #Job-box-11 #title{font-size:60px; color:red;
+    /* background: -webkit-linear-gradient(black, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/ }
+    #Job-box-11 a{font-size:30px;}
+    #job-box-11 {height:1300px; }
+    #Job-box-11 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+
+
+ #Job-box-12 {margin-bottom:30px;}
+    #Job-box-12 .icon-box-title {margin-top: 30px;}
+    #Job-box-12 .mk-main-ico {background-color:orange;color:#ffffff;}
+    #Job-box-12 #title{font-size:60px; color:orange;}
+    #Job-box-12 a{font-size:30px;}
+    #Job-box-12 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-12 {height:1300px; }
+    
+    
+    #Job-box-13 {margin-bottom:30px;}
+    #Job-box-13 .icon-box-title {margin-top: 30px;}
+    #Job-box-13 .mk-main-ico {background-color:orange;color:#ffffff;}
+    #Job-box-13 #title{font-size:60px; color:orange;}
+    #Job-box-13 a{font-size:30px;}
+    #Job-box-13 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-13 {height:1300px; }
+    
+    #Job-box-14 {margin-bottom:30px;}
+    #Job-box-14 .icon-box-title {margin-top: 30px;}
+    #Job-box-14 .mk-main-ico {background-color:blue;color:#ffffff;}
+    #Job-box-14 #title{font-size:60px; color:blue;}
+    #Job-box-14 a{font-size:30px;}
+    #Job-box-14 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-14 {height:1300px; }
+    
+     #Job-box-15 {margin-bottom:30px;}
+    #Job-box-15 .icon-box-title {margin-top: 30px;}
+    #Job-box-15 .mk-main-ico {background-color:pink;color:#ffffff;}
+    #Job-box-15 #title{font-size:60px; color:pink;}
+    #Job-box-15 a{font-size:30px;}
+    #Job-box-15 .card-img-top { transition: all 0.3s; height:450px; width:300px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-15 {height:1300px; }
+    
+    
+   
+   
+
+
+
+
+    #infolavoro{
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+    font-family: 'Delius', cursive;
+    font-style: italic;
+    }
+
+    #infolavoro > img{
+      height: 80px;
+      width: 80px;
+    }
+
+    .card-img-top {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 12px;
+    padding: 60px;
+    }
+
+    .card-img-top:hover {
+    transform: scale(1.2);
+    }
+
+/*FINE LAVORI CELLULARE*/
+
+
+
+
+
+
+
+/*Inizio SLIDES cellulare*/
+       #slide1-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+
+       #slide2-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+
+       #slide3-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+        #slide4-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+       #slide5-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+       #slide6-photo:hover{
+           transition: all 0.3s;
+           transform: scale(1.4);
+       }
+
+      #ak2{
+         visibility: visible;
+      }
+
+
+/*Fine SLIDES cellulare*/
+
+
+
+
+/*Inizio Test cellulare*/
+
+           #test1-goodluck{font-size: 45px;}
+           #test2-goodluck{font-size: 45px;}
+           #test-photo{position:relative; top:20px;height:300px; width:80%;}
+
+           #test1-info{ text-align: center;  background-color:#DBDDED; }
+           #test1a-info{ text-align: center;  background-color:#DBDDED; margin-top:-38px;}
+           #test2-info{ text-align: center;  background-color:#E5EDDB; }
+           #test2a-info{ text-align: center;  background-color:#E5EDDB; margin-top:-38px;}
+            #testCinema-info{ text-align: center;  background-color:#B0B0B0; }
+           #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:-38px;}
+          
+         
+           #test1-title{color:#4747d1; font-size: 75px;}
+           #test1-start{color:#4747d1; font-size: 70px;}
+           
+           
+           #test2-title{color:#4CB050; font-size: 85px;}
+           #test2-start{color:#4CB050; font-size: 70px;}
+          
+           #testCinema-title{color:black; font-size: 85px;}
+           #testCinema-start{color:black; font-size: 70px;}
+
+
+/*Fine Test cellulare*/
+
+
+
+
+/*Inizio DOWNLOAD CELLULARE*/
+
+            #down-a{font-size: 50px;}
+            #levels-a{font-size: 40px;}
+
+            #Box-download-1 .card-img-top {
+              transition: all 0.3s;
+              width:220px;
+              height:220px;
+              margin-bottom: 12px;
+              padding: 1px;
+            }
+
+             
+              #down1-title{color:red; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px; }
+               #downr1-title{color:#CECECE;font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-bottom:27px;}
+
+
+              #Box-download-2 {margin-bottom:0px;}
+              #Box-download-2 .card-img-top {
+                transition: all 0.3s;
+                width:220px;
+                height:220px;
+                margin-bottom: 12px;
+                padding: 15px;
+              }
+
+                
+                  #down2-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                  #downEdit1-title{color: #AAD3E5; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                  #downEdit2-title{color: #323C48; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+
+
+
+
+                   #Box-download-3 {margin-bottom:0px;}
+                   #Box-download-3 .card-img-top {
+                     transition: all 0.3s;
+                     width:220px;
+                     height:220px;
+                     margin-bottom: 12px;
+                     padding: 15px;
+                   }
+
+                
+                  #down3-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+
+
+                  #Box-download-4 {margin-bottom:0px;}
+                  #Box-download-4 .card-img-top {
+                    transition: all 0.3s;
+                    width:220px;
+                    height:220px;
+                    margin-bottom: 12px;
+                    padding: 1px;
+                  }
+
+              
+                 #down4-title{color:green; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+
+
+
+                  #Box-download-5 {margin-bottom:0px;}
+                  #Box-download-5 .card-img-top {
+                    transition: all 0.3s;
+                    width:220px;
+                    height:220px;
+                    margin-bottom: 12px;
+                    padding: 15px;
+                  }
+
+              
+                 #down5-title{color:orange; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                 
+                 
+                 
+                 
+                 #Box-download-6 {margin-bottom:0px;}
+                  #Box-download-6 .card-img-top {
+                    transition: all 0.3s;
+                    width:220px;
+                    height:220px;
+                    margin-bottom: 12px;
+                    padding: 15px;
+                  }
+
+              
+                 #down6-title{color:black; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+
+
+/*FINE DOWNLOAD CELLULARE*/
+
+
+
+/*INIZIO FINALPROJECTS CELLULARE*/
+
+    #finalp-a{font-size: 50px;}
+    #finalp-photo{position:relative; top:40px; height:470px; width:80%;}
+    #finalp1-info{ text-align: center;  margin-top:0px;}
+    #finalp1-title{color:black; font-size: 70px;}
+
+/*FINE FINALPROJECTS CELLULARE*/
+
+
+/*INIZIO ROBOTICA CELLULARE*/
+    #rob1-photo{  height:400px; width:80%; position: relative; margin-left: 10%}
+    #rob2-photo{  height:400px; width:80%; position: relative; margin-left: 10%}
+    #rob3-photo{  height:400px; width:80%; position: relative; margin-left: 10%}
+/*FINE ROBOTICA CELLULARE*/
+
+
+
+
+
+
+/* INIZIO TABLINK CELLULARE (Programmazione, Robotica, ecc)*/
+
+/*
+    .tablink {
+      font-size: 15px;
+      height:53px;
+    }
+
+    .tablink:before {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 0px;
+      height: 0px;
+      border-bottom: 68px solid #eee;
+      border-right: 68px solid transparent;
+
+    }
+
+    .tablink:after {
+      position: absolute;
+      top: -3%;
+      right:-1.5%;
+      width: 0px;
+      height: 0px;
+      border-top: 74px solid white;
+      border-left: 74px solid transparent;
+    }
+
+    .tablink:hover { font-size: 140%; height: 82px;}
+
+*/
+
+/* FINE TABLINK CELLULARE (Programmazione, Robotica, ecc)*/
+
+
+/*BULLISMO*/
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+   width: 70%;
+   display: inline-block; 
+
+}
+
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+
+
+
+
+
+}
+
+
+
+
+
+/*Desktop*/
+@media (min-width: 992px){
+
+  p{
+    font-size: 18px;
+  }
+
+  #menu-item-p{visibility: hidden;}
+
+     #myname{
+         font-size: 100px;
+         top:35%;
+         position: absolute;
+     }
+     #student{
+       font-size: 50px;
+       top:49%;
+       position: absolute;
+     }
+     #university{
+       font-size: 20px;
+       top:57%;
+       position: absolute;
+     }
+     
+     #pr-did{
+      font-size:23px;
+      }
+
+/*Inizio foto Desktop*/
+
+
+
+
+
+/*Fine foto Desktop*/
+
+
+  #info1,#info2,#info3,#info4,#info5,#info6{
+    height:1%;
+   }
+
+
+     .fa {
+
+        margin-top: 30px;
+         margin-left: 10px;
+           margin-right: 10px;
+         opacity: 0.4;
+         transition: 1s;
+         -webkit-transition: 1s;
+     }
+
+
+
+
+/*SKILLS Desktop*/
+
+
+  #skills-item{margin-left: 10px; margin-right: 10px; margin-bottom:40px;}
+
+  #skill-box-1{height:350px;}
+  #skill-box-1 {margin-bottom:30px;}
+  #skill-box-1 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+  #skill-box-1 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+  #skill-box-2 {height:350px;}
+  #skill-box-2 {margin-bottom:30px;}
+  #skill-box-2 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+  #skill-box-2 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+  #skill-box-3{height:350px;}
+  #skill-box-3 {margin-bottom:30px;}
+  #skill-box-3 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+  #skill-box-3 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+  #box-icon-4{margin-left:15%;}
+  #skill-box-4{height:350px;}
+  #skill-box-4 {margin-bottom:30px;}
+  #skill-box-4 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+  #skill-box-4 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+   #skill-box-5{height:350px; }
+   #skill-box-5 {margin-bottom:30px;}
+   #skill-box-5 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+   #skill-box-5 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+   #skill-box-6{height:300px; }
+   #skill-box-6 {margin-bottom:30px;}
+   #skill-box-6 .icon-box-title {font-family: 'Caveat Brush'; margin-top:-40px; font-size: 40px;}
+   #skill-box-6 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
+
+
+
+
+
+
+
+
+/*Inizio Pub Desktop*/
+
+    #pub-photo{position:relative; top:40px;height:320px; width:200px;}
+    #pub1-info{ text-align: center;  margin-top:150px;}
+    #pub1-title{color:red; font-size: 70px;}
+    #pub1-read{color:red; font-size: 50px;}
+
+
+/*FINE Pub DESKTOP*/
+
+
+
+
+/*DEKSTOP LAVORI INIZIO*/
+
+   .card-img-top:hover {transform: scale(1.2);}
+   /*spazio tra scheda e quella sotto*/
+   #Job-box-1 {margin-bottom:30px; }
+   /*Foto card*/
+   #Job-box-1 .card-img-top {transition: all 0.3s; margin-bottom: 12px; height:200px; padding: 3px; border: 1px solid; box-shadow: 0.05em 0.1em 0.05em gray; }
+   /*altezza card*/
+   #job-box-1 {height:880px;}
+
+   #Job-box-1 .mk-main-ico {background-image: linear-gradient(#00FF00, red);   color:#ffffff;}
+   /*titolo card*/
+   #Job-box-1 #title{font-size:40px; color:#00FF00;}
+ /*spazio tra foto e titolo*/
+   #Job-box-1 .icon-box-title { margin-top: 30px;}
+
+
+
+
+
+    #Job-box-2 {margin-bottom:30px;}
+    #Job-box-2 #title{font-size:40px; color:green;}
+    #Job-box-2 .mk-main-ico {background-color: green;   color:#ffffff;}
+    #Job-box-2 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px; border: 1px solid; box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-2 {height:880px; }
+
+    #Job-box-3 .icon-box-title { margin-top: 30px; height: 100px;}
+    #Job-box-3 {margin-bottom:30px;}
+    #Job-box-3 #title{font-size:40px; color:red;}
+    #Job-box-3 .mk-main-ico {background-color: red;   color:#ffffff;}
+    #Job-box-3 .card-img-top {transition: all 0.3s; height:240px; width:180px; margin-bottom: -30px; padding: 3px; border: 1px solid; box-shadow: 0.1em 0.1em 0.1em gray;}
+    #job-box-3 {height:880px; }
+
+    #Job-box-4 {margin-bottom:30px;}
+    #Job-box-4 #title{font-size:40px;}
+    #Job-box-4 a{font-size:14px;}
+    #Job-box-4 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid; box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-4 {height:880px;}
+
+    #Job-box-5 {margin-bottom:30px;}
+    #Job-box-5 #title{font-size:40px;}
+    #Job-box-5 a{font-size:14px;}
+    #Job-box-5 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid; box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-5 {height:880px;}
+
+    #Job-box-6 {margin-bottom:30px;}
+    #Job-box-6 #title{font-size:40px;}
+    #Job-box-6 a{font-size:14px;}
+    #Job-box-6 .card-img-top {transition: all 0.3s; width:130px; height:200px; margin-bottom: -10px; padding: 1px;border: 1px solid; box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-6 {height:880px;}
+
+    #Job-box-7 {margin-bottom:30px;}
+    #Job-box-7 #title{font-size:40px;}
+    #Job-box-7 a{font-size:14px;}
+    #Job-box-7 .card-img-top {transition: all 0.3s; width:130px; height:200px; margin-bottom: 12px; padding: 1px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-7 {height:880px; }
+
+    #Job-box-8 {margin-bottom:30px;}
+    #Job-box-8 #title{font-size:40px;}
+    #Job-box-8 a{font-size:14px;}
+    #Job-box-8 .card-img-top {transition: all 0.3s; width:300px; height:200px; margin-bottom: 12px; padding: 1px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-8 {height:880px;}
+
+    #Job-box-9 {margin-bottom:30px;}
+    #Job-box-9 #title{font-size:40px;}
+    #Job-box-9 a{font-size:14px;}
+    #Job-box-9 .card-img-top { transition: all 0.3s; width:300px; height:200px; margin-bottom: 12px; padding: 1px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-9 {height:880px;}
+
+    #Job-box-10 {margin-bottom:30px;}
+    #Job-box-10 #title{font-size:40px;}
+    #Job-box-10 a{font-size:14px;}
+    #Job-box-10 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-10 {height:880px;}
+
+    #Job-box-11 {margin-bottom:30px;}
+    #Job-box-11 #title{font-size:40px;}
+    #Job-box-11 a{font-size:14px;}
+    #Job-box-11 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-11 {height:880px;}
+    
+    
+     #Job-box-12 {margin-bottom:30px;}
+    #Job-box-12 #title{font-size:40px;}
+    #Job-box-12 a{font-size:14px;}
+    #Job-box-12 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-12 {height:880px;}
+    
+     #Job-box-13 {margin-bottom:30px;}
+    #Job-box-13 #title{font-size:40px;}
+    #Job-box-13 a{font-size:14px;}
+    #Job-box-13 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-13 {height:880px;}
+    
+     #Job-box-14 {margin-bottom:30px;}
+    #Job-box-14 #title{font-size:40px;}
+    #Job-box-14 a{font-size:14px;}
+    #Job-box-14 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-14 {height:880px;}
+    
+     #Job-box-15 .icon-box-title { margin-top: 30px; height: 130px;}
+    #Job-box-15 {margin-bottom:30px;}
+    #Job-box-15 #title{font-size:40px; color:pink;}
+    #Job-box-15 a{font-size:14px;}
+    #Job-box-15 .card-img-top {transition: all 0.3s; height:240px; width:180px; margin-bottom: -20px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
+    #job-box-15 {height:880px;}
+    
+    
+   
+    
+   
+    
+
+    #infolavoro{text-align: center; font-size: 15px;}
+
+    #infolavoro > img{height: 40px; width: 40px;}
+
+/*FINE LAVORI DEKSTOP*/
+
+
+/*TEACHING*/
+/*Inizio SLIDES Desktop*/
+
+    #slide1-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+    #slide2-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+    #slide3-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+    #slide4-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+    #slide5-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+    #slide6-photo:hover{transition: all 0.3s; transform: scale(1.4);}
+
+
+/*FINE SLIDES DESKTOP*/
+
+
+
+
+
+/*Inizio Test Desktop*/
+
+    #test1-goodluck{font-size: 28px;}
+    #test2-goodluck{font-size: 28px;}
+    #test-photo{position:relative; top:40px;height:370px; width:80%;}
+   
+    #test1-info{ text-align: center; background-color:#DBDDED;}
+    #test1a-info{ text-align: center;  background-color:#DBDDED; margin-top:0px;}
+    #test2-info{ text-align: center;  background-color:#E5EDDB; }
+    #test2a-info{ text-align: center;  background-color:#E5EDDB; margin-top:0px;}
+    #testCinema-info{ text-align: center;  background-color:#B0B0B0; height: 730px;}
+    #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:0px;}
+    
+    #test1-title{color:#4747d1; font-size: 280%;}
+    #test1-start{color:#4747d1; font-size: 50px;}
+    #test2-title{color:#4CB050; font-size: 280%;}
+    #test2-start{color:#4CB050; font-size: 50px;}
+    
+    #testCinema-title{color:black; font-size: 65px;}
+    #testCinema-start{color:black; font-size: 70px;}
+
+
+
+/*FINE TEST DESKTOP*/
+
+
+
+/*Inizio DOWNLOAD Desktop*/
+
+ #down-a{font-size: 30px; }
+ #levels-a{font-size: 20px;
+   }
+
+  #Box-download-1 .card-img-top {
+      transition: all 0.3s;
+      width:220px;
+      height:214px;
+      margin-bottom: 12px;
+      padding: 1px;
+  }
+  
+  #down1-title{color:red; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+  
+  #downr1-title{color:#CECECE;font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+  
+  
+  #Box-download-2 {margin-bottom:0px;}
+  #Box-download-2 .card-img-top {
+  transition: all 0.3s;
+  width:220px;
+  height:237px;
+  margin-top: 20px;
+  margin-bottom: 55px;
+  padding: 25px;
+  }
+  #box-download-2 {height:600px; }
+  #down2-title{color:blue; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+
+
+  
+  
+  /*EDITING*/
+  #downEdit1-title{color: #AAD3E5; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
+  #downEdit2-title{color: #323C48; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
+/*FINE EDITING*/
+
+
+
+
+
+  #Box-download-3 {margin-bottom:0px;}
+  #Box-download-3 .card-img-top {
+  transition: all 0.3s;
+  width:150px;
+  height:150px;
+  margin-top: 75px;
+  margin-bottom: 64px;
+  padding: 5px;
+  }
+
+  /*#box-download-3 {height:550px; }*/
+  #down3-title{color:blue; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+
+
+  
+  
+  #Box-download-4 {margin-bottom:0px;}
+  #Box-download-4 .card-img-top {
+      transition: all 0.3s;
+      width:220px;
+      height:220px;
+   margin-top: 10px;
+  margin-bottom: 25px;
+      padding: 15px;
+  }
+
+  #down4-title{color:green; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+
+  #Box-download-5 {margin-bottom:0px;}
+  #Box-download-5 .card-img-top {
+  transition: all 0.3s;
+  width:220px;
+  height:214px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 15px;
+  }
+  #box-download-5 {height:550px; }
+  #down5-title{color:orange; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+  
+  
+  #Box-download-6 {margin-bottom:0px;}
+  #Box-download-6 .card-img-top {
+  transition: all 0.3s;
+  width:220px;
+  height:214px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  padding: 15px;
+  }
+  #box-download-6 {height:550px; }
+  #down6-title{color:black; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+
+/*FINE DOWNLOAD DESKTOP*/
+
+
+
+
+/*INIZIO FINALPROJECTS DESKTOP*/
+   #finalp-a{font-size: 50px;}
+   #finalp-photo{position:relative; top:60px;height:350px; width:80%;}
+   #finalp1-info{ text-align: center;  margin-top:90px;}
+    #finalp1-title{color:black; font-size: 70px;}
+
+
+/*FINE FINALPROJECTS DESKTOP*/
+
+
+
+/*INIZIO ROBOTICA DESKTOP*/
+    #rob1-photo{  height:400px; width:180%; position: relative; left:15%;}
+    #rob2-photo{  height:400px; width:180%; position: relative; left:15%;}
+    #rob3-photo{  height:400px; width:180%; position: relative; left:15%;}
+/*FINE ROBOTICA DESKTOP*/
+
+
+
+
+
+
+
+
+
+
+/* INIZIO TABLINK DESKTOP (Programmazione, Robotica, ecc)*/
+/*
+      .tablink {
+        font-size: 15px;
+        height:52px;
+      }
+
+      .tablink:before {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 0px;
+        height: 0px;
+        border-bottom: 68px solid #eee;
+        border-right: 68px solid transparent;
+
+      }
+
+      .tablink:after {
+        position: absolute;
+        top: -3%;
+        right:-0.8%;
+        width: 0px;
+        height: 0px;
+        border-top: 72px solid white;
+        border-left: 72px solid transparent;
+      }
+
+      .tablink:hover { font-size: 150%; height: 82px;}
+
+*/
+/* FINE TABLINK DESKTOP (Programmazione, Robotica, ecc)*/
+
+
+}
+/*fine Desktop*/
+
+
+
+  #myname{color:white; font-family: 'Fredoka One';  text-shadow: 0.01em 0.03em 0.03em gray;}
+  #student{color:white; font-family: 'Fredoka One';  text-shadow: 0.01em 0.05em 0.05em gray;}
+  #university{color:white;font-family: 'Fredoka One';  text-shadow: 0.01em 0.05em 0.05em gray;}
+
+
+  #p_lead_presentazione{
+    text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+  }
+  #myname {
+   /*animation: flip 1s;*/
+    animation-iteration-count: 1;
+  }
+  #student{
+    animation:zoomInLeft 1s;
+    animation-iteration-count: 1;
+  }
+  #university{
+    animation: wobble 1s;
+    animation-iteration-count: 1;
+  }
+
+  #presentation,#maurizio2{
+      background-color:#F3F3F3;
+  }
+    #pr-did{
+     font-family: 'Caveat Brush';  color:black;
+    }
+
+
+/*Inizio Foto in Generale*/
+
+    #par_foto {
+    text-align: center;
+    margin-top: 4%;
+
+    text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+    font-family: 'Delius', cursive;
+    }
+
+
+    .flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+
+    border: 1px solid #ccc;
+    margin-top: 70px;
+    }
+
+
+    .flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    }
+
+    .flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    }
+
+    .flip-container, .front, .back {
+    width: 400px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+
+    .flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+
+    -moz-transition: 0.6s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+    }
+
+    .front, .back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
+    }
+
+    .front {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    background: lightgreen;
+    z-index: 2;
+    }
+
+    .back {
+    background: lightblue;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    }
+
+    .front .name {
+    font-size: 2em;
+    display: inline-block;
+    background: rgba(33, 33, 33, 0.9);
+    color: #f8f8f8;
+    font-family: Courier;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 60px;
+    left: 25%;
+    position: absolute;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+    display: none;
+
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    }
+
+    .back-logo {
+    position: absolute;
+    right:-1px;
+    bottom:150px;
+    width: 320px;
+    height: 300px;
+    background: url(http://mauriziominieri.it/loghi/logo_foxSmall.png) 0 0 no-repeat;
+
+    }
+
+    .back-title {
+    color: black;
+    position: absolute;
+    top: 310px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Caveat Brush';
+    font-size: 20px;
+    text-shadow: 0.01em 0.03em 0.1em gray;
+    }
+
+
+        .back-title2 {
+        font-weight: bold;
+        color: #00304a;
+        position: absolute;
+        top: 210px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-shadow: 0.1em 0.03em 0.1em #acd7e5;
+        font-family: Courier;
+        font-size: 33px;
+        }
+
+    .back p {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 18px;
+    }
+
+    /* vertical */
+    .vertical.flip-container {
+    position: relative;
+    }
+
+    .vertical .back {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    }
+
+    .vertical.flip-container .flipper {
+    -webkit-transform-origin: 100% 213.5px;
+    -moz-transform-origin: 100% 213.5px;
+    -ms-transform-origin: 100% 213.5px;
+    transform-origin: 100% 213.5px;
+    }
+
+    .vertical.flip-container:hover .back, .vertical.flip-container.hover .back {
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      -o-transform: rotateX(0deg);
+      -ms-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+
+    .vertical.flip-container:hover .front, .vertical.flip-container.hover .front {
+      -webkit-transform: rotateX(180deg);
+      -moz-transform: rotateX(180deg);
+      -o-transform: rotateX(180deg);
+      transform: rotateX(180deg);
+    }
+
+/*FINE Foto in Generale*/
+
+
+/*Inizio Skills in Generale*/
+
+   #skills {background-image: url('https://images7.alphacoders.com/380/380394.png'); text-align: center;}
+
+   #skills {text-shadow: 0.1em 0.1em 0.05em gray;}
+   #skill-box-1{border: 2px solid;box-shadow: 3px 5px gray;}
+   #skill-box-2{border: 2px solid;box-shadow: 3px 5px gray;}
+   #skill-box-3{border: 2px solid;box-shadow: 3px 5px gray;}
+   #skill-box-4{border: 2px solid;box-shadow: 3px 5px gray;}
+   #skill-box-5{border: 2px solid;box-shadow: 3px 5px gray;}
+   #skill-box-6{border: 2px solid;box-shadow: 3px 5px gray;}
+
+   .mk-main-ico {border: 1px solid; box-shadow: 0.1em 0.1em 0.05em gray;}
+
+   #skills-item:hover {animation: jello 0.3s; animation-iteration-count: 1;}
+   #skills-item {}
+
+/*FINE SKILLS in Generale*/
+
+
+
+
+/*Inizio Pubblicazioni in Generale*/
+
+  #publications{background-image: url('https://crazyblessedlife.files.wordpress.com/2014/01/latest-blue-vintage-background-background-patterns-others.jpg');}
+  #pub-photo {margin-top: -18px;padding:3px; transition: all 0.3s;  display: block; margin-left: auto; margin-right: auto; border: 2px solid;box-shadow: 3px 5px gray;}
+  .pub-title{text-align: center; text-shadow: 0.01em 0.1em 0.1em gray; font-family: 'Caveat Brush';}
+  #pub-photo:hover{transform: scale(1.2);}
+  .pub-read{text-shadow: 0.01em 0.05em 0.1em gray; font-family: 'Caveat Brush';}
+
+/*FINE Pubblicazioni in Generale*/
+
+
+
+
+
+/*Inizio Lavori in Generale*/
+   #Job-box-1 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-1 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-2 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-2 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-3 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-3 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-4 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-4 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-5 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-5 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-6 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-6 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-7 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-7 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-8 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-8 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-9 .icon-box-title {   text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-9 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-10 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-10 { border: 2px solid;box-shadow: 3px 5px gray;}
+   #Job-box-11 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-11 { border: 2px solid;box-shadow: 3px 5px gray;}
+    #Job-box-12 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-12 { border: 2px solid;box-shadow: 3px 5px gray;}
+    #Job-box-13 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-13 { border: 2px solid;box-shadow: 3px 5px gray;}
+    #Job-box-14 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-14 { border: 2px solid;box-shadow: 3px 5px gray;}
+    #Job-box-15 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
+   #job-box-15 { border: 2px solid;box-shadow: 3px 5px gray;}
+   
+
+   #descrizione{font-family: 'Delius', cursive;}
+
+/*FINE Lavori in Generale*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*TEACHING*/
+/*INIZIO SLIDES in generale*/
+
+  #slides{background-image: url('https://thinkerbit.com/content/wallpaper/2560x1440-night-sky.jpg');}
+
+  #slide1-box{border: 2px solid;}
+  #slide1-title{color:green; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+
+  #slide2-box{border: 2px solid;}
+  #slide2-title{color:blue; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+
+  #slide3-box{border: 2px solid;}
+  #slide3-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  
+   #slide4-box{border: 2px solid;}
+  #slide4-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  
+   #slide5-box{border: 2px solid;}
+  #slide5-title{color:green; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  
+   #slide6-box{border: 2px solid;}
+  #slide6-title{color:red; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+
+  .nav-link{border: 1px black solid; box-shadow: 3px 5px gray; width:150px; background-color:#A49F9F; color: white; margin-left:-66px; font-family: 'Delius'}
+  .nav-link:hover{width:200px;  text-align: center;  cursor: pointer;}
+
+  .tooltipS .tooltiptext {
+      visibility: hidden;
+      width: 300px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 30%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-family: 'Delius'
+  }
+
+  .tooltipS .tooltiptext::after {   /*la freccetta del tooltip*/
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: hidden;
+      border-color: transparent transparent #555 transparent;
+  }
+
+  .tooltipS:hover .tooltiptext {visibility: visible; opacity: 1;}
+
+  .tooltipS {          /*con questi comandi il tooltip si posiziona in base a dove è il mouse*/
+  /*position: relative;display: inline-block;*/width:100px;}
+
+
+  /*@media only screen and (max-width: 1000px){}*/
+
+/*FINE SLIDES in generale*/
+
+
+
+
+
+
+
+/*INIZIO TEST in generale*/
+
+  #test{background-image: url('http://mauriziominieri.it/loghi/blueBackground.jpg');}
+  #test1-goodluck{font-family: 'Delius', cursive; font-style: italic; text-shadow: 0.1em 0.1em 0.05em #acd7e5; color:#4747d1;}
+  #test2-goodluck{font-family: 'Delius', cursive; font-style: italic; text-shadow: 0.1em 0.1em 0.05em #acd7e5; color:green;}
+  #test-photo {margin-top: -18px;padding:3px; transition: all 0.3s; display: block; margin-left: auto; margin-right: auto; border: 2px solid;box-shadow: 3px 5px gray;}
+  .test-title{text-align: center; text-shadow: 0.01em 0.1em 0.1em gray; font-family: 'Caveat Brush';}
+  #test-photo:hover{transform: scale(1.2);}
+  .test-start{text-shadow: 0.01em 0.05em 0.1em gray; font-family: 'Caveat Brush';}
+  #test-item:hover {animation: pulse 0.3s; animation-iteration-count: 2;}
+  #test-item {margin-right: 15px;}
+
+  #testEditing{background-image: url('https://images.wallpaperscraft.com/image/paint_grunge_green_124502_2560x1440.jpg');}
+  #test1-div{background-color:#E8ECEF; border: 2px solid;box-shadow: 0.1em 0.1em 0.05em gray; margin-left: 3%; margin-right: 3%; margin-top: 2%;}
+  #test2-div{background-color:#E8ECEF; border: 2px solid;box-shadow: 0.1em 0.1em 0.05em gray; margin-left: 3%; margin-right: 3%; margin-top: 2%;}
+
+
+
+/*FINE TEST in generale*/
+
+
+
+
+
+
+/*Inizio Download in Generale*/
+
+  #download{
+     background-image: url('http://mauriziominieri.it/loghi/blueBackground2.jpg');
+    text-align: center;}
+
+  .down-descrizione{font-family: 'Delius';}
+   #down-box{ border: 2px solid;box-shadow: 3px 5px gray; height:700px;}
+   #down-a{text-shadow: 0.01em 0.05em 0.05em gray; font-family:'Caveat Brush';}
+   #levels-a{text-shadow: 0.01em 0.05em 0.05em gray; font-family:'Caveat Brush';}
+
+/*Fine Download in Generale*/
+
+
+
+/*Inizio FinalProjects in Generale*/
+
+  #finalp { border: 2px solid;box-shadow: 3px 5px gray;}
+  #finalProjects{text-align: center;}
+  #finalp-photo {padding:3px; transition: all 0.3s; display: block; margin-left: auto; margin-right: auto; border: 2px solid;box-shadow: 3px 5px gray;}
+  .finalp-title{text-align: center; text-shadow: 0.01em 0.05em 0.1em gray; font-family: 'Caveat Brush';}
+  .finalp-descrizione{font-family: 'Delius';}
+  #finalp-photo:hover{transform: scale(1.2);}
+  #finalp-a{text-shadow: 0.01em 0.05em 0.05em gray; font-family:'Caveat Brush';}
+
+/*Fine FinalProjects in Generale*/
+
+
+
+
+body{
+    margin: 0;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+*/
+    font-size: 16px;
+}
+
+#particles-js {
+width: 100%;
+height: 900px;
+background-size: cover;
+background: #17182f;
+display: flex;
+justify-content: center;
+}
+
+#particles-js_didattica {
+width: 100%;
+height: 900px;
+background-size: cover;
+background: #05051F;
+display: flex;
+justify-content: center;
+}
+
+
+
+
+
+#footer {
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #17182f;
+  text-align: center;
+}
+
+#footer2 {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #0f0f1e;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.fa-facebook {
+    color: #3B5998;
+      -webkit-transition: ease-in;
+}
+.fa-linkedin{
+
+  -webkit-transition: ease-in;
+}
+.fa-envelope{
+  color:#16F3FE;
+  -webkit-transition: ease-in;
+}
+.fa-github {
+    color: #00a478;
+      -webkit-transition: ease-in;
+      margin-right: 30px;
+}
+.fa-instagram {
+    color: #ff0084;
+    -webkit-transition: ease-in;
+}
+.fa:hover{
+    opacity: 1;
+    -webkit-transition: 0s;
+  }
+  #textfoto {
+      text-align: center;
+  }
+
+  #responsive-menu-item-didattica{margin-left: 110px; padding-top:5px; font-size: 20px;}
+
+
+/*INIZIO NAVBAR*/
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #17182f;
+    position: relative;
+
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+  #menu-item-skills{ min-width: 120px;}
+  #menu-item-skills:hover .dropdown-content {display: block;}
+
+
+
+  /*FINE NAVBAR*/
+
+
+
+#mail:hover{cursor: pointer;}
+
+
+/* INIZIO TABLINK in generale (Programmazione, Robotica, ecc)*/
+
+/*
+      .tablink {
+        float: left;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-family: 'Fredoka One';
+        width: 25%;
+        border-top: black 2px;
+        border-right: black 2px;
+        border-left: black 2px;
+        background-color:gray;
+        color: white;
+        border-top-right-radius:0px;
+        border-top-left-radius:10px;
+        text-align: center;
+        border-style: solid;
+        margin-left: 1px;
+        box-shadow: 0.2em -0.1em 0.1em gray;
+      }
+
+      .tablink:before {
+        content: "";
+        -webkit-box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+        -moz-box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+        box-shadow: -7px 7px 7px rgba(0,0,0,0.3);
+      }
+
+      .tablink:after {
+        content: "";
+      }
+
+
+      #defaultOpen{margin-left:10px;}
+
+      .tablink:hover {transform: translate(0px,-30px); transition: all 0.2s;   box-shadow: none;}
+
+     
+
+      .tabcontent {
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+        border-top: solid;
+        border-bottom: solid;
+
+      }
+
+
+      #Programmazione {background-color:#F0EDED;margin-top:50px;}
+      #Robotica {background-color:#EBF9FA; margin-top:50px;}
+      #Editing {background-color:#EFFBEF; margin-top:50px;}
+      
+      */
+
+/* FINE TABLINK in generale (Programmazione, Robotica, ecc)*/
+
+
+
+/*INIZIO ROBOTICA in Generale*/
+      .rob-nav-link{border: 1px black solid; box-shadow: 3px 5px gray; width:400px; background-color:#A49F9F; color: white; margin-left:-36px; font-family: 'Delius'; padding:20px; border-radius:5px;    }
+      .rob-nav-link:hover{width:500px;  text-align: center;  cursor: pointer;}
+
+      #rob1-photo:hover{transform: scale(1.2);  }
+      #rob1-photo{border: 2px solid;box-shadow: 3px 5px 0.1px gray; transition: all 0.3s;}
+      #rob1-box{border: 2px solid;box-shadow: 3px 5px 0.5em gray;}
+      #rob1-title{color:#F37818; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; text-align: center;}
+      #rob2-photo:hover{transform: scale(1.2);  }
+      #rob2-photo{border: 2px solid;box-shadow: 3px 5px 0.1px gray; transition: all 0.3s;}
+      #rob2-box{border: 2px solid;box-shadow: 3px 5px 0.5em gray;}
+      #rob2-title{color:#14A0D6; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; text-align: center;}
+      #rob3-photo:hover{transform: scale(1.2);  }
+      #rob3-photo{border: 2px solid;box-shadow: 3px 5px 0.1px gray; transition: all 0.3s;}
+      #rob3-box{border: 2px solid;box-shadow: 3px 5px 0.5em gray;}
+      #rob3-title{color:#019191; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; text-align: center;}
+/*FINE ROBOTICA IN GENERALE*/
