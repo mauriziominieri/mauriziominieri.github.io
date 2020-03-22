@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<!--CHE DEVO FARE? DEVO TROVARE TUTTI I FILE CHE FANNO MUOVERE CAROUSEL2, UNIRLI TUTTI E CREARE PAGECONTROLMOVE.JS, VEDERE SE QUESTO FA MUOVERE IL CAROUSEL2 NEL INDEX2,
+ SE SI lo importo NEL MAIN INDEX, POI DEVO MODIFICARLO TOGLIENDO PEZZO DOPO PEZZO QUELLO CHE VA IN CONFLITTO CON CAROUSEL1 finchè carousel2 non si muove anche nel indexmain,
+ e soprattutto che non sfanculizzi carousel1. Infine passerò ad aggiustare problemi grafici. quindi devo fare lo steso per i file css del carousel2 cioè news.css
+-->
+
+<head>
+    <link rel="stylesheet" href="file:///Users/mauriziominieri/websites/www.android.com/static/2016/css/news.css">
+    <!--Necessario dato che nel index main è obbligatorio, non c'è alcun problema per ora con gli altri importi-->
+    <link rel="stylesheet" href="file:///Users/mauriziominieri/websites/www.android.com/static/2016/css/compGrid.css" media="print" onload="this.media='all'">
+    <link href="file:///Users/mauriziominieri/websites/www.android.com/static/2016/css/photoFlip.css" rel="stylesheet">
+
+
+  <!--   IL COROUSEL1 QUI DENTRO VA IN CONFLITTO CON IL 2, ma solo graficamente, il movimento funziona, DEVO FARE IN MODO CHE ANCHE CON QUESTO IMPORTATO DEVE VEDERSI BENE E HO FINITO
+Il problema è l'aria hidden di main.min.css che sfanculizza il carousel, devo vedere quale fa sfanculizzare e sistemare
+
+-->
+
+      <link href="file:///Users/mauriziominieri/websites/www.android.com/static/2016/css/main.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+    <style data-c-focus-control></style>
+    <meta charset="utf-8">
+    <title>Maurizio Minieri</title>
+</head>
+
+
+
+
+  <body class="sc-security-center">
+    <main>
+      <!--QUESTA SECTION GLOBALE NON HA NULLA A CHE FARE CON IL FUNZIONAMENTO DEL CAROUSEL MA SOLO SULL'ASPETTO GRAFICO-->
+  <section class="sc sc-main" data-c-sc="">
+
+
+<!--INIZIO-->
+
+<section id="latest" class="sc-latest" data-c-sc-latest>
+  <div class="containerA sc__containerA">
+    <div class="sc-latest__heading">
+      <h2 class="sc-latest__title">Le novità sulla sicurezza Android</h2></div><div class="c-carouselA sc-latest__carouselA" data-c-carouselA>
+  <div class="c-carouselA__clip">
+    <ul class="c-carouselA__containerA">
+
+
+        <li class="c-carouselA__slide sc-latest__carouselA-slide" id="blog">
+                <span class="sc-latest__category">Blog</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Aggiornamento sui miglioramenti della sicurezza Android: aiutiamo gli sviluppatori a rafforzare le loro app e contrastiamo le vulnerabilità una alla volta</p>
+
+
+  <a href="https://security.googleblog.com/search/label/android security"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view content"
+    data-g-action="view-content"
+    data-g-label="https://security.googleblog.com/search/label/android security"
+
+      data-c-button
+      >
+    Visualizza tutti i post
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+      <li class="c-carouselA__slide sc-latest__carouselA-slide" id="videos">
+                <span class="sc-latest__category">Video</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Sessione di domande e risposte con il vicepresidente di Android Security and Privacy</p>
+
+
+  <a href="https://www.youtube.com/watch?v=UcS9LrMWqbY&amp;list=PLOcMSsuppV4pcvHhR7qd0DOPUgKxcBw_j&amp;index=2&amp;t=0s"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view videos"
+    data-g-action="view-videos"
+    data-g-label="https://www.youtube.com/watch?v=UcS9LrMWqbY&amp;list=PLOcMSsuppV4pcvHhR7qd0DOPUgKxcBw_j&amp;index=2&amp;t=0s"
+
+      data-c-button
+      >
+    Visualizza tutti i video
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+      <li class="c-carouselA__slide sc-latest__carouselA-slide" id="white-paper">
+                <span class="sc-latest__category">Libri bianchi e rapporti</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Sicurezza e privacy Android: il 2018 in breve</p>
+
+
+  <a href="https://source.android.com/security/overview/reports"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view content"
+    data-g-action="view-content"
+    data-g-label="https://source.android.com/security/overview/reports"
+
+      data-c-button
+      >
+    Visualizza tutti i libri bianchi e i rapporti
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+      <li class="c-carouselA__slide sc-latest__carouselA-slide" id="pie">
+                <span class="sc-latest__category">Android 9 Pie</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Scopri le ultime funzionalità di sicurezza di Android 9 Pie</p>
+
+
+  <a href="https://www.android.com/versions/pie-9-0/"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view content"
+    data-g-action="view-content"
+    data-g-label="https://www.android.com/versions/pie-9-0/"
+
+      data-c-button
+      >
+    Scopri di più
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+      <li class="c-carouselA__slide sc-latest__carouselA-slide" id="research">
+                <span class="sc-latest__category">Ricerca</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Presentazione di Android Security and Privacy Research (ASPIRE)</p>
+
+
+  <a href="https://security.googleblog.com/2018/12/aspire-to-keep-protecting-billions-of.html"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view content"
+    data-g-action="view-content"
+    data-g-label="https://security.googleblog.com/2018/12/aspire-to-keep-protecting-billions-of.html"
+
+      data-c-button
+      >
+    Scopri di più
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+      <li class="c-carouselA__slide sc-latest__carouselA-slide" id="additional-resources">
+                <span class="sc-latest__category">Altre risorse</span>
+          <div class="sc-card__carouselA">
+      <p class="sc-card__carouselA-description">Leggi la nostra panoramica sulla sicurezza</p>
+
+
+  <a href="https://source.android.com/security"
+        target="_blank"
+        rel="noopener"
+     class="button  sc-card__carouselA-cta button--external"
+            data-g-event="view content"
+    data-g-action="view-content"
+    data-g-label="https://source.android.com/security"
+
+      data-c-button
+      >
+    Visualizza dettagli sulla sicurezza
+
+          <svg class="icon--svg button--icon" aria-hidden="true">
+    <use xlink:href="#arrow-sc-cta"></use>
+  </svg>
+
+  </a>
+
+  </div>
+
+
+      </li>
+</ul>
+  </div>
+  <!--BOTTONI DELLE FRECCE SINISTRA E DESTRA-->
+  <nav class="c-carouselA__nav sc-latest__carouselA-nav">
+    <button
+      class="c-carouselA__button c-carouselA__button--prev"
+      data-c-direction="left"
+      aria-label="Go to previous slide"
+>
+          <svg class="icon--svg c-carouselA__button-icon" aria-hidden="true">
+    <use xlink:href="#material-arrow"></use>
+  </svg>
+
+    </button>
+    <button
+      class="c-carouselA__button c-carouselA__button--next"
+      data-c-direction="right"
+      aria-label="Go to next slide"
+>
+          <svg class="icon--svg c-carouselA__button-icon" aria-hidden="true">
+    <use xlink:href="#material-arrow"></use>
+  </svg>
+
+    </button>
+  </nav>
+  <nav class="c-carouselA__bullets-nav sc-latest__carouselA-bullets-nav">
+    <ul class="c-carouselA__bullets-list sc-latest__carouselA-bullets">        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 1"
+            class="c-carouselA__bullet-link active sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 2"
+            class="c-carouselA__bullet-link sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 3"
+            class="c-carouselA__bullet-link sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 4"
+            class="c-carouselA__bullet-link sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 5"
+            class="c-carouselA__bullet-link sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+        <li class="c-carouselA__bullet sc-latest__carouselA-bullet">
+          <button
+            aria-label="Go to slide 6"
+            class="c-carouselA__bullet-link sc-latest__carouselA-bullet-link"
+>
+          </button>
+        </li>
+</ul>
+  </nav>
+</div>
+</div>
+</section>
+
+<!--FINE-->
+
+
+
+
+<svg class="svg-icons" xmlns="http://www.w3.org/2000/svg">
+<symbol id="material-arrow" viewBox="0 0 24 24">
+  <polygon points="7.41 8 12 12.58 16.59 8 18 9.41 12 15.41 6 9.41"/>
+</symbol>
+
+
+
+<symbol id="arrow-sc-cta" viewBox="0 0 16 16">
+    <defs>
+        <path d="M14.222 14.222H1.778V1.778H8V0H1.778C.791 0 0 .8 0 1.778v12.444C0 15.2.791 16 1.778 16h12.444C15.2 16 16 15.2 16 14.222V8h-1.778v6.222zM9.778 0v1.778h3.191l-8.738 8.737 1.253 1.254 8.738-8.738v3.191H16V0H9.778z" id="arrow"/>
+    </defs>
+    <use fill="#00a051" xlink:href="#arrow" fill-rule="evenodd"/>
+</symbol>
+</svg>
+
+
+
+<!--QUESTI 2 script permettono al carousel2 di funzionare-->
+      <script src="file:///Users/mauriziominieri/websites/www.android.com/static/2016/js/pageControlMove.js"></script>
+      <script src="file:///Users/mauriziominieri/websites/www.android.com/static/2016/js/pageControlMove2.js"></script>
+
+
+
+
+<!--
+     <script src="https://www.android.com/static/js/common.min.js"></script>
+   -->
+   <!--
+     <script src="https://www.android.com/static/js/security-center/main.min.js"></script>
+-->
+
+
+
+
+</main>
+</section>
+
+  </body>
+
+<!-- Mirrored from www.android.com/intl/it_it/security-center/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Mar 2020 13:30:51 GMT -->
+</html>
