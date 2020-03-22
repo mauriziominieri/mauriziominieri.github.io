@@ -1,4 +1,4 @@
-
+/*VA BENE, INIZIO*/
   /*IPHONE*/
   @media only screen and (max-width: 599px) {
     .flip-container, .front, .back {
@@ -2625,12 +2625,14 @@ cloud-image.is-loaded {
 	}
 }
 
+/* QUESTO NON FA VEDERE BENE IL CAROUSEL PROGETTI NELLA VISIONE IPAD
 @media screen and (orientation:portrait) {
 	body:before {
 		content: "portrait";
 		display: none
 	}
 }
+*/
 
 @media screen and (inverted-colors:inverted) {
 	img,
