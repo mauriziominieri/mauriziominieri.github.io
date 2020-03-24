@@ -8,6 +8,19 @@
       margin-top:5%;
       margin-bottom:5%;
     }
+    #tito-livio-image{
+      width:100%;
+    }
+
+    #apple-teacher-image{
+      width:100%;
+      height:100%
+    }
+
+    #battlebash-image{
+      width:100%;
+
+    }
   }
   /*IPAD*/
   @media only screen and (min-width: 600px) {
@@ -18,6 +31,19 @@
       margin-top:3%;
       margin-bottom:5%;
     }
+    #tito-livio-image{
+        width:100%;
+    }
+
+    #apple-teacher-image{
+      height:100%;
+      margin-left:-30%;
+    }
+
+    #battlebash-image{
+      height:100%;
+      margin-left:-40%;
+    }
   }
   /*DESKTOP*/
   @media only screen and (min-width: 1000px) {
@@ -27,6 +53,33 @@
 
     #myFotoYear{
       margin-top:5%;
+    }
+
+    #tito-livio-image{
+        width:100%;
+        margin-top:-5%;
+    }
+
+    #apple-teacher-image{
+      height:100%;
+      margin-left:-15%;
+    }
+
+    #battlebash-image{
+      height:100%;
+      margin-left:-20%;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    #tito-livio-image{
+        width:100%;
+        margin-top:-15%;
+    }
+
+    #apple-teacher-image{
+      margin-left:-5%
+
     }
   }
 
