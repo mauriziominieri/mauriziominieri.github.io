@@ -11029,20 +11029,20 @@ html.no-scroll-ios {
 }
 
 @media only screen and (min-width: 1000px) {
-	.l-footer .logo-google {
+	.l-footer .logo-maurizio {
 		display: inline-block;
 		margin-right: 40px;
 		vertical-align: middle
 	}
 }
 
-.l-footer .logo-google img {
+.l-footer .logo-maurizio img {
 	opacity: .54;
 	vertical-align: middle
 }
 
 @media only screen and (max-width: 599px) {
-	.l-footer .logo-google img {
+	.l-footer .logo-maurizio img {
 		max-width: 40%
 	}
 }
