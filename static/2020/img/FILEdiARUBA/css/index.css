@@ -243,8 +243,8 @@
     #Job-box-12 a{font-size:30px;}
     #Job-box-12 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-12 {height:1300px; }
-    
-    
+
+
     #Job-box-13 {margin-bottom:30px;}
     #Job-box-13 .icon-box-title {margin-top: 30px;}
     #Job-box-13 .mk-main-ico {background-color:orange;color:#ffffff;}
@@ -252,7 +252,7 @@
     #Job-box-13 a{font-size:30px;}
     #Job-box-13 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-13 {height:1300px; }
-    
+
     #Job-box-14 {margin-bottom:30px;}
     #Job-box-14 .icon-box-title {margin-top: 30px;}
     #Job-box-14 .mk-main-ico {background-color:blue;color:#ffffff;}
@@ -260,7 +260,7 @@
     #Job-box-14 a{font-size:30px;}
     #Job-box-14 .card-img-top { transition: all 0.3s; height:450px; width:650px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-14 {height:1300px; }
-    
+
      #Job-box-15 {margin-bottom:30px;}
     #Job-box-15 .icon-box-title {margin-top: 30px;}
     #Job-box-15 .mk-main-ico {background-color:pink;color:#ffffff;}
@@ -268,10 +268,10 @@
     #Job-box-15 a{font-size:30px;}
     #Job-box-15 .card-img-top { transition: all 0.3s; height:450px; width:300px; margin-bottom: 12px; padding: 5px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-15 {height:1300px; }
-    
-    
-   
-   
+
+
+
+
 
 
 
@@ -359,15 +359,15 @@
            #test2a-info{ text-align: center;  background-color:#E5EDDB; margin-top:-38px;}
             #testCinema-info{ text-align: center;  background-color:#B0B0B0; }
            #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:-38px;}
-          
-         
+
+
            #test1-title{color:#4747d1; font-size: 75px;}
            #test1-start{color:#4747d1; font-size: 70px;}
-           
-           
+
+
            #test2-title{color:#4CB050; font-size: 85px;}
            #test2-start{color:#4CB050; font-size: 70px;}
-          
+
            #testCinema-title{color:black; font-size: 85px;}
            #testCinema-start{color:black; font-size: 70px;}
 
@@ -390,7 +390,7 @@
               padding: 1px;
             }
 
-             
+
               #down1-title{color:red; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px; }
                #downr1-title{color:#CECECE;font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-bottom:27px;}
 
@@ -404,7 +404,7 @@
                 padding: 15px;
               }
 
-                
+
                   #down2-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
                   #downEdit1-title{color: #AAD3E5; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
                   #downEdit2-title{color: #323C48; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
@@ -421,7 +421,7 @@
                      padding: 15px;
                    }
 
-                
+
                   #down3-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
@@ -434,7 +434,7 @@
                     padding: 1px;
                   }
 
-              
+
                  #down4-title{color:green; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
@@ -448,12 +448,12 @@
                     padding: 15px;
                   }
 
-              
+
                  #down5-title{color:orange; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
-                 
-                 
-                 
-                 
+
+
+
+
                  #Box-download-6 {margin-bottom:0px;}
                   #Box-download-6 .card-img-top {
                     transition: all 0.3s;
@@ -463,7 +463,7 @@
                     padding: 15px;
                   }
 
-              
+
                  #down6-title{color:black; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
@@ -538,7 +538,7 @@
   transition: opacity 0.6s;
   margin-bottom: 15px;
    width: 70%;
-   display: inline-block; 
+   display: inline-block;
 
 }
 
@@ -581,7 +581,7 @@
        top:57%;
        position: absolute;
      }
-     
+
      #pr-did{
       font-size:23px;
       }
@@ -749,38 +749,38 @@
     #Job-box-11 a{font-size:14px;}
     #Job-box-11 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-11 {height:880px;}
-    
-    
+
+
      #Job-box-12 {margin-bottom:30px;}
     #Job-box-12 #title{font-size:40px;}
     #Job-box-12 a{font-size:14px;}
     #Job-box-12 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-12 {height:880px;}
-    
+
      #Job-box-13 {margin-bottom:30px;}
     #Job-box-13 #title{font-size:40px;}
     #Job-box-13 a{font-size:14px;}
     #Job-box-13 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-13 {height:880px;}
-    
+
      #Job-box-14 {margin-bottom:30px;}
     #Job-box-14 #title{font-size:40px;}
     #Job-box-14 a{font-size:14px;}
     #Job-box-14 .card-img-top {transition: all 0.3s; height:200px; margin-bottom: 12px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-14 {height:880px;}
-    
+
      #Job-box-15 .icon-box-title { margin-top: 30px; height: 130px;}
     #Job-box-15 {margin-bottom:30px;}
     #Job-box-15 #title{font-size:40px; color:pink;}
     #Job-box-15 a{font-size:14px;}
     #Job-box-15 .card-img-top {transition: all 0.3s; height:240px; width:180px; margin-bottom: -20px; padding: 3px;border: 1px solid;box-shadow: 0.05em 0.1em 0.05em gray;}
     #job-box-15 {height:880px;}
-    
-    
-   
-    
-   
-    
+
+
+
+
+
+
 
     #infolavoro{text-align: center; font-size: 15px;}
 
@@ -811,19 +811,19 @@
     #test1-goodluck{font-size: 28px;}
     #test2-goodluck{font-size: 28px;}
     #test-photo{position:relative; top:40px;height:370px; width:80%;}
-   
+
     #test1-info{ text-align: center; background-color:#DBDDED;}
     #test1a-info{ text-align: center;  background-color:#DBDDED; margin-top:0px;}
     #test2-info{ text-align: center;  background-color:#E5EDDB; }
     #test2a-info{ text-align: center;  background-color:#E5EDDB; margin-top:0px;}
     #testCinema-info{ text-align: center;  background-color:#B0B0B0; height: 730px;}
     #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:0px;}
-    
+
     #test1-title{color:#4747d1; font-size: 280%;}
     #test1-start{color:#4747d1; font-size: 50px;}
     #test2-title{color:#4CB050; font-size: 280%;}
     #test2-start{color:#4CB050; font-size: 50px;}
-    
+
     #testCinema-title{color:black; font-size: 65px;}
     #testCinema-start{color:black; font-size: 70px;}
 
@@ -846,12 +846,12 @@
       margin-bottom: 12px;
       padding: 1px;
   }
-  
+
   #down1-title{color:red; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
-  
+
   #downr1-title{color:#CECECE;font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
-  
-  
+
+
   #Box-download-2 {margin-bottom:0px;}
   #Box-download-2 .card-img-top {
   transition: all 0.3s;
@@ -865,8 +865,8 @@
   #down2-title{color:blue; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
 
 
-  
-  
+
+
   /*EDITING*/
   #downEdit1-title{color: #AAD3E5; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
   #downEdit2-title{color: #323C48; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
@@ -890,8 +890,8 @@
   #down3-title{color:blue; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
 
 
-  
-  
+
+
   #Box-download-4 {margin-bottom:0px;}
   #Box-download-4 .card-img-top {
       transition: all 0.3s;
@@ -915,8 +915,8 @@
   }
   #box-download-5 {height:550px; }
   #down5-title{color:orange; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
-  
-  
+
+
   #Box-download-6 {margin-bottom:0px;}
   #Box-download-6 .card-img-top {
   transition: all 0.3s;
@@ -1318,7 +1318,7 @@
    #job-box-14 { border: 2px solid;box-shadow: 3px 5px gray;}
     #Job-box-15 .icon-box-title {  text-shadow: 0.01em 0.03em 0.1em gray; font-family: 'Fredoka One';}
    #job-box-15 { border: 2px solid;box-shadow: 3px 5px gray;}
-   
+
 
    #descrizione{font-family: 'Delius', cursive;}
 
@@ -1348,13 +1348,13 @@
 
   #slide3-box{border: 2px solid;}
   #slide3-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
-  
+
    #slide4-box{border: 2px solid;}
   #slide4-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
-  
+
    #slide5-box{border: 2px solid;}
   #slide5-title{color:green; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
-  
+
    #slide6-box{border: 2px solid;}
   #slide6-title{color:red; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
@@ -1472,7 +1472,7 @@ body{
 width: 100%;
 height: 900px;
 background-size: cover;
-background: #17182f;
+background: red;
 display: flex;
 justify-content: center;
 }
@@ -1608,7 +1608,7 @@ justify-content: center;
 
       .tablink:hover {transform: translate(0px,-30px); transition: all 0.2s;   box-shadow: none;}
 
-     
+
 
       .tabcontent {
         display: none;
@@ -1623,7 +1623,7 @@ justify-content: center;
       #Programmazione {background-color:#F0EDED;margin-top:50px;}
       #Robotica {background-color:#EBF9FA; margin-top:50px;}
       #Editing {background-color:#EFFBEF; margin-top:50px;}
-      
+
       */
 
 /* FINE TABLINK in generale (Programmazione, Robotica, ecc)*/
