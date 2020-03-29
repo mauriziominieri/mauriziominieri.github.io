@@ -1,4 +1,53 @@
 
+/*IPHONE*/
+@media only screen and (max-width: 599px) {
+
+}
+/*IPAD*/
+@media only screen and (min-width: 600px) {
+			#particles-name{
+				font-size:70px;
+				margin-top:37%;
+		 }
+		 #particles-role{
+			 font-size:45px;
+			 margin-top:44%;
+		}
+		#particles-university{
+			margin-top:50%;
+		}
+}
+/*DESKTOP*/
+@media only screen and (min-width: 1000px) {
+	#particles-name{
+		font-size:70px;
+		margin-top:37%;
+	}
+	#particles-role{
+	 font-size:45px;
+	 margin-top:44%;
+	}
+	#particles-university{
+	margin-top:50%;
+	font-size:35px;
+	}
+}
+
+  @media only screen and (min-width: 1440px) {
+		#particles-name{
+			font-size:70px;
+			margin-top:23%;
+		}
+		#particles-role{
+		 font-size:45px;
+		 margin-top:27%;
+		}
+		#particles-university{
+		margin-top:30%;
+		}
+	}
+
+
 :root {
 	--color-is-1: #000;
 	--color-is-2: #fff;
