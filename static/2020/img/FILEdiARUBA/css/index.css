@@ -1,4 +1,267 @@
-/*Telefoni*/
+
+/*IPHONE*/
+@media only screen and (max-width: 599px){
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-top: 5px;
+    margin-bottom: 15px;
+     width: 99%;
+     display: inline-block;
+
+  }
+
+  #mydisp {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:40px;
+    text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #myver {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:45px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #mydown {
+    color:black;
+    font-family: 'Fredoka One';
+    font-size:38px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #slide1-title{
+    font-size:30px;
+  }
+
+  #slide2-title{
+    font-size:30px;
+  }
+
+  #slide3-title{
+    font-size:30px;
+  }
+
+  #slide4-title{
+    font-size:30px;
+  }
+
+  #slide5-title{
+    font-size:30px;
+  }
+
+  #slide6-title{
+    font-size:30px;
+  }
+
+   #test1-title{color:#4747d1; font-size: 50px;}
+
+   #test2-title{ font-size: 50px;}
+
+
+   #photo-div{
+  margin-left:0px; margin-top:30px; margin-bottom: 30px;
+  }
+
+
+  .carousel-inner h3{
+    font-size: 10px;
+  }
+
+  .carousel-inner  p{
+    font-size: 10px;
+  }
+
+    #down1-title{color:red; font-size: 50px; margin-top:-30px; }
+    #down2-title{ font-size: 50px;}
+    #down3-title{ font-size: 50px;}
+    #down4-title{ font-size: 50px;}
+    #down5-title{ font-size: 50px;}
+    #down6-title{ font-size: 50px;}
+
+    #myprog{font-size: 30px;}
+
+}
+
+/*IPAD*/
+@media only screen and (min-width: 600px){
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+     width: 95%;
+     display: inline-block;
+
+  }
+
+  #mydisp {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:60px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #myver {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:60px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #mydown {
+    color:black;
+    font-family: 'Fredoka One';
+    font-size:70px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+
+  #slide1-title{
+    font-size:35px;
+  }
+
+  #slide2-title{
+    font-size:35px;
+  }
+
+  #slide3-title{
+    font-size:35px;
+  }
+
+  #slide4-title{
+    font-size:35px;
+  }
+
+  #slide5-title{
+    font-size:35px;
+  }
+
+  #slide6-title{
+    font-size:35px;
+  }
+
+   #test1-title{color:#4747d1; font-size: 70px;}
+
+   #test2-title{ font-size: 70px;}
+
+  #photo-div{
+   margin-bottom: 50px;
+ }
+
+   #down1-title{font-size: 60px;  }
+
+     #myprog{font-size: 50px;}
+
+}
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 1024px) {
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 95%;
+    display: inline-block;
+
+  }
+
+
+  #mydisp {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:80px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #myver {
+    color:white;
+    font-family: 'Fredoka One';
+    font-size:80px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #mydown {
+    color:black;
+    font-family: 'Fredoka One';
+    font-size:90px; text-shadow: 0.01em 0.07em 0.05em gray;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  #slide1-title{
+    font-size:40px;
+  }
+
+  #slide2-title{
+    font-size:40px;
+  }
+
+  #slide3-title{
+    font-size:40px;
+  }
+
+  #slide4-title{
+    font-size:40px;
+  }
+
+  #slide5-title{
+    font-size:40px;
+  }
+
+  #slide6-title{
+    font-size:40px;
+  }
+
+
+   #test1-title{color:#4747d1; font-size: 80px;}
+    #test2-title{ font-size: 80px;}
+
+   #photo-div{
+    margin-left:180px; margin-top:-240px; margin-bottom: 240px;
+  }
+
+  #myprog{font-size: 80px;}
+}
+
+
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+
+
+
+
+
+
+
+
+/*VECCHIO*/
 @media (min-width: 200px)  {
 
   h4 {
@@ -64,7 +327,7 @@
 
 
 /*INIZIO SKILLS CELLULARE*/
-
+/*
     #skills-item{margin-left: 10px; margin-right: 10px; margin-bottom:40px;}
 
     .vc_col-sm-4{width:900px;margin:auto;}
@@ -100,7 +363,7 @@
     #skill-box-6 .icon-box-title {font-family: 'Caveat Brush';  margin-top:-40px;}
     #skill-box-6 .mk-main-ico {background-color:#097ef6;color:#ffffff;}
 
-
+*/
 /*FINE SKILL CELLULARE*/
 
 
@@ -361,11 +624,11 @@
            #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:-38px;}
 
 
-           #test1-title{color:#4747d1; font-size: 75px;}
+
            #test1-start{color:#4747d1; font-size: 70px;}
 
 
-           #test2-title{color:#4CB050; font-size: 85px;}
+           #test2-title{color:#4CB050;}
            #test2-start{color:#4CB050; font-size: 70px;}
 
            #testCinema-title{color:black; font-size: 85px;}
@@ -391,7 +654,7 @@
             }
 
 
-              #down1-title{color:red; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px; }
+              #down1-title{color:red; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px; }
                #downr1-title{color:#CECECE;font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-bottom:27px;}
 
 
@@ -405,7 +668,7 @@
               }
 
 
-                  #down2-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                  #down2-title{color:blue; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
                   #downEdit1-title{color: #AAD3E5; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
                   #downEdit2-title{color: #323C48; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
@@ -422,7 +685,7 @@
                    }
 
 
-                  #down3-title{color:blue; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                  #down3-title{color:blue;  text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
                   #Box-download-4 {margin-bottom:0px;}
@@ -435,7 +698,7 @@
                   }
 
 
-                 #down4-title{color:green; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                 #down4-title{color:green;  text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
 
@@ -449,7 +712,7 @@
                   }
 
 
-                 #down5-title{color:orange; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                 #down5-title{color:orange;  text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
 
@@ -464,7 +727,7 @@
                   }
 
 
-                 #down6-title{color:black; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                 #down6-title{color:black;  text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
 
 
 /*FINE DOWNLOAD CELLULARE*/
@@ -530,21 +793,6 @@
 
 /*BULLISMO*/
 
-.alert {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-  opacity: 1;
-  transition: opacity 0.6s;
-  margin-bottom: 15px;
-   width: 70%;
-   display: inline-block;
-
-}
-
-.alert.success {background-color: #4CAF50;}
-.alert.info {background-color: #2196F3;}
-.alert.warning {background-color: #ff9800;}
 
 
 
@@ -819,9 +1067,9 @@
     #testCinema-info{ text-align: center;  background-color:#B0B0B0; height: 730px;}
     #testCinemaa-info{ text-align: center;  background-color:#B0B0B0; margin-top:0px;}
 
-    #test1-title{color:#4747d1; font-size: 280%;}
+    #test1-title{color:#4747d1;}
     #test1-start{color:#4747d1; font-size: 50px;}
-    #test2-title{color:#4CB050; font-size: 280%;}
+    #test2-title{color:#4CB050;}
     #test2-start{color:#4CB050; font-size: 50px;}
 
     #testCinema-title{color:black; font-size: 65px;}
@@ -847,7 +1095,7 @@
       padding: 1px;
   }
 
-  #down1-title{color:red; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+  #down1-title{color:red; text-shadow: 0.05em 0.05em 0.05em gray; }
 
   #downr1-title{color:#CECECE;font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
 
@@ -1341,22 +1589,22 @@
   #slides{background-image: url('https://thinkerbit.com/content/wallpaper/2560x1440-night-sky.jpg');}
 
   #slide1-box{border: 2px solid;}
-  #slide1-title{color:green; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide1-title{color:green; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
   #slide2-box{border: 2px solid;}
-  #slide2-title{color:blue; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide2-title{color:blue; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
   #slide3-box{border: 2px solid;}
-  #slide3-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide3-title{color:orange; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
    #slide4-box{border: 2px solid;}
-  #slide4-title{color:orange; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide4-title{color:orange; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
    #slide5-box{border: 2px solid;}
-  #slide5-title{color:green; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide5-title{color:green; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
    #slide6-box{border: 2px solid;}
-  #slide6-title{color:red; font-size: 50px; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
+  #slide6-title{color:red; font-family: 'Caveat Brush'; text-shadow: 0.01em 0.03em 0.1em gray; }
 
   .nav-link{border: 1px black solid; box-shadow: 3px 5px gray; width:150px; background-color:#A49F9F; color: white; margin-left:-66px; font-family: 'Delius'}
   .nav-link:hover{width:200px;  text-align: center;  cursor: pointer;}
