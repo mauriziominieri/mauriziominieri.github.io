@@ -24,6 +24,18 @@
     margin-top: 5%;
   }
 
+  #myEditdisp {
+
+    font-size:60px;
+
+  }
+
+  #myrobot {
+
+    font-size:60px;
+
+  }
+
   #myver {
     color:white;
     font-family: 'Fredoka One';
@@ -68,6 +80,21 @@
 
    #test2-title{ font-size: 50px;}
 
+   #downEdit1-title{
+     font-size:50px;
+   }
+
+   #downEdit2-title{
+     font-size:50px;
+   }
+
+
+   #downr1-title{
+      font-size:50px;
+   }
+
+     #testCinema-title{color:black; font-size: 30px;}
+
 
    #photo-div{
   margin-left:0px; margin-top:30px; margin-bottom: 30px;
@@ -90,6 +117,9 @@
     #down6-title{ font-size: 50px;}
 
     #myprog{font-size: 30px;}
+
+
+      #down-a{font-size: 30px;}
 
 }
 
@@ -114,6 +144,12 @@
     font-size:60px; text-shadow: 0.01em 0.07em 0.05em gray;
     margin-left: 5%;
     margin-top: 5%;
+  }
+
+  #myEditdisp {
+
+    font-size:60px;
+
   }
 
   #myver {
@@ -157,6 +193,10 @@
     font-size:35px;
   }
 
+  #downr1-title{
+     font-size:30px;
+  }
+
    #test1-title{color:#4747d1; font-size: 70px;}
 
    #test2-title{ font-size: 70px;}
@@ -195,6 +235,18 @@
     font-size:80px; text-shadow: 0.01em 0.07em 0.05em gray;
     margin-left: 5%;
     margin-top: 5%;
+  }
+
+  #myEditdisp {
+
+    font-size:80px;
+
+  }
+
+  #myrobot {
+
+    font-size:80px;
+
   }
 
   #myver {
@@ -238,6 +290,20 @@
   }
 
 
+  #downr1-title{
+     font-size:40px;
+  }
+
+    #testCinema-title{color:black; font-size: 60px;}
+
+  #downEdit1-title{
+    font-size:60px; margin-bottom: 20px;
+  }
+
+  #downEdit2-title{
+    font-size:60px; margin-bottom: 20px;
+  }
+
    #test1-title{color:#4747d1; font-size: 80px;}
     #test2-title{ font-size: 80px;}
 
@@ -246,6 +312,8 @@
   }
 
   #myprog{font-size: 80px;}
+
+    #down-a{font-size: 50px;}
 }
 
 
@@ -631,7 +699,7 @@
            #test2-title{color:#4CB050;}
            #test2-start{color:#4CB050; font-size: 70px;}
 
-           #testCinema-title{color:black; font-size: 85px;}
+
            #testCinema-start{color:black; font-size: 70px;}
 
 
@@ -642,7 +710,7 @@
 
 /*Inizio DOWNLOAD CELLULARE*/
 
-            #down-a{font-size: 50px;}
+
             #levels-a{font-size: 40px;}
 
             #Box-download-1 .card-img-top {
@@ -655,7 +723,7 @@
 
 
               #down1-title{color:red; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px; }
-               #downr1-title{color:#CECECE;font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-bottom:27px;}
+               #downr1-title{color:#CECECE; text-shadow: 0.05em 0.05em 0.05em gray; margin-bottom:27px;}
 
 
               #Box-download-2 {margin-bottom:0px;}
@@ -669,8 +737,8 @@
 
 
                   #down2-title{color:blue; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
-                  #downEdit1-title{color: #AAD3E5; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
-                  #downEdit2-title{color: #323C48; font-size:70px; text-shadow: 0.05em 0.05em 0.05em gray; margin-top:-30px;  }
+                  #downEdit1-title{color: #AAD3E5;  text-shadow: 0.05em 0.05em 0.05em gray;   }
+                  #downEdit2-title{color: #323C48;  text-shadow: 0.05em 0.05em 0.05em gray;   }
 
 
 
@@ -1072,7 +1140,7 @@
     #test2-title{color:#4CB050;}
     #test2-start{color:#4CB050; font-size: 50px;}
 
-    #testCinema-title{color:black; font-size: 65px;}
+
     #testCinema-start{color:black; font-size: 70px;}
 
 
@@ -1083,7 +1151,7 @@
 
 /*Inizio DOWNLOAD Desktop*/
 
- #down-a{font-size: 30px; }
+
  #levels-a{font-size: 20px;
    }
 
@@ -1097,7 +1165,7 @@
 
   #down1-title{color:red; text-shadow: 0.05em 0.05em 0.05em gray; }
 
-  #downr1-title{color:#CECECE;font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray; }
+  #downr1-title{color:#CECECE; text-shadow: 0.05em 0.05em 0.05em gray; }
 
 
   #Box-download-2 {margin-bottom:0px;}
@@ -1116,8 +1184,8 @@
 
 
   /*EDITING*/
-  #downEdit1-title{color: #AAD3E5; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
-  #downEdit2-title{color: #323C48; font-size:50px; text-shadow: 0.05em 0.05em 0.05em gray;}
+  #downEdit1-title{color: #AAD3E5;  text-shadow: 0.05em 0.05em 0.05em gray;}
+  #downEdit2-title{color: #323C48;  text-shadow: 0.05em 0.05em 0.05em gray;}
 /*FINE EDITING*/
 
 
