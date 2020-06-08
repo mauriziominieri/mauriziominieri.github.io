@@ -65,12 +65,23 @@
       margin-bottom:-65%;
     }
 
+   /* cubo di rubik
     #animation-image-7{
       display: block;
       min-height: 10px;
       width:100%;
      margin-bottom:-100%;
     }
+    */
+
+    #animation-image-7{
+      display: block;
+      min-height: 10px;
+      width:60%;
+     margin-bottom:-100%;
+    }
+
+
   }
 
 
@@ -138,11 +149,19 @@
       margin-bottom:-45%;
     }
 
-
+/*Cubo di rubik
     #animation-image-7{
       display: block;
       min-height: 10px;
         width:120%;
+      margin-bottom:-100%;
+    }
+    */
+
+    #animation-image-7{
+      display: block;
+      min-height: 10px;
+        width:80%;
       margin-bottom:-100%;
     }
 
@@ -212,10 +231,19 @@
       margin-left:0%;
     }
 
+/* cubo di rubik
     #animation-image-7{
       display: block;
       min-height: 10px;
         width:120%;
+      margin-bottom:-45%;
+    }
+    */
+
+    #animation-image-7{
+      display: block;
+      min-height: 10px;
+        width:80%;
       margin-bottom:-45%;
     }
 
