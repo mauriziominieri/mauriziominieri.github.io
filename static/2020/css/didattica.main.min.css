@@ -1401,6 +1401,7 @@
 	transform: rotate(-45deg)
 }
 
+/*
 .survey-default {
 	background-color: #fff;
 	bottom: 0;
@@ -1852,7 +1853,7 @@
 
 .survey-panel input[type=radio]:checked {
 	background: radial-gradient(ellipse at center, #3ddc84 39%, #fff 40%)
-}
+}*/
 
 .f-label,
 .f-question {
@@ -4147,6 +4148,7 @@ main:after {
 		height: auto;
 		top: auto
 	}
+	/*
 	.survey-default {
 		max-width: 410px
 	}
@@ -4155,7 +4157,7 @@ main:after {
 	}
 	.survey-panel.survey-panel--start {
 		padding: 50px 65px 0 28px
-	}
+	}*/
 	.cookie-banner {
 		max-width: 100%
 	}
@@ -4862,6 +4864,7 @@ main:after {
 	.search-default__open {
 		background: transparent
 	}
+	/*
 	.survey-default__alert {
 		padding: 30px 80px 0 28px
 	}
@@ -4869,7 +4872,7 @@ main:after {
 		height: 100%;
 		overflow: visible;
 		padding: 136px 65px 0 28px
-	}
+	}*/
 	.f-question-list>li {
 		margin-bottom: 20px
 	}
