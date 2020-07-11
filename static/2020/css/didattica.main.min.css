@@ -82,7 +82,7 @@
 		}
 	}
 
-
+/*
 :root {
 	--color-is-1: #000;
 	--color-is-2: #fff;
@@ -2179,7 +2179,7 @@
 	height: 100px;
 	margin-top: auto;
 	overflow: hidden;
-	width: 100px  /*QUI dimensione*/
+	width: 100px  //QUI dimensione
 }
 
 .small-text-cards .cards-grid__item-wrapper {
@@ -4031,7 +4031,7 @@ main:after {
 	content: "loaded";
 	display: none
 }
-
+*/
 @media only screen and (min-width:320px) and (max-width:410px) {
 	.hero-devices .rotating-heading__fixed-heading,
 	.hero-devices .rotating-heading__title {
