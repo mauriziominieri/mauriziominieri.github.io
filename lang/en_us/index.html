@@ -4042,7 +4042,9 @@ data-ca-label="tv">
   <script src="http://www.mauriziominieri.it/static/2020/js/main3.min.js"></script>
 
   <script>
-  android.init();
+    $(document).ready(function() {  //esegue il codice non appena la pagina HTML (il DOM) è stata caricata, senza verificare che le immagini, i frames e gli oggetti siano stati caricati.
+      android.init();
+    });
   </script>
 
 
