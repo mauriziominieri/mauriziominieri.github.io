@@ -251,9 +251,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </head>
 
-  <div id="loader"></div>
 
-  <body class="index" style="display:none;">
+
+  <body class="index">
+
+  <div id="loader"></div>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDPH9F"
@@ -545,7 +547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </header>
 
-    <main id="main" role="main">
+    <main id="main" role="main" style="display:none;">
     <h1 class="u-is-hidden-visually">Maurizio Minieri</h1>
 
     <!--INIZIO TASTO DARK-->
@@ -4101,7 +4103,7 @@ data-ca-label="tv">
       android.init();
 
       $(document).ready(function() {  //esegue il codice non appena la pagina HTML (il DOM) è stata caricata, senza verificare che le immagini, i frames e gli oggetti siano stati caricati.
-          $('.index').show();
+          $('#main').show();
           $('#loader').hide();
       });
 
