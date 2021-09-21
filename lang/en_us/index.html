@@ -10,61 +10,9 @@
     type = "image/x-icon">
 
 <!--INIZIO Personal-->
-
+  <!--Effetto scrolling-->
   <style>
-  /* Effetto scrolling */
   html {scroll-behavior: smooth;}
-
-  /* Loader */
-  #loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-}
-
   </style>
 
 
@@ -251,12 +199,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   </head>
 
-
-
-  <body class="index">
-
-  <div id="loader"></div>
-
+  <body class="index" >
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZDPH9F"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -547,7 +490,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </header>
 
-    <main id="main" role="main" style="display:none;">
+    <main id="main" role="main">
     <h1 class="u-is-hidden-visually">Maurizio Minieri</h1>
 
     <!--INIZIO TASTO DARK-->
@@ -4099,14 +4042,7 @@ data-ca-label="tv">
   <script src="http://www.mauriziominieri.it/static/2020/js/main3.min.js"></script>
 
   <script>
-
-      android.init();
-
-      $(document).ready(function() {  //esegue il codice non appena la pagina HTML (il DOM) è stata caricata, senza verificare che le immagini, i frames e gli oggetti siano stati caricati.
-          $('#main').show();
-          $('#loader').hide();
-      });
-
+  android.init();
   </script>
 
 
