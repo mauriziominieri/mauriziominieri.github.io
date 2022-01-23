@@ -4,3 +4,7 @@ static/2020/software/Balsamiq_Mockups_3.5.17.exe
 static/2020/software/camtasia.exe
 static/2020/software/codeblocks-17.12-setup.exe
 *.exe
+.DS_Store
+lang/.DS_Store
+static/.DS_Store
+static/2020/.DS_Store
