@@ -6681,7 +6681,7 @@ body.theme--dark .content-dark__image--light {
 	color: var(--color-is-1);
 	height: auto;
 	margin-bottom: 115px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: relative;
 	z-index: 20
 }
