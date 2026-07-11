@@ -3692,7 +3692,7 @@ var So = Mi(wt.exports),
       ]}
     ],
     '#publications': [
-      { title: 'Pubblicazioni', links: [
+      { title: 'Altro', links: [
         { label: 'Tutte le pubblicazioni', href: '#publications' }
       ]}
     ]
