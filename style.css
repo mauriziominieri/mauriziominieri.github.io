@@ -2,9 +2,10 @@
 :root{
   --bg: #121212;
   --bg-soft: #282828;
+  --bg-hard: #0f0e0e;
   --card: #1e1e1e;
   --card-2: #232323;
-  --red: #cd1c29;
+  --main: #cd1c29;
   --red-bright: #c33a43;
   --text: #f2f0ee;
   --text-dim: #a8a4a1;
@@ -15,9 +16,11 @@
   --font-body: 'Inter', sans-serif;
 }
 
+
+
 /* NEW */
 
-.logo-bg{ fill: var(--red); }
+.logo-bg{ fill: var(--main); }
 .socials a:hover .logo-bg{ fill: var(--red-bright); transform: translateY(-2px); }
 
 /* Foto cliccabile */
@@ -76,7 +79,7 @@ ul{ list-style: none; margin:0; padding:0; }
   transition: transform 0.2s ease, background 0.2s ease;
 }
 .btn-primary{
-  background: var(--red);
+  background: var(--main);
   color: #fff;
 }
 .btn-primary:hover{
@@ -231,7 +234,7 @@ ul{ list-style: none; margin:0; padding:0; }
   transition: transform 0.25s ease;
 }
 .service-card:hover{ transform: translateY(-6px); }
-.service-card--active{ background: var(--red); }
+.service-card--active{ background: var(--main); }
 .icon-box{
   color: var(--red-bright);
   margin-bottom: 26px;

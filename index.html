@@ -1,447 +1,749 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maurizio Minieri</title>
-<link rel = "icon" href = "2022/static/2020/img/icons/logoM.png" type = "image/x-icon">
-<link rel="stylesheet" href="font.css">
-<link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maurizio Minieri</title>
+  <link rel = "icon" href = "2022/static/2020/img/icons/logoM.png" type = "image/x-icon">
+  <link rel="stylesheet" href="font.css"> <!-- BASE -->
+  <link rel="stylesheet" href="style.css"> <!-- BASE -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" /> <!-- APPLE -->
+  <link rel="stylesheet" type="text/css" href="apple/globalheader.css" /> <!-- APPLE -->
+  <link rel="stylesheet" href="apple/home.built.css" /> <!-- APPLE -->
+
 </head>
-<body>
+<body class="ac-nav-overlap globalnav-scrim globalheader-light">
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container header-inner">
-     <a href="#" class="logo" aria-label="Home">
-      <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-        <rect width="34" height="34" rx="9" class="logo-bg"/>
-        <text x="17" y="23.5" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#ffffff">m</text>
-      </svg>
-    </a>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Presentazione</a></li>
-        <li><a href="#about">Competenze</a></li>
-        <li class="has-dropdown">
-          <a href="#projects">Progetti</a>
-          <ul class="dropdown">
-            <li><a href="#projects">Mobile</a></li>
-            <li><a href="#projects-desktop">Desktop</a></li>
-          </ul>
-        </li>
-        <li><a href="#publications">Pubblicazioni</a></li>
-        <li><a href="#contact">Contatti</a></li>
-        <li class="has-dropdown"><a href="#">Other page</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <div id="globalheader"></div> <!-- APPLE -->
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-image">
-      <img id="profile-img" src="profile_red.png" class="clickable-photo">
-    </div>
-    <div class="hero-content">
-      <p class="eyebrow">Ciao, mi presento, sono Maurizio Minieri</p>
-      <h1>Ingegnere Software</h1>
-      <p class="hero-text">
-        Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose, ero il bambino che smontava i propri giocattoli costosi per vedere come funzionavano piuttosto
-        che usarli, inoltre la grande passione per i videogiochi negli anni è cresciuta sempre più
-        e dopo aver frequentato un liceo scientifico sperimentale mi sono iscritto all'università di Napoli Federico II, immergendomi in questo vasto e fantastico mondo: <b class="">L'INFORMATICA</b>.
-        Mi incuriosisce e affascina come essa possa essere presente in ogni oggetto della vita, immagino un futuro con
-        videogiochi incredibilmente immersivi, videochiamate olografiche, macchine che si guidano, case che si puliscono, fornelli che cucinano, autonomamente.
-        <br><br>
-        Durante gli anni di università ho imparato ad usare vari linguaggi di programmazione, a creare applicazioni e siti web, e
-        grazie al tirocinio svolto presso la <a class="eyebrow" href="https://www.digitalcomoedia.com/landing/" target="_blank" rel="noopener">DigitalComoedia</a> ho sviluppato una passione per un ramo specifico dell'informatica: <b class="">LA REALTA' VIRTUALE</b>.
-        <br><br>
-      </p>
-      <a href="2022/static/2020/videos/PresentazioneManusVRMinieri.mp4" target="_blank" rel="noopener" class="btn btn-primary">La mia tesi</a>
-      <a href="2022/static/2020/videos/PresentazioneManusVRMinieriCut.mp4" target="_blank" rel="noopener" class="btn btn-primary">Gioco VR</a>
+  <!-- HERO -->
+  <section class="hero" id="presentation">
+    <div class="container hero-inner">
+      <div class="hero-image">
+        <img id="profile-img" src="profile_red.png" class="clickable-photo">
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Ciao, mi presento, sono Maurizio Minieri</p>
+        <h1>Ingegnere Software</h1>
+        <p class="hero-text">
+          Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose, ero il bambino che smontava i propri giocattoli costosi per vedere come funzionavano piuttosto
+          che usarli, inoltre la grande passione per i videogiochi negli anni è cresciuta sempre più
+          e dopo aver frequentato un liceo scientifico sperimentale mi sono iscritto all'università di Napoli Federico II, immergendomi in questo vasto e fantastico mondo: <b class="">L'INFORMATICA</b>.
+          Mi incuriosisce e affascina come essa possa essere presente in ogni oggetto della vita, immagino un futuro con
+          videogiochi incredibilmente immersivi, videochiamate olografiche, macchine che si guidano, case che si puliscono, fornelli che cucinano, autonomamente.
+          <br><br>
+          Durante gli anni di università ho imparato ad usare vari linguaggi di programmazione, a creare applicazioni e siti web, e
+          grazie al tirocinio svolto presso la <a class="eyebrow" href="https://www.digitalcomoedia.com/landing/" target="_blank" rel="noopener">DigitalComoedia</a> ho sviluppato una passione per un ramo specifico dell'informatica: <b class="">LA REALTA' VIRTUALE</b>.
+          <br><br>
+        </p>
+        <a href="2022/static/2020/videos/PresentazioneManusVRMinieri.mp4" target="_blank" rel="noopener" class="btn btn-primary">La mia tesi</a>
+        <a href="2022/static/2020/videos/PresentazioneManusVRMinieriCut.mp4" target="_blank" rel="noopener" class="btn btn-primary">Gioco VR</a>
 
 
-<!--
- Dopo essermi laureato ho ricoperto vari ruoli, tra cui:
+  <!--
+  Dopo essermi laureato ho ricoperto vari ruoli, tra cui:
 
 
-</p>
-                
-                <ul class="my-list">
+  </p>
+                  
+                  <ul class="my-list">
 
-                  <li>
-                    <svg  style="vertical-align: middle; margin-right:10px;" height="50" viewBox="0 0 58 58" width="50">
-                        <use xlink:href="#ico-graduation"></use>
+                    <li>
+                      <svg  style="vertical-align: middle; margin-right:10px;" height="50" viewBox="0 0 58 58" width="50">
+                          <use xlink:href="#ico-graduation"></use>
+                        </svg>
+                        <div style=" display: inline-block; vertical-align: middle;">
+                      <span class="cta-grid__copy-item is-copy-m">
+                          Professore Esperto PON
+                      </span>
+                    </div>
+                    </li>
+
+                    <li>
+                        
+                      <svg   viewBox="0 0 28 28" height="50" width="50"  style="vertical-align: middle; margin-left:0.5%; margin-right:8px; ">
+                      <use xlink:href="#ico-apple"></use>
                       </svg>
                       <div style=" display: inline-block; vertical-align: middle;">
-                     <span class="cta-grid__copy-item is-copy-m">
-                        Professore Esperto PON
-                     </span>
-                   </div>
-                  </li>
+                      <span class="cta-grid__copy-item is-copy-m" >Apple software developer</span>
+                    </div>
+                    </li>
 
-                  <li>
-                      
-                    <svg   viewBox="0 0 28 28" height="50" width="50"  style="vertical-align: middle; margin-left:0.5%; margin-right:8px; ">
-                    <use xlink:href="#ico-apple"></use>
-                    </svg>
-                    <div style=" display: inline-block; vertical-align: middle;">
-                    <span class="cta-grid__copy-item is-copy-m" >Apple software developer</span>
-                  </div>
-                  </li>
-
-                  <li>
-                    <img loading="lazy" src="/static/2020/img/icons/icon-scuola.png"  style="vertical-align: middle; margin-right:10px;" height="50" width="50">
-                  </img>
-                      <div style=" display: inline-block; vertical-align: middle;">
-                     <span class="cta-grid__copy-item is-copy-m">
-                        Professore privato a richiesta
-                     </span>
-                   </div>
-                  </li>
-                </ul>
-                
-                <br>
-                  <p class="cta-grid__copy-item text-normal cascade-text__item">
-                Nella sezione <a class="cta" href="http://www.mauriziominieri.it/didattica/">DIDATTICA</a> puoi consultare slides, verifiche e guide create da me e vedere
-                le foto con i miei studenti.<br>
-                Ho lavorato come Full-Stack Developer presso <a class="cta cta--is-2" href="http://www.protom.com/">Protom</a> e attualmente lavoro come Ingegnere Software presso <a class="cta cta--is-2" href="https://www.indracompany.com/">Indra.</a>
-                <br><br>
-                <p class="cta-grid__copy-item is-copy" style="text-align: center">"Beyond the common vision"</p>
-                  -->
-
-
-
-
-    </div>
-  </div>
-</section>
-
-<!-- COMPETENZE -->
-<div class="highlight-block" id="about">
-
-  <!-- COMPETENZE1 -->
-  <section class="services">
-    <div class="container services-grid">
-      <article class="service-card">
-        <div class="icon-box">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <h3>UI Design</h3>
-        <p>Interfacce pulite e coerenti, costruite su un sistema di componenti pensato per scalare.</p>
-        <a href="#" class="know-more">Know more →</a>
-      </article>
-
-      <article class="service-card service-card--active">
-        <div class="icon-box">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5M9 13h6M9 17h6"/></svg>
-        </div>
-        <h3>Product Design</h3>
-        <p>Dalla ricerca al prototipo: prodotti digitali disegnati intorno ai bisogni reali degli utenti.</p>
-        <a href="#" class="know-more">Know more →</a>
-      </article>
-
-      <article class="service-card">
-        <div class="icon-box">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20L20 4M14 4h6v6"/></svg>
-        </div>
-        <h3>Branding</h3>
-        <p>Identità visive distintive che restano impresse e reggono su ogni superficie.</p>
-        <a href="#" class="know-more">Know more →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- COMPETENZE2 -->
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat-hero">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number-sm">60+</span>
-        <span class="stat-label-sm">Clients</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number-sm">08</span>
-        <span class="stat-label-sm">Years Experience</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number-sm">122+</span>
-        <span class="stat-label-sm">Completed Projects</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number-sm">10</span>
-        <span class="stat-label-sm">Achievements</span>
+                    <li>
+                      <img loading="lazy" src="/static/2020/img/icons/icon-scuola.png"  style="vertical-align: middle; margin-right:10px;" height="50" width="50">
+                    </img>
+                        <div style=" display: inline-block; vertical-align: middle;">
+                      <span class="cta-grid__copy-item is-copy-m">
+                          Professore privato a richiesta
+                      </span>
+                    </div>
+                    </li>
+                  </ul>
+                  
+                  <br>
+                    <p class="cta-grid__copy-item text-normal cascade-text__item">
+                  Nella sezione <a class="cta" href="http://www.mauriziominieri.it/didattica/">DIDATTICA</a> puoi consultare slides, verifiche e guide create da me e vedere
+                  le foto con i miei studenti.<br>
+                  Ho lavorato come Full-Stack Developer presso <a class="cta cta--is-2" href="http://www.protom.com/">Protom</a> e attualmente lavoro come Ingegnere Software presso <a class="cta cta--is-2" href="https://www.indracompany.com/">Indra.</a>
+                  <br><br>
+                  <p class="cta-grid__copy-item is-copy" style="text-align: center">"Beyond the common vision"</p>
+                    -->
+              
       </div>
     </div>
   </section>
 
-</div>
+  <!-- COMPETENZE -->
+  <div class="highlight-block" id="skills">
 
-<!-- PROGETTI MOBILE -->
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="projects-header">
-      <div>
-        <h2>Progetti Mobile</h2>
-        <p>I miei progetti per dispositivi mobile.</p>
+    <!-- COMPETENZE1 -->
+    <section class="services">
+      <div class="container services-grid">
+        <article class="service-card">
+          <div class="icon-box">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>UI Design</h3>
+          <p>Interfacce pulite e coerenti, costruite su un sistema di componenti pensato per scalare.</p>
+          <a href="#" class="know-more">Know more →</a>
+        </article>
+
+        <article class="service-card service-card--active">
+          <div class="icon-box">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13H6z"/><path d="M15 3v5h5M9 13h6M9 17h6"/></svg>
+          </div>
+          <h3>Product Design</h3>
+          <p>Dalla ricerca al prototipo: prodotti digitali disegnati intorno ai bisogni reali degli utenti.</p>
+          <a href="#" class="know-more">Know more →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="icon-box">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20L20 4M14 4h6v6"/></svg>
+          </div>
+          <h3>Branding</h3>
+          <p>Identità visive distintive che restano impresse e reggono su ogni superficie.</p>
+          <a href="#" class="know-more">Know more →</a>
+        </article>
       </div>
-      <a href="#" class="btn btn-primary btn-small">Tutti</a>
-    </div>
+    </section>
 
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/theflyingpig.gif')"></div>
-        <h4>The Flying Pig</h4>
-        <a href="2022/static/2020/projects/TheFlyingPig.zip" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/myTv.png')"></div>
-        <h4>MY TV</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/mytv" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/not-only-pasta.png')"></div>
-        <h4>Not Only Pasta</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/mc1-notonlypasta" target="_blank" class="know-more">Guarda →</a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/geoAll.png')"></div>
-        <h4>GeoAll</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/personal-geoall" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/findOne.png')"></div>
-        <h4>FindOne</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/nc3-findone" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/core-data-add-book.png')"></div>
-        <h4>Core Data Library</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/mylibrarywithcoredata" target="_blank" class="know-more">Guarda →</a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/API-holidays.png')"></div>
-        <h4>API Holidays</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/personal-api-holidays" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/AR-Images.png')"></div>
-        <h4>AR Images</h4>
-        <a href="https://gitlab.com/DOPPIA3MME/personal-arimages" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/easyticket.gif')"></div>
-        <h4>EasyTicket Client</h4>
-        <a href="https://github.com/mauriziominieri/EasyTicket_Client" target="_blank" class="know-more">Guarda →</a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-thumb" style="--img:url('2022/static/2020/gif/easyticketOperator.gif')"></div>
-        <h4>EasyTicket Operator</h4>
-        <a href="https://github.com/mauriziominieri/EasyTicket_Operator target="_blank" class="know-more">Guarda →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROGETTI DESKTOP -->
-<section class="pub" id="projects-desktop">
-  <div class="container">
-    <div class="pub-header">
-      <div>
-        <h2>Progetti Desktop</h2>
-        <p>I miei progetti per dispositivi desktop.</p>
+    <!-- COMPETENZE2 -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat-hero">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number-sm">60+</span>
+          <span class="stat-label-sm">Clients</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number-sm">08</span>
+          <span class="stat-label-sm">Years Experience</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number-sm">122+</span>
+          <span class="stat-label-sm">Completed Projects</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number-sm">10</span>
+          <span class="stat-label-sm">Achievements</span>
+        </div>
       </div>
-      <a href="#" class="btn btn-primary btn-small">Tutti</a>
-    </div>
+    </section>
 
-    <div class="pub-grid">
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/changeColor.gif'); background-size: 100% 100%;"></div>
-        <h4>Change Color</h4>
-        <a href="https://github.com/mauriziominieri/ChangeColor" target="_blank" class="know-more">Contenuto →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/manus_vr.jpg'); background-size: 100% 100%;"></div>
-        <h4>MANUS VR</h4>
-        <a href="https://github.com/mauriziominieri/Manus-VR" target="_blank" class="know-more">Contenuto →</a>
-      </article>
-
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/giocoDel15.png'); background-size: 100% 100%;"></div>
-        <h4>Il gioco del 15</h4>
-        <a href="https://github.com/mauriziominieri/GiocoDelQuindici" target="_blank" class="know-more">Contenuto →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/ProgrammingComposer.png'); background-size: 100% 100%;"></div>
-        <h4>CALIPSO</h4>
-        <a href="https://scratch.mit.edu/projects/312466034/" target="_blank" class="know-more">Gioca →</a>
-      </article>
-
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/dashboardGierre.png'); background-size: 100% 100%;"></div>
-        <h4>Dashboard Gierre</h4>
-        <a href="https://github.com/mauriziominieri/gierre-dashboard" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/battlebash.jpg')"></div>
-        <h4>Battlebash</h4>
-        <a href="https://github.com/mauriziominieri/BattleBash" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/economiaProject.gif'); background-size: 100% 100%;"></div>
-        <h4>Find your PC</h4>
-        <a href="https://github.com/mauriziominieri/Economia-Project" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/ABR.gif'); background-size: 100% 100%;"></div>
-        <h4>ABR Tree</h4>
-        <a href="https://github.com/mauriziominieri/ABR_Tree" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/easyTicketWeb.png'); background-size: 100% 100%;"></div>
-        <h4>Easy Ticket Web</h4>
-        <a href="https://github.com/mauriziominieri/EasyTicket_Web" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/nasa.jpg'); background-size: 100% 100%;"></div>
-        <h4>NASA Game</h4>
-        <a href="https://github.com/mauriziominieri/SpaceAppChallenge2018" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/graph.png'); background-size: 100% 100%;"></div>
-        <h4>Graph</h4>
-        <a href="https://github.com/mauriziominieri/Graph" target="_blank" class="know-more">Guarda →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/HighwayProject.gif'); background-size: 100% 100%;"></div>
-        <h4>Highway</h4>
-        <a href="https://github.com/mauriziominieri/HighwayProject" target="_blank" class="know-more">Guarda →</a>
-      </article>
-    </div>
   </div>
-</section>
 
-<!-- PUBBLICAZIONI -->
-<section class="pub" id="publications">
-  <div class="container">
-    <div class="pub-header">
-      <div>
-        <h2>Pubblicazioni</h2>
-        <p>Leggi i miei articoli.</p>
+  <!-- PROGETTI MOBILE -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <h2>Progetti Mobile</h2>
+          <p>I miei progetti per dispositivi mobile.</p>
+        </div>
+        <a href="#" class="btn btn-primary btn-small">Tutti</a>
       </div>
-      <a href="#" class="btn btn-primary btn-small">Tutte</a>
-    </div>
 
-    <div class="pub-grid">
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/myManus.png')"></div>
-        <h4>ManDri</h4>
-        <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-15035-8_84" target="_blank" class="know-more">Leggi →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/articoli/FindOne-Medium.jpeg')"></div>
-        <h4>FindOne</h4>
-        <a href="https://medium.com/@mauminieri/findone-f7117d58a3bd" target="_blank" class="know-more">Leggi →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/gif/battlebash.jpg')"></div>
-        <h4>BattleBash</h4>
-        <a href="2022/static/2020/articoli/BattleBash.pdf" target="_blank" class="know-more">Leggi →</a>
-      </article>
-      <article class="pub-card">
-        <div class="pub-thumb" style="--img:url('2022/static/2020/articoli/ccna1.jpg')"></div>
-        <h4>Cisco CCNA1</h4>
-        <a href="https://forms.gle/k1bto3Y1S95Wvte47" target="_blank" class="know-more">Leggi →</a>
-      </article>
-    </div>
-  </div>
-</section>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/theflyingpig.gif')"></div>
+          <h4>The Flying Pig</h4>
+          <a href="2022/static/2020/projects/TheFlyingPig.zip" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/myTv.png')"></div>
+          <h4>MY TV</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/mytv" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/not-only-pasta.png')"></div>
+          <h4>Not Only Pasta</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/mc1-notonlypasta" target="_blank" class="know-more">Guarda →</a>
+        </article>
 
-<!-- CTA -->
-<section class="cta" id="contact">
-  <div class="container cta-inner">
-    <div>
-      <h2>Let's work together on<br>your next project</h2>
-      <p>Raccontami la tua idea: rispondo entro 24 ore con i prossimi passi.</p>
-    </div>
-    <a href="mailto:hello@agetha.design" class="btn btn-primary">Contact</a>
-  </div>
-</section>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/geoAll.png')"></div>
+          <h4>GeoAll</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/personal-geoall" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/findOne.png')"></div>
+          <h4>FindOne</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/nc3-findone" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/core-data-add-book.png')"></div>
+          <h4>Core Data Library</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/mylibrarywithcoredata" target="_blank" class="know-more">Guarda →</a>
+        </article>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-nav">
-    <a href="#">Presentazione</a>
-    <a href="#about">Competenze</a>
-    <a href="#projects">Progetti</a>
-    <a href="#publications">Pubblicazioni</a>
-    <a href="#contact">Contatti</a>
-  </div>
-  <div class="container footer-bottom">
-    <a href="#" class="logo" aria-label="Home">
-      <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-        <rect width="34" height="34" rx="9" class="logo-bg"/>
-        <text x="17" y="23.5" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#ffffff">m</text>
-      </svg>
-    </a>
-    <div class="socials">
-      
-      <a href="mailto:mauminieri@gmail.com" aria-label="Mandami una mail" target="_blank" rel="noopener" title="Mandami una mail" data-g-event="site-footer-mail" data-g-action="clicked" data-g-label="mail">
-        <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 50 50">
-          <path fill="#e0e0e0" d="M5.5,40.5h37c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11v26C2,38.933,3.567,40.5,5.5,40.5z"/><path fill="#d9d9d9" d="M26,40.5h16.5c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11L26,40.5z"/><path fill="#eee" d="M6.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L6.745,40.5z"/>
-          <path fill="#e0e0e0" d="M25.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L18.771,31.616L25.745,40.5z"/><path  d="M42.5,9.5h-37C3.567,9.5,2,9.067,2,11v26c0,1.933,1.567,3.5,3.5,3.5H7V12h34v28.5h1.5c1.933,0,3.5-1.567,3.5-3.5V11C46,9.067,44.433,9.5,42.5,9.5z"/>
-          <path fill="#f5f5f5" d="M42.5,7.5H24H5.5C3.567,7.5,2,9.036,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.036,44.433,7.5,42.5,7.5z"/><path d="M43.246,7.582L24,21L4.754,7.582C3.18,7.919,2,9.297,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.297,44.82,7.919,43.246,7.582z"/>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/API-holidays.png')"></div>
+          <h4>API Holidays</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/personal-api-holidays" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/AR-Images.png')"></div>
+          <h4>AR Images</h4>
+          <a href="https://gitlab.com/DOPPIA3MME/personal-arimages" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/easyticket.gif')"></div>
+          <h4>EasyTicket Client</h4>
+          <a href="https://github.com/mauriziominieri/EasyTicket_Client" target="_blank" class="know-more">Guarda →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb" style="--img:url('2022/static/2020/gif/easyticketOperator.gif')"></div>
+          <h4>EasyTicket Operator</h4>
+          <a href="https://github.com/mauriziominieri/EasyTicket_Operator target="_blank" class="know-more">Guarda →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGETTI DESKTOP -->
+  <section class="pub" id="projects-desktop">
+    <div class="container">
+      <div class="pub-header">
+        <div>
+          <h2>Progetti Desktop</h2>
+          <p>I miei progetti per dispositivi desktop.</p>
+        </div>
+        <a href="#" class="btn btn-primary btn-small">Tutti</a>
+      </div>
+
+      <div class="pub-grid">
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/changeColor.gif'); background-size: 100% 100%;"></div>
+          <h4>Change Color</h4>
+          <a href="https://github.com/mauriziominieri/ChangeColor" target="_blank" class="know-more">Contenuto →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/manus_vr.jpg'); background-size: 100% 100%;"></div>
+          <h4>MANUS VR</h4>
+          <a href="https://github.com/mauriziominieri/Manus-VR" target="_blank" class="know-more">Contenuto →</a>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/giocoDel15.png'); background-size: 100% 100%;"></div>
+          <h4>Il gioco del 15</h4>
+          <a href="https://github.com/mauriziominieri/GiocoDelQuindici" target="_blank" class="know-more">Contenuto →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/ProgrammingComposer.png'); background-size: 100% 100%;"></div>
+          <h4>CALIPSO</h4>
+          <a href="https://scratch.mit.edu/projects/312466034/" target="_blank" class="know-more">Gioca →</a>
+        </article>
+
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/dashboardGierre.png'); background-size: 100% 100%;"></div>
+          <h4>Dashboard Gierre</h4>
+          <a href="https://github.com/mauriziominieri/gierre-dashboard" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/battlebash.jpg')"></div>
+          <h4>Battlebash</h4>
+          <a href="https://github.com/mauriziominieri/BattleBash" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/economiaProject.gif'); background-size: 100% 100%;"></div>
+          <h4>Find your PC</h4>
+          <a href="https://github.com/mauriziominieri/Economia-Project" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/ABR.gif'); background-size: 100% 100%;"></div>
+          <h4>ABR Tree</h4>
+          <a href="https://github.com/mauriziominieri/ABR_Tree" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/easyTicketWeb.png'); background-size: 100% 100%;"></div>
+          <h4>Easy Ticket Web</h4>
+          <a href="https://github.com/mauriziominieri/EasyTicket_Web" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/nasa.jpg'); background-size: 100% 100%;"></div>
+          <h4>NASA Game</h4>
+          <a href="https://github.com/mauriziominieri/SpaceAppChallenge2018" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/graph.png'); background-size: 100% 100%;"></div>
+          <h4>Graph</h4>
+          <a href="https://github.com/mauriziominieri/Graph" target="_blank" class="know-more">Guarda →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/HighwayProject.gif'); background-size: 100% 100%;"></div>
+          <h4>Highway</h4>
+          <a href="https://github.com/mauriziominieri/HighwayProject" target="_blank" class="know-more">Guarda →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBBLICAZIONI -->
+  <section class="pub" id="publications">
+    <div class="container">
+      <div class="pub-header">
+        <div>
+          <h2>Pubblicazioni</h2>
+          <p>Leggi i miei articoli.</p>
+        </div>
+        <a href="#" class="btn btn-primary btn-small">Tutte</a>
+      </div>
+
+      <div class="pub-grid">
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/myManus.png')"></div>
+          <h4>ManDri</h4>
+          <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-15035-8_84" target="_blank" class="know-more">Leggi →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/articoli/FindOne-Medium.jpeg')"></div>
+          <h4>FindOne</h4>
+          <a href="https://medium.com/@mauminieri/findone-f7117d58a3bd" target="_blank" class="know-more">Leggi →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/gif/battlebash.jpg')"></div>
+          <h4>BattleBash</h4>
+          <a href="2022/static/2020/articoli/BattleBash.pdf" target="_blank" class="know-more">Leggi →</a>
+        </article>
+        <article class="pub-card">
+          <div class="pub-thumb" style="--img:url('2022/static/2020/articoli/ccna1.jpg')"></div>
+          <h4>Cisco CCNA1</h4>
+          <a href="https://forms.gle/k1bto3Y1S95Wvte47" target="_blank" class="know-more">Leggi →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container cta-inner">
+      <div>
+        <h2>Let's work together on<br>your next project</h2>
+        <p>Raccontami la tua idea: rispondo entro 24 ore con i prossimi passi.</p>
+      </div>
+      <a href="mailto:hello@agetha.design" class="btn btn-primary">Contact</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-nav">
+      <!--<a href="#">Presentazione</a>
+      <a href="#skills">Competenze</a>
+      <a href="#projects">Progetti</a>
+      <a href="#publications">Pubblicazioni</a>
+      <a href="#contact">Contatti</a>-->
+    </div>
+    <div class="container footer-bottom">
+      <a href="#" class="logo" aria-label="Home">
+        <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+          <rect width="34" height="34" rx="9" class="logo-bg"/>
+          <text x="17" y="23.5" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#ffffff">m</text>
         </svg>
       </a>
-
-      <a href="https://www.linkedin.com/in/maurizio-minieri-0b4992174/" target="_blank" rel="noopener" aria-label="Scoprimi su Linkedin" title="Scoprimi su Linkedin" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="linkedin">
-        <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="42" viewBox="0 0 28 24">
-          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-      </a>
-
-      <a href="https://github.com/mauriziominieri" target="_blank" rel="noopener" aria-label="Scoprimi su Github" title="Scoprimi su Github" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="github">
-          <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      <div class="socials">
+        
+        <a href="mailto:mauminieri@gmail.com" aria-label="Mandami una mail" target="_blank" rel="noopener" title="Mandami una mail" data-g-event="site-footer-mail" data-g-action="clicked" data-g-label="mail">
+          <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 50 50">
+            <path fill="#e0e0e0" d="M5.5,40.5h37c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11v26C2,38.933,3.567,40.5,5.5,40.5z"/><path fill="#d9d9d9" d="M26,40.5h16.5c1.933,0,3.5-1.567,3.5-3.5V11c0-1.933-1.567-3.5-3.5-3.5h-37C3.567,7.5,2,9.067,2,11L26,40.5z"/><path fill="#eee" d="M6.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L6.745,40.5z"/>
+            <path fill="#e0e0e0" d="M25.745,40.5H42.5c1.933,0,3.5-1.567,3.5-3.5V11.5L18.771,31.616L25.745,40.5z"/><path  d="M42.5,9.5h-37C3.567,9.5,2,9.067,2,11v26c0,1.933,1.567,3.5,3.5,3.5H7V12h34v28.5h1.5c1.933,0,3.5-1.567,3.5-3.5V11C46,9.067,44.433,9.5,42.5,9.5z"/>
+            <path fill="#f5f5f5" d="M42.5,7.5H24H5.5C3.567,7.5,2,9.036,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.036,44.433,7.5,42.5,7.5z"/><path d="M43.246,7.582L24,21L4.754,7.582C3.18,7.919,2,9.297,2,11c0,1.206,1.518,2.258,1.518,2.258L24,27.756l20.482-14.497c0,0,1.518-1.053,1.518-2.258C46,9.297,44.82,7.919,43.246,7.582z"/>
           </svg>
-      </a>
+        </a>
 
-      <a href="https://www.instagram.com/doppia3mme/" target="_blank" rel="noopener" aria-label="Guarda il mio account instagram" title="Guarda il mio account instagram" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="instagram">
-        <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
-          <path d="M23.9,7.1c5.5,0,6.1,0,8.3,0.1c2,0.1,3.1,0.4,3.8,0.7c0.9,0.3,1.7,0.9,2.4,1.5c0.7,0.7,1.2,1.5,1.5,2.4 c0.3,0.7,0.6,1.8,0.7,3.8c0.1,2.2,0.1,2.8,0.1,8.3s0,6.1-0.1,8.3c-0.1,2-0.4,3.1-0.7,3.8c-0.7,1.8-2.1,3.2-3.9,3.9 c-0.7,0.3-1.8,0.6-3.8,0.7c-2.2,0.1-2.8,0.1-8.3,0.1s-6.1,0-8.3-0.1c-2-0.1-3.1-0.4-3.8-0.7c-0.9-0.3-1.7-0.9-2.4-1.5 c-0.7-0.7-1.2-1.5-1.5-2.4c-0.3-0.7-0.6-1.8-0.7-3.8c-0.1-2.2-0.1-2.8-0.1-8.3s0-6.1,0.1-8.3c0.1-2,0.4-3.1,0.7-3.8 c0.3-0.9,0.9-1.7,1.5-2.4c0.7-0.7,1.5-1.2,2.4-1.5c0.7-0.3,1.8-0.6,3.8-0.7C17.8,7.1,18.5,7.1,23.9,7.1 M23.9,3.4 c-5.6,0-6.3,0-8.5,0.1c-2.2,0.1-3.7,0.4-5,1C9.1,5,7.9,5.8,6.9,6.8c-1,1-1.9,2.3-2.4,3.6c-0.5,1.3-0.9,2.8-1,5 c-0.1,2.2-0.1,2.9-0.1,8.5s0,6.3,0.1,8.5c0.1,2.2,0.4,3.7,1,5C5,38.7,5.8,40,6.9,41c1,1,2.3,1.9,3.6,2.4c1.3,0.5,2.8,0.9,5,1 c2.2,0.1,2.9,0.1,8.5,0.1s6.3,0,8.5-0.1c2.2-0.1,3.7-0.4,5-1c2.8-1.1,4.9-3.2,6-6c0.5-1.3,0.9-2.8,1-5c0.1-2.2,0.1-2.9,0.1-8.5 s0-6.3-0.1-8.5c-0.1-2.2-0.4-3.7-1-5c-0.5-1.4-1.3-2.6-2.4-3.6c-1-1-2.3-1.9-3.6-2.4c-1.3-0.5-2.8-0.9-5-1 C30.2,3.4,29.5,3.4,23.9,3.4L23.9,3.4L23.9,3.4z"/>
-          <path d="M23.9,13.4c-5.8,0-10.5,4.7-10.5,10.5s4.7,10.5,10.5,10.5s10.5-4.7,10.5-10.5l0,0C34.5,18.1,29.8,13.4,23.9,13.4z M23.9,30.8c-3.8,0-6.8-3.1-6.8-6.8c0-3.8,3.1-6.8,6.8-6.8c3.8,0,6.8,3.1,6.8,6.8C30.8,27.7,27.7,30.8,23.9,30.8z"/>
-          <circle cx="34.9" cy="13" r="2.5"/>
-        </svg>
-      </a>
+        <a href="https://www.linkedin.com/in/maurizio-minieri-0b4992174/" target="_blank" rel="noopener" aria-label="Scoprimi su Linkedin" title="Scoprimi su Linkedin" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="linkedin">
+          <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="42" viewBox="0 0 28 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
 
-      <a href="https://www.facebook.com/maurizio.minieri" target="_blank" rel="noopener" aria-label="Guarda il mio account Facebook" title="Guarda il mio account Facebook" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="facebook">
-        <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
-          <path transform="translate(-10, 0)" d="M27.3098324,25.8118605 L33.7677542,25.8118605 L34.7377207,18.3676047 L27.3098324,18.3676047 L27.3098324,13.5953547 C27.3098324,11.4327209 27.8933855,9.95930233 31.0167709,9.95930233 L35,9.96003488 L35,3.27605233 C34.3109944,3.18509302 31.9465475,3 29.1955642,3 C23.4522123,3 19.5229385,6.46292442 19.5229385,12.8558372 L19.5229385,18.3677267 L13,18.3677267 L13,25.8118605 L19.5215866,25.8118605 L19.5215866,45 L27.3098324,45 L27.3098324,25.8118605 Z"></path>
-        </svg>
-      </a>
+        <a href="https://github.com/mauriziominieri" target="_blank" rel="noopener" aria-label="Scoprimi su Github" title="Scoprimi su Github" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="github">
+            <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
 
+        <a href="https://www.instagram.com/doppia3mme/" target="_blank" rel="noopener" aria-label="Guarda il mio account instagram" title="Guarda il mio account instagram" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="instagram">
+          <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+            <path d="M23.9,7.1c5.5,0,6.1,0,8.3,0.1c2,0.1,3.1,0.4,3.8,0.7c0.9,0.3,1.7,0.9,2.4,1.5c0.7,0.7,1.2,1.5,1.5,2.4 c0.3,0.7,0.6,1.8,0.7,3.8c0.1,2.2,0.1,2.8,0.1,8.3s0,6.1-0.1,8.3c-0.1,2-0.4,3.1-0.7,3.8c-0.7,1.8-2.1,3.2-3.9,3.9 c-0.7,0.3-1.8,0.6-3.8,0.7c-2.2,0.1-2.8,0.1-8.3,0.1s-6.1,0-8.3-0.1c-2-0.1-3.1-0.4-3.8-0.7c-0.9-0.3-1.7-0.9-2.4-1.5 c-0.7-0.7-1.2-1.5-1.5-2.4c-0.3-0.7-0.6-1.8-0.7-3.8c-0.1-2.2-0.1-2.8-0.1-8.3s0-6.1,0.1-8.3c0.1-2,0.4-3.1,0.7-3.8 c0.3-0.9,0.9-1.7,1.5-2.4c0.7-0.7,1.5-1.2,2.4-1.5c0.7-0.3,1.8-0.6,3.8-0.7C17.8,7.1,18.5,7.1,23.9,7.1 M23.9,3.4 c-5.6,0-6.3,0-8.5,0.1c-2.2,0.1-3.7,0.4-5,1C9.1,5,7.9,5.8,6.9,6.8c-1,1-1.9,2.3-2.4,3.6c-0.5,1.3-0.9,2.8-1,5 c-0.1,2.2-0.1,2.9-0.1,8.5s0,6.3,0.1,8.5c0.1,2.2,0.4,3.7,1,5C5,38.7,5.8,40,6.9,41c1,1,2.3,1.9,3.6,2.4c1.3,0.5,2.8,0.9,5,1 c2.2,0.1,2.9,0.1,8.5,0.1s6.3,0,8.5-0.1c2.2-0.1,3.7-0.4,5-1c2.8-1.1,4.9-3.2,6-6c0.5-1.3,0.9-2.8,1-5c0.1-2.2,0.1-2.9,0.1-8.5 s0-6.3-0.1-8.5c-0.1-2.2-0.4-3.7-1-5c-0.5-1.4-1.3-2.6-2.4-3.6c-1-1-2.3-1.9-3.6-2.4c-1.3-0.5-2.8-0.9-5-1 C30.2,3.4,29.5,3.4,23.9,3.4L23.9,3.4L23.9,3.4z"/>
+            <path d="M23.9,13.4c-5.8,0-10.5,4.7-10.5,10.5s4.7,10.5,10.5,10.5s10.5-4.7,10.5-10.5l0,0C34.5,18.1,29.8,13.4,23.9,13.4z M23.9,30.8c-3.8,0-6.8-3.1-6.8-6.8c0-3.8,3.1-6.8,6.8-6.8c3.8,0,6.8,3.1,6.8,6.8C30.8,27.7,27.7,30.8,23.9,30.8z"/>
+            <circle cx="34.9" cy="13" r="2.5"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/maurizio.minieri" target="_blank" rel="noopener" aria-label="Guarda il mio account Facebook" title="Guarda il mio account Facebook" data-g-event="site-footer-social" data-g-action="clicked" data-g-label="facebook">
+          <svg aria-hidden="true" role="presentation" class="logo-bg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
+            <path transform="translate(-10, 0)" d="M27.3098324,25.8118605 L33.7677542,25.8118605 L34.7377207,18.3676047 L27.3098324,18.3676047 L27.3098324,13.5953547 C27.3098324,11.4327209 27.8933855,9.95930233 31.0167709,9.95930233 L35,9.96003488 L35,3.27605233 C34.3109944,3.18509302 31.9465475,3 29.1955642,3 C23.4522123,3 19.5229385,6.46292442 19.5229385,12.8558372 L19.5229385,18.3677267 L13,18.3677267 L13,25.8118605 L19.5215866,25.8118605 L19.5215866,45 L27.3098324,45 L27.3098324,25.8118605 Z"></path>
+          </svg>
+        </a>
+
+      </div>
+      <p class="credit">Maurizio Minieri</p>
     </div>
-    <p class="credit">Maurizio Minieri</p>
-  </div>
-</footer>
+  </footer>
 
+  <!-- JAVASCRIPT -->
+  <script>
+    const img = document.getElementById("profile-img");
 
-<!-- JAVASCRIPT -->
-<script>
-  const img = document.getElementById("profile-img");
+    img.addEventListener("click", () => {
+        const isRed = img.src.includes("profile_red.png");
+        img.src = isRed ? "profile_black.png" : "profile_red.png";
+    });
+  </script>
 
-  img.addEventListener("click", () => {
-      const isRed = img.src.includes("profile_red.png");
-      img.src = isRed ? "profile_black.png" : "profile_red.png";
-  });
-</script>
+  <script id = "__ACGH_DATA__" type = "application/json" > {
+    "props": {
+      "globalNavData": {
+        
+        "ariaLabel": "Globale",
+        "analyticsAttributes": [{
+          "name": "data-analytics-activitymap-region-id",
+          "value": "global nav"
+        }, {
+          "name": "data-analytics-region",
+          "value": "global nav"
+        }],
+        "links": [{
+          "id": "0a185bf8114118267edc9e46dba6f2d09151cc83501f9c670e56c0547eabb1cb",
+          "name": "apple", 
+          "text": "Maurizio",
+          "url": "",
+          "ariaLabel": "Maurizio",
+          "submenuAriaLabel": "Menu Apple",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"30\" viewBox=\"0 0 45 30\" width=\"45\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(4.49,27.114) scale(0.003521,-0.003521)\" fill=\"var(--main)\"><path d=\"M50 6006 c-17 -8 -39 -26 -48 -40 -17 -25 -16 -30 9 -109 15 -48 43 -109 66 -143 26 -38 51 -95 71 -159 19 -60 47 -125 72 -163 25 -40 51 -99 68 -158 24 -84 39 -116 102 -214 24 -38 47 -165 47 -259 0 -163 -32 -350 -90 -521 -16 -47 -36 -137 -45 -200 -9 -63 -22 -160 -30 -215 -7 -56 -32 -154 -54 -220 -25 -77 -45 -163 -56 -240 -33 -245 -45 -312 -70 -395 -52 -173 -66 -239 -86 -395 -22 -176 -36 -240 -73 -331 -28 -69 -51 -183 -66 -334 -14 -140 -26 -197 -65 -310 -18 -52 -40 -129 -50 -171 -21 -90 -12 -123 45 -152 32 -16 73 -17 530 -15 l495 3 50 25 c28 14 57 38 67 55 10 18 25 93 38 185 29 218 36 250 81 382 27 81 46 161 59 255 32 226 39 263 80 383 44 132 54 176 75 354 10 78 26 157 42 200 14 39 32 89 40 110 13 36 23 91 69 385 8 51 33 148 55 215 28 85 46 163 60 261 26 191 46 284 79 376 16 42 36 112 45 154 20 96 36 129 72 144 21 8 145 11 450 9 l421 -3 26 -24 c20 -19 26 -34 26 -67 0 -56 -22 -149 -59 -250 -32 -88 -51 -185 -76 -389 -16 -130 -29 -190 -79 -360 -15 -51 -37 -173 -51 -283 -26 -202 -42 -287 -75 -387 -29 -88 -57 -234 -69 -365 -14 -142 -44 -290 -76 -375 -28 -74 -46 -168 -70 -370 -11 -93 -30 -183 -55 -267 -66 -217 -74 -261 -59 -294 8 -16 30 -37 49 -47 32 -16 73 -17 512 -15 566 3 520 -7 554 130 12 48 38 133 58 191 20 58 42 147 50 199 8 51 22 138 30 193 10 64 30 137 55 201 24 59 47 140 56 195 38 233 49 280 86 372 25 62 45 135 55 195 36 235 46 275 83 360 38 87 54 147 66 252 14 118 47 253 81 331 29 67 40 110 60 252 28 193 34 222 74 323 16 39 36 108 44 153 17 90 34 122 72 139 17 8 109 12 282 12 264 0 398 -9 445 -31 36 -16 137 -144 155 -194 18 -52 9 -120 -30 -238 -16 -50 -38 -152 -49 -227 -29 -199 -47 -282 -86 -389 -26 -71 -41 -141 -59 -271 -19 -130 -35 -204 -64 -290 -45 -132 -61 -205 -85 -380 -12 -91 -30 -164 -66 -271 -40 -120 -52 -175 -69 -305 -21 -165 -39 -243 -70 -304 -33 -65 -55 -177 -97 -500 -6 -43 20 -74 74 -89 24 -7 215 -11 517 -11 571 0 533 -7 609 118 58 95 61 106 87 303 21 158 37 225 83 354 16 43 36 140 51 248 27 186 41 251 77 352 31 89 57 215 74 371 11 96 26 165 46 224 55 158 67 208 89 380 21 169 37 238 79 353 40 109 55 242 54 492 0 263 -13 345 -68 455 -18 36 -43 99 -55 140 -28 93 -42 121 -84 168 -18 20 -49 67 -70 104 -20 37 -60 92 -89 122 -29 30 -70 74 -93 98 -74 80 -185 168 -252 202 -37 19 -76 44 -87 56 -34 37 -96 68 -175 86 -41 9 -111 34 -155 55 -161 78 3 73 -2545 76 -1918 2 -2270 0 -2297 -11z\"></path></g></svg>"
+          }, {
+            "name": "compact",
+            "assetInline": "<svg height=\"30\" viewBox=\"0 0 50 30\" width=\"50\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(4.49,27.114) scale(0.003521,-0.003521)\" fill=\"var(--main)\"><path d=\"M50 6006 c-17 -8 -39 -26 -48 -40 -17 -25 -16 -30 9 -109 15 -48 43 -109 66 -143 26 -38 51 -95 71 -159 19 -60 47 -125 72 -163 25 -40 51 -99 68 -158 24 -84 39 -116 102 -214 24 -38 47 -165 47 -259 0 -163 -32 -350 -90 -521 -16 -47 -36 -137 -45 -200 -9 -63 -22 -160 -30 -215 -7 -56 -32 -154 -54 -220 -25 -77 -45 -163 -56 -240 -33 -245 -45 -312 -70 -395 -52 -173 -66 -239 -86 -395 -22 -176 -36 -240 -73 -331 -28 -69 -51 -183 -66 -334 -14 -140 -26 -197 -65 -310 -18 -52 -40 -129 -50 -171 -21 -90 -12 -123 45 -152 32 -16 73 -17 530 -15 l495 3 50 25 c28 14 57 38 67 55 10 18 25 93 38 185 29 218 36 250 81 382 27 81 46 161 59 255 32 226 39 263 80 383 44 132 54 176 75 354 10 78 26 157 42 200 14 39 32 89 40 110 13 36 23 91 69 385 8 51 33 148 55 215 28 85 46 163 60 261 26 191 46 284 79 376 16 42 36 112 45 154 20 96 36 129 72 144 21 8 145 11 450 9 l421 -3 26 -24 c20 -19 26 -34 26 -67 0 -56 -22 -149 -59 -250 -32 -88 -51 -185 -76 -389 -16 -130 -29 -190 -79 -360 -15 -51 -37 -173 -51 -283 -26 -202 -42 -287 -75 -387 -29 -88 -57 -234 -69 -365 -14 -142 -44 -290 -76 -375 -28 -74 -46 -168 -70 -370 -11 -93 -30 -183 -55 -267 -66 -217 -74 -261 -59 -294 8 -16 30 -37 49 -47 32 -16 73 -17 512 -15 566 3 520 -7 554 130 12 48 38 133 58 191 20 58 42 147 50 199 8 51 22 138 30 193 10 64 30 137 55 201 24 59 47 140 56 195 38 233 49 280 86 372 25 62 45 135 55 195 36 235 46 275 83 360 38 87 54 147 66 252 14 118 47 253 81 331 29 67 40 110 60 252 28 193 34 222 74 323 16 39 36 108 44 153 17 90 34 122 72 139 17 8 109 12 282 12 264 0 398 -9 445 -31 36 -16 137 -144 155 -194 18 -52 9 -120 -30 -238 -16 -50 -38 -152 -49 -227 -29 -199 -47 -282 -86 -389 -26 -71 -41 -141 -59 -271 -19 -130 -35 -204 -64 -290 -45 -132 -61 -205 -85 -380 -12 -91 -30 -164 -66 -271 -40 -120 -52 -175 -69 -305 -21 -165 -39 -243 -70 -304 -33 -65 -55 -177 -97 -500 -6 -43 20 -74 74 -89 24 -7 215 -11 517 -11 571 0 533 -7 609 118 58 95 61 106 87 303 21 158 37 225 83 354 16 43 36 140 51 248 27 186 41 251 77 352 31 89 57 215 74 371 11 96 26 165 46 224 55 158 67 208 89 380 21 169 37 238 79 353 40 109 55 242 54 492 0 263 -13 345 -68 455 -18 36 -43 99 -55 140 -28 93 -42 121 -84 168 -18 20 -49 67 -70 104 -20 37 -60 92 -89 122 -29 30 -70 74 -93 98 -74 80 -185 168 -252 202 -37 19 -76 44 -87 56 -34 37 -96 68 -175 86 -41 9 -111 34 -155 55 -161 78 3 73 -2545 76 -1918 2 -2270 0 -2297 -11z\"></path></g></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "apple home"
+          }]
+        }, {
+          "id": "614b0c90530598811d54cb305ef5bb25f84e6d371defce15bf8dd807286b641d",
+          "name": "store",
+          "text": "Presentazione",
+          "url": "#presentation",
+          "ariaLabel": "Presentazione",
+          "submenuAriaLabel": "Menu Store",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 80 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Presentazione</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "store"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - store"
+          }]
+        }, {
+          "id": "766e380ce2cf4a8a9a7e135fb83fb5ee67544d0e11806e0d162e079eeea9d8ba",
+          "name": "mac",
+          "text": "Competenze",
+          "url": "#skills",
+          "ariaLabel": "Competenze",
+          "submenuAriaLabel": "Menu Mac",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 80 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Competenze</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "mac"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - mac"
+          }]
+        }, {
+          "id": "47bba62c95beb7cfe346b2caf56bd2855753b28eab7d973e75d1fefc7adb18d8",
+          "name": "ipad",
+          "text": "Progetti",
+          "url": "#projects",
+          "ariaLabel": "Progetti",
+          "submenuAriaLabel": "Menu iPad",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 50 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Progetti</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "ipad"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - ipad"
+          }]
+        }, {
+          "id": "21157ff7ec666d0f15a2ddb6030b89e051fd9000656fad1bf3a3408038b7c5f2",
+          "name": "iphone",
+          "text": "Pubblicazioni",
+          "url": "#publications",
+          "ariaLabel": "Pubblicazioni",
+          "submenuAriaLabel": "Menu iPhone",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 80 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Pubblicazioni</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "iphone"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - iphone"
+          }]
+        }, {
+          "id": "9feb7b1cb858b22ad9c9810d82cd75ec9cb262573173e4325096dec257f560cf",
+          "name": "watch",
+          "text": "Contatti",
+          "url": "#contact",
+          "ariaLabel": "Contatti",
+          "submenuAriaLabel": "Menu Watch",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 70 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Contatti</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "watch"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - watch"
+          }]
+        }, {
+          "id": "4806d2123ffee1dccc9dddba59c63d96cefc2e803a701ca050bb50897331d44c",
+          "name": "airpods",
+          "text": "Altro",
+          "url": "/altro",
+          "ariaLabel": "Altro",
+          "submenuAriaLabel": "Menu AirPods",
+          "images": [{
+            "name": "regular",
+            "assetInline": "<svg height=\"44\" viewBox=\"0 0 70 44\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"0\" y=\"26\" font-family=\"-apple-system, 'SF Pro Text', Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"350\" fill=\"var(--text)\">Altro</text></svg>"
+          }],
+          "analyticsAttributes": [{
+            "name": "data-analytics-title",
+            "value": "airpods"
+          }, {
+            "name": "data-analytics-element-engagement",
+            "value": "hover - airpods"
+          }]
+        }],
+        "bag": {
+          "analyticsAttributes": [{
+            "name": "data-analytics-region",
+            "value": "bag"
+          }],
+          "open": {
+            "url": "/it/shop/goto/bag",
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"44\" viewBox=\"0 0 14 44\" width=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"48\" viewBox=\"0 0 17 48\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z\"/></svg>"
+            }],
+            "analyticsAttributes": [{
+              "name": "data-analytics-title",
+              "value": "open - bag"
+            }],
+            "ariaLabel": "Shopping bag"
+          },
+          "close": {
+            "analyticsAttributes": [{
+              "name": "data-analytics-click",
+              "value": "prop3:close - bag"
+            }, {
+              "name": "data-analytics-title",
+              "value": "close - bag"
+            }],
+            "ariaLabel": "Chiudi"
+          },
+          "badge": {
+            "ariaLabel": "Shopping bag con conteggio articoli: {%BAGITEMCOUNT%}"
+          },
+          "storeApiUrl": "/[storefront]/shop/bag/status"
+        },
+        "search": {
+          "analyticsAttributes": [{
+            "name": "data-analytics-region",
+            "value": "search"
+          }],
+          "open": {
+            "url": "/it/search",
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"15px\" height=\"44px\" viewBox=\"0 0 15 44\">\n<path fill=\"var(--text)\" d=\"M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z\"/>\n</svg>\n"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"48\" viewBox=\"0 0 17 48\" width=\"17\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z\"/></svg>"
+            }],
+            "ariaLabel": "Cerca sul mio sito5",
+            "analyticsAttributes": [{
+              "name": "data-analytics-title",
+              "value": "open - search field"
+            }]
+          },
+          "close": {
+            "ariaLabel": "Chiudi"
+          },
+          "input": {
+            "placeholderTextRegular": "Cerca sul mio sito",
+            "placeholderTextCompact": "Cerca",
+            "ariaLabel": "Cerca sul mio sito7"
+          },
+          "submit": {
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"32\" viewBox=\"0 0 30 32\" width=\"30\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m23.3291 23.3066-4.35-4.35c-.0105-.0105-.0247-.0136-.0355-.0235a6.8714 6.8714 0 1 0 -1.5736 1.4969c.0214.0256.03.0575.0542.0815l4.35 4.35a1.1 1.1 0 1 0 1.5557-1.5547zm-15.4507-8.582a5.6031 5.6031 0 1 1 5.603 5.61 5.613 5.613 0 0 1 -5.603-5.61z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg width=\"38\" height=\"40\" viewBox=\"0 0 38 40\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m28.6724 27.8633-5.07-5.07c-.0095-.0095-.0224-.0122-.032-.0213a7.9967 7.9967 0 1 0 -1.8711 1.7625c.0254.03.0357.0681.0642.0967l5.07 5.07a1.3 1.3 0 0 0 1.8389-1.8379zm-18.0035-10.0033a6.5447 6.5447 0 1 1 6.545 6.5449 6.5518 6.5518 0 0 1 -6.545-6.5449z\"/></svg>"
+            }],
+            "ariaLabel": "Avvia la ricerca"
+          },
+          "reset": {
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"14\" viewBox=\"0 0 14 14\" width=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m7 .0339a6.9661 6.9661 0 1 0 6.9661 6.9661 6.9661 6.9661 0 0 0 -6.9661-6.9661zm2.798 8.9867a.55.55 0 0 1 -.778.7774l-2.02-2.02-2.02 2.02a.55.55 0 0 1 -.7784-.7774l2.0206-2.0206-2.0204-2.02a.55.55 0 0 1 .7782-.7778l2.02 2.02 2.02-2.02a.55.55 0 0 1 .778.7778l-2.0203 2.02z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"16\" viewBox=\"0 0 16 16\" width=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m0 8a8.0474 8.0474 0 0 1 7.9922-8 8.0609 8.0609 0 0 1 8.0078 8 8.0541 8.0541 0 0 1 -8 8 8.0541 8.0541 0 0 1 -8-8zm5.6549 3.2863 2.3373-2.353 2.3451 2.353a.6935.6935 0 0 0 .4627.1961.6662.6662 0 0 0 .6667-.6667.6777.6777 0 0 0 -.1961-.4706l-2.3451-2.3373 2.3529-2.3607a.5943.5943 0 0 0 .1961-.4549.66.66 0 0 0 -.6667-.6589.6142.6142 0 0 0 -.447.1961l-2.3686 2.3606-2.353-2.3527a.6152.6152 0 0 0 -.447-.1883.6529.6529 0 0 0 -.6667.651.6264.6264 0 0 0 .1961.4549l2.3451 2.3529-2.3451 2.353a.61.61 0 0 0 -.1961.4549.6661.6661 0 0 0 .6667.6667.6589.6589 0 0 0 .4627-.1961z\" /></svg>"
+            }],
+            "ariaLabel": "Cancella la ricerca"
+          },
+          "results": {
+            "ariaLabel": "risultati"
+          },
+          "defaultLinks": {
+            "title": "Link rapidi",
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"16\" viewBox=\"0 0 9 16\" width=\"9\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"25\" viewBox=\"0 0 13 25\" width=\"13\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z\"/></svg>"
+            }],
+            "analyticsAttributes": [{
+              "name": "data-analytics-region",
+              "value": "defaultlinks search"
+            }]
+          },
+          "defaultLinksApiUrl": "/search-services/suggestions/defaultlinks/",
+          "suggestedLinks": {
+            "title": "Link suggeriti",
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"16\" viewBox=\"0 0 9 16\" width=\"9\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m8.6124 8.1035-2.99 2.99a.5.5 0 0 1 -.7071-.7071l2.1366-2.1364h-6.316a.5.5 0 0 1 0-1h6.316l-2.1368-2.1367a.5.5 0 0 1 .7071-.7071l2.99 2.99a.5.5 0 0 1 .0002.7073z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"25\" viewBox=\"0 0 13 25\" width=\"13\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m12.3577 13.4238-4.4444 4.4444a.6.6 0 0 1 -.8486-.8477l3.37-3.37h-9.3231a.65.65 0 0 1 0-1.3008h9.3232l-3.37-3.37a.6.6 0 0 1 .8486-.8477l4.4444 4.4444a.5989.5989 0 0 1 -.0001.8474z\"/></svg>"
+            }],
+            "analyticsAttributes": [{
+              "name": "data-analytics-region",
+              "value": "suggested links"
+            }]
+          },
+          "suggestedSearches": {
+            "title": "Ricerche suggerite",
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"16\" viewBox=\"0 0 9 16\" width=\"9\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m8.6235 11.2266-2.2141-2.2142a3.43 3.43 0 0 0 .7381-2.1124 3.469 3.469 0 1 0 -1.5315 2.8737l2.23 2.23a.55.55 0 0 0 .7773-.7773zm-7.708-4.3266a2.7659 2.7659 0 1 1 2.7657 2.766 2.7694 2.7694 0 0 1 -2.7657-2.766z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"25\" viewBox=\"0 0 13 25\" width=\"13\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m12.3936 17.7969-3.1231-3.1231a4.83 4.83 0 0 0 1.023-2.9541 4.89 4.89 0 1 0 -2.1806 4.059v.0006l3.1484 3.1484a.8.8 0 0 0 1.1319-1.1308zm-10.9536-6.0769a3.9768 3.9768 0 1 1 3.976 3.9773 3.981 3.981 0 0 1 -3.976-3.9773z\"/></svg>"
+            }],
+            "analyticsAttributes": [{
+              "name": "data-analytics-region",
+              "value": "suggested search"
+            }]
+          },
+          "suggestionsApiUrl": "/search-services/suggestions/"
+        },
+        "segmentbar": {
+          "dataStrings": {
+            "view": "Home page store {%STOREFRONT%}",
+            "exit": "Esci",
+            "segments": {
+              "smb": "Store Business – home",
+              "eduInd": "Store Education – home",
+              "other": "Store – home"
+            }
+          }
+        },
+        "menu": {
+          "open": {
+            "ariaLabel": "Menu"
+          },
+          "close": {
+            "ariaLabel": "Chiudi"
+          },
+          "back": {
+            "ariaLabel": "Menu principale",
+            "images": [{
+              "name": "compact",
+              "assetInline": "<svg height=\"48\" viewBox=\"0 0 9 48\" width=\"9\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m1.5618 24.0621 6.5581-6.4238c.2368-.2319.2407-.6118.0088-.8486-.2324-.2373-.6123-.2407-.8486-.0088l-7 6.8569c-.1157.1138-.1807.2695-.1802.4316.001.1621.0674.3174.1846.4297l7 6.7241c.1162.1118.2661.1675.4155.1675.1577 0 .3149-.062.4326-.1846.2295-.2388.2222-.6187-.0171-.8481z\"/></svg>"
+            }]
+          }
+        },
+        "submenu": {
+          "open": {
+            "images": [{
+              "name": "regular",
+              "assetInline": "<svg height=\"10\" viewBox=\"0 0 10 10\" width=\"10\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m4.6725 6.635-2.655-2.667a.445.445 0 0 1 -.123-.304.4331.4331 0 0 1 .427-.439h.006a.447.447 0 0 1 .316.135l2.357 2.365 2.356-2.365a.458.458 0 0 1 .316-.135.433.433 0 0 1 .433.433v.006a.4189.4189 0 0 1 -.123.3l-2.655 2.671a.4451.4451 0 0 1 -.327.14.464.464 0 0 1 -.328-.14z\"/></svg>"
+            }, {
+              "name": "compact",
+              "assetInline": "<svg height=\"48\" viewBox=\"0 0 9 48\" width=\"9\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"var(--text)\" d=\"m7.4382 24.0621-6.5581-6.4238c-.2368-.2319-.2407-.6118-.0088-.8486.2324-.2373.6123-.2407.8486-.0088l7 6.8569c.1157.1138.1807.2695.1802.4316-.001.1621-.0674.3174-.1846.4297l-7 6.7242c-.1162.1118-.2661.1675-.4155.1675-.1577 0-.3149-.062-.4326-.1846-.2295-.2388-.2222-.6187.0171-.8481l6.5537-6.2959z\"/></svg>"
+            }]
+          }
+        },
+        "hasAbsoluteUrls": false,
+        "hasShopRedirectUrls": false,
+        "analyticsType": "marcom",
+        "storeApiKey": "",
+        "wwwDomain": "https://mauriziominieri.github.io/",
+        "textDirection": "ltr",
+        "searchUrlPath": "/it/search",
+        "storeRootPath": "/it",
+        "storeUrlPath": "/it"
+        
+      },
+      "config": {
+        "version": "ac-globalheader-18-20260410-214409"
+      }
+    }
+    } 
+  </script> <!-- APPLE -->
+  <script type="text/javascript" src="apple/globalheader.umd.js"></script> <!-- APPLE -->
 
 </body>
 </html>
