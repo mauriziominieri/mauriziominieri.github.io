@@ -101,13 +101,37 @@
       display:none;
     }
     nav ul.open{ display:flex; }
-    #navToggle{ display:inline-block; }
+    #navToggle{ display:inline-block; margin-left: auto; }
   }
 
   :focus-visible{
     outline: 2px solid var(--mint);
     outline-offset: 3px;
   }
+
+
+  /* ---------- PHOTO ---------- */
+  .hero-photo-col{ position: relative; display:flex; justify-content:center; align-items:center; min-height: 420px; }
+  .photo-glow{ position:absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, var(--violet-glow), transparent 65%); filter: blur(10px); z-index:0; }
+  .photo-stage{ position: relative; z-index: 1; width: min(360px, 78vw); will-change: transform; transition: transform .1s ease-out; }
+  .photo-stage img{ width: 100%; display:block; filter: drop-shadow(0 30px 50px rgba(0,0,0,0.55)); }
+  .orbit-ring{ position:absolute; inset: -26px; border: 1px dashed rgba(76,242,192,0.35); border-radius: 50%; z-index:0; animation: spin 26s linear infinite; }
+  @keyframes spin{ to{ transform: rotate(360deg); } }
+
+  .float-chip{
+    position:absolute; z-index:2;
+    background: var(--surface); border:1px solid var(--border); border-radius: 10px;
+    padding: 9px 13px; font-family:'IBM Plex Mono', monospace; font-size: 12px; color: var(--mint);
+    box-shadow: 0 14px 30px -12px rgba(0,0,0,0.6);
+    animation: floaty 5s ease-in-out infinite;
+    display:flex; align-items:center; gap:7px;
+  }
+  .float-chip svg{ width:14px; height:14px; }
+  .chip-a{ top: 4%; left: -6%; animation-delay: 0s; color: var(--mint); }
+  .chip-b{ bottom: 10%; right: -8%; animation-delay: 1.2s; color: var(--violet); }
+  .chip-c{ top: 46%; right: -14%; animation-delay: 2.4s; color: var(--amber); }
+  @keyframes floaty{ 0%,100%{ transform: translateY(0px); } 50%{ transform: translateY(-10px); } }
+  @media (max-width: 900px){ .chip-a, .chip-b, .chip-c{ display:none; } }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -400,7 +424,8 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 56px;
-    align-items: start;
+    align-items: center;
+    margin: 0 0 30px;
   }
   @media (max-width: 860px){ .teach-grid{ grid-template-columns: 1fr; } }
   .teach-grid p{ color: var(--text-muted); max-width: 56ch; margin: 0 0 16px; }
@@ -421,12 +446,19 @@
       var(--surface-2);
   }
   .photo-grid > .photo-ph:first-child{ grid-column: 1 / -1; aspect-ratio: 16/8; }
+  .photo-grid.stacked{ grid-template-columns: 1fr; }
   .photo-ph::after{
-    content: "foto placeholder";
+    content: "clicca per ingrandire";
     position:absolute; bottom:10px; left:12px;
     font-family:'IBM Plex Mono', monospace;
     font-size: 11px;
     color: rgba(231,236,243,0.55);
+  }
+  .photo-ph img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* ---------- CONTACT ---------- */
