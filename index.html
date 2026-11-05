@@ -492,29 +492,69 @@
   ) {
     browser = "Safari";
   }
+
+  let os = "Sconosciuto";
+
+  if (navigator.userAgent.includes("Windows")) {
+    os = "Windows";
+  } else if (navigator.userAgent.includes("Mac")) {
+    os = "macOS";
+  } else if (navigator.userAgent.includes("Android")) {
+    os = "Android";
+  } else if (
+    navigator.userAgent.includes("iPhone") ||
+    navigator.userAgent.includes("iPad")
+  ) {
+    os = "iOS";
+  } else if (navigator.userAgent.includes("Linux")) {
+    os = "Linux";
+  }
+
+  let device = "Desktop";
+
+  if (/tablet|ipad/i.test(navigator.userAgent)) {
+    device = "Tablet";
+  } else if (/mobile|android|iphone/i.test(navigator.userAgent)) {
+    device = "Mobile";
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+
   fetch("https://eol87daxqdu9qm7.m.pipedream.net", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      pagina: window.location.href,
-      dataLocale: new Date().toLocaleString("it-IT"),
+      titolo: document.title,
+      url: window.location.href,
+      pagina: window.location.pathname,
+      dataLocale: new Date().toLocaleString("it-IT", {
+        timeZone: "Europe/Rome"
+      }),
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       referrer: document.referrer || "Diretto",
-      browser: browser,
+      browser,
+      os,
+      device,
       lingua: navigator.language,
-      schermo: window.screen.width + "x" + window.screen.height
+      schermo: `${window.screen.width}x${window.screen.height}`,
+      viewport: `${window.innerWidth}x${window.innerHeight}`,
+      userAgent: navigator.userAgent,
+      utm_source: urlParams.get("utm_source") || "",
+      utm_medium: urlParams.get("utm_medium") || "",
+      utm_campaign: urlParams.get("utm_campaign") || "",
+      utm_content: urlParams.get("utm_content") || ""
     })
   }).catch(() => {});
 </script>
 
 <script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "IL_TUO_PROJECT_ID");
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z8w4c6qu8y");
 </script>
 
 </body>
