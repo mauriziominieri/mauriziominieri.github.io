@@ -88,6 +88,11 @@
   }
   nav a:hover, nav a:focus-visible{ color: var(--text); }
   #navToggle{ display:none; background:none; border:1px solid var(--border); color:var(--text); border-radius:6px; padding:8px 10px; font-size:18px; cursor:pointer; }
+  header{ position: sticky; top:0; z-index: 50; backdrop-filter: blur(10px); background: rgba(8,11,18,0.72); border-bottom: 1px solid var(--border); }
+  .navrow{ display:flex; align-items:center; justify-content: space-between; padding: 16px 32px; max-width: var(--maxw); margin: 0 auto; position:relative; z-index:2; }
+  .logo{ font-family:'Space Grotesk', sans-serif; font-weight:600; font-size: 18px; display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .logo-avatar{ width:34px; height:34px; border-radius:50%; overflow:hidden; border:1.5px solid var(--mint); box-shadow: 0 0 12px var(--mint-glow); flex-shrink:0; }
+  .logo-avatar img{ width:100%; height:100%; object-fit: cover; object-position: top center; }
 
   @media (max-width: 760px){
     nav ul{
@@ -137,7 +142,7 @@
   .hero{
     position: relative;
     overflow:hidden;
-    padding: 20px 0 50px;
+    padding: 88px 0 90px;
   }
   .hero-bg{
     position:absolute;
@@ -177,6 +182,10 @@
     font-weight: 700;
   }
   .hero h1 .accent{ color: var(--mint); }
+  .hero h1 .grad{
+    background: linear-gradient(100deg, var(--violet) 10%, var(--mint) 75%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
 
   .role-line{
     font-family:'IBM Plex Mono', monospace;
@@ -280,7 +289,7 @@
   .term-body div{ margin-bottom: 6px; }
 
   /* ---------- SECTION SHELL ---------- */
-  section{ padding: 50px 0; }
+  section{ padding: 92px 0; }
   section.alt{ background: var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
 
   .section-head{
@@ -465,11 +474,11 @@
   .contact-wrap{
     display:flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:center;
     flex-wrap: wrap;
     gap: 40px;
   }
-  .contact-wrap h2{ font-size: clamp(30px,4vw,44px); max-width: 14ch; }
+  .contact-wrap h2{ font-size: clamp(30px,4vw,44px); }
   .contact-links{ display:flex; flex-direction:column; gap: 14px; }
   .contact-links a{
     display:flex; align-items:center; gap:12px;
@@ -491,3 +500,14 @@
     flex-wrap: wrap; gap: 10px;
   }
   footer .wrap span.mono{ font-family:'IBM Plex Mono', monospace; }
+
+  /* ---------- PRENOTA UNA LEZIONE ---------- */
+:root{ --wa: #25D366; --wa-glow: rgba(37,211,102,0.35); }
+.book-simple{ text-align:center; max-width: 560px; }
+.book-simple h2{ font-size: clamp(28px, 4vw, 40px); }
+.book-simple p{ color: var(--text-muted); margin: 12px 0 28px; }
+.book-buttons{ display:flex; flex-direction:column; gap: 14px; }
+.btn svg{ width:20px; height:20px; flex-shrink:0; }
+.btn-lg{ min-height: 58px; justify-content:center; font-size: 18px; width:100%; }
+.btn-wa{ background: var(--wa); color:#04140A; font-weight:600; }
+.btn-wa:hover{ box-shadow: 0 0 26px var(--wa-glow); transform: translateY(-1px); }
