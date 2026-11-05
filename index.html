@@ -476,77 +476,54 @@
 </script>
 
 <script>
-  let browser = "Sconosciuto";
-  if (navigator.userAgent.includes("Edg")) {
-    browser = "Edge";
-  } else if (navigator.userAgent.includes("Firefox")) {
-    browser = "Firefox";
-  } else if (
-    navigator.userAgent.includes("Chrome") &&
-    !navigator.userAgent.includes("Edg")
-  ) {
-    browser = "Chrome";
-  } else if (
-    navigator.userAgent.includes("Safari") &&
-    !navigator.userAgent.includes("Chrome")
-  ) {
-    browser = "Safari";
-  }
+(() => {
+  const ua = navigator.userAgent;
+  if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
 
-  let os = "Sconosciuto";
+  try {
+    if (sessionStorage.getItem("visit_sent")) return;
+    sessionStorage.setItem("visit_sent", "1");
+  } catch {}
 
-  if (navigator.userAgent.includes("Windows")) {
-    os = "Windows";
-  } else if (navigator.userAgent.includes("Mac")) {
-    os = "macOS";
-  } else if (navigator.userAgent.includes("Android")) {
-    os = "Android";
-  } else if (
-    navigator.userAgent.includes("iPhone") ||
-    navigator.userAgent.includes("iPad")
-  ) {
-    os = "iOS";
-  } else if (navigator.userAgent.includes("Linux")) {
-    os = "Linux";
-  }
+  const browser =
+    /Edg\//.test(ua) ? "Edge" :
+    /OPR\//.test(ua) ? "Opera" :
+    /Firefox|FxiOS/.test(ua) ? "Firefox" :
+    /Chrome|CriOS/.test(ua) ? "Chrome" :
+    /Safari/.test(ua) ? "Safari" : "Sconosciuto";
 
-  let device = "Desktop";
+  const isTouchMac = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+  const shortSide = Math.min(screen.width, screen.height);
 
-  if (/tablet|ipad/i.test(navigator.userAgent)) {
-    device = "Tablet";
-  } else if (/mobile|android|iphone/i.test(navigator.userAgent)) {
-    device = "Mobile";
-  }
+  const os =
+    isTouchMac || /iPhone|iPad|iPod/.test(ua) ? "iOS" :
+    /Android/.test(ua) ? "Android" :
+    /Windows/.test(ua) ? "Windows" :
+    /Mac/.test(ua) ? "macOS" :
+    /Linux/.test(ua) ? "Linux" : "Sconosciuto";
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const device =
+    isTouchMac ? (shortSide < 700 ? "Mobile" : "Tablet") :
+    /iPad|Tablet/i.test(ua) ? "Tablet" :
+    /Mobi|Android|iPhone/i.test(ua) ? "Mobile" : "Desktop";
+
+  const p = new URLSearchParams(location.search);
+  let ref = "Diretto";
+  try { if (document.referrer) ref = new URL(document.referrer).origin; } catch {}
 
   fetch("https://eol87daxqdu9qm7.m.pipedream.net", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    keepalive: true,
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      titolo: document.title,
-      url: window.location.href,
-      pagina: window.location.pathname,
-      dataLocale: new Date().toLocaleString("it-IT", {
-        timeZone: "Europe/Rome"
-      }),
+      dataLocale: new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" }),
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: document.referrer || "Diretto",
-      browser,
-      os,
-      device,
-      lingua: navigator.language,
-      schermo: `${window.screen.width}x${window.screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      userAgent: navigator.userAgent,
-      utm_source: urlParams.get("utm_source") || "",
-      utm_medium: urlParams.get("utm_medium") || "",
-      utm_campaign: urlParams.get("utm_campaign") || "",
-      utm_content: urlParams.get("utm_content") || ""
+      referrer: ref,
+      browser, os, device,
+      lingua: navigator.language
     })
   }).catch(() => {});
+})();
 </script>
 
 <script type="text/javascript">
