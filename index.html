@@ -53,6 +53,7 @@
         <li><a href="#teaching">Didattica</a></li>
         <li><a href="#skills">Skill</a></li>
         <li><a href="#projects">Progetti</a></li>
+        <li><a href="#certifications">Certificazioni</a></li>
         <li><a href="#contact">Contatti</a></li>
         <li><a href="#lezioni">Prenota una lezione</a></li>
       </ul>
@@ -242,6 +243,14 @@
         </div>
       </div>
     </div>
+
+   
+    <!-- Pulsante Espandi -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button id="toggleProjBtn" class="btn btn-ghost" onclick="toggleProgetti()">Mostra altro</button>
+    </div>
+
+
   </div>
 </section>
 
@@ -399,11 +408,391 @@
         </div>
       </div>
 
+      <!-- Hidden -->
+      <!-- Progetto 5 (inizialmente nascosto con la classe hidden) -->
+      <div class="proj-card hidden">
+        <div class="proj-top">
+          <span class="term-dot t1"></span>
+          <span class="term-dot t2"></span>
+          <span class="term-dot t3"></span>
+          <span class="proj-cmd">progetto-4</span>
+        </div>
+        <div class="proj-body">
+          <h3>Prossimamente</h3>
+          <p>Descrizione del progetto in arrivo...</p>
+          <div class="proj-tags"><span class="tag">Python</span></div>
+          <div class="proj-links">
+            <a href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pulsante Espandi -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button id="toggleProjBtn" class="btn btn-ghost" onclick="toggleProgetti()">Mostra altro</button>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head"><span class="idx">04</span><h2>Certificazioni</h2></div>
+    
+    <div class="cert-grid">
+
+      <a href="https://www.credly.com/badges/c7a04ede-108b-4c66-b5b3-1a431752e5ab/linked_in_profile" target="_blank" rel="noopener" class="cert-card vendor-blue">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">LINUX FOUNDATION</div>
+            <span class="cert-year">2026</span>
+          </div>
+          <h3>CKA</h3>
+          <p>Certified Kubernetes Administrator</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-blue-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6CDA6207592BA4F20A9368608471C747EAC2B3338F3332A70D7926F39BCE070B" target="_blank" rel="noopener" class="cert-card vendor-red">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">ORACLE</div>
+            <span class="cert-year">2023</span>
+          </div>
+          <h3>Oracle Certified Professional</h3>
+          <p>Java SE 11 Developer</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://www.credly.com/badges/bfeb2a50-eca8-4e1a-961d-76d80bce548d?source=linked_in_profile" target="_blank" rel="noopener" class="cert-card vendor-red">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">ORACLE</div>
+            <span class="cert-year">2021</span>
+          </div>
+          <h3>Oracle Certified Associate</h3>
+          <p>Java SE 8 Programmer</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/apple_certification.pdf" target="_blank" rel="noopener" class="cert-card vendor-white">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">APPLE</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Apple Developer Academy</h3>
+          <p>Apple Developer Academy 2019/2020</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-white-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/RSE20.pdf" target="_blank" rel="noopener" class="cert-card vendor-cyan">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">CISCO</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Cisco CCNA</h3>
+          <p>Routing &amp; Switching Essentials</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-cyan-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/ITN20.pdf" target="_blank" rel="noopener" class="cert-card vendor-cyan">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">CISCO</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Cisco CCNA</h3>
+          <p>Introduction to Networks</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-cyan-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <!-- (Nascosta inizialmente) -->
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/certificatoGoogle.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Google</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Google Digital Training</h3>
+          <p>Fondamenti di Marketing Digitale</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CertificatoAppleTeacher.pdf" target="_blank" rel="noopener" class="cert-card vendor-white hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">APPLE</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Apple Developer Academy</h3>
+          <p>iOS App Development &amp; Swift Playgrounds</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-white-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/AgileProjectManagement.jpeg" target="_blank" rel="noopener" class="cert-card vendor-slate hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Life Learning</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>AGILE PROJECT MANAGEMENT</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-slate-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/DO080.pdf" target="_blank" rel="noopener" class="cert-card vendor-red hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Red Hat</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Deploying Containerized Applications Technical Overview</h3>
+          <p>DO080</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/World-health-organization.pdf" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">World Health Organization</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Standard precautions</h3>
+          <p>Hand Hygiene</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/university-of-leeds.pdf" target="_blank" rel="noopener" class="cert-card vendor-orange hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Future Learn </div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>UNIVERSITY OF LEEDS AND INSTITUTE OF CODING</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-orange-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/accenture.pdf" target="_blank" rel="noopener" class="cert-card vendor-orange hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Future Learn</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>ACCENTURE</h3>
+          <p>DIGITAL SKILLS</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-orange-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/AnalisiStatistica-ValutazioneDelDatoSperimentale.pdf" target="_blank" rel="noopener" class="cert-card vendor-fuchsia hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">EduOpen</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Analisi statistica e valutazione del dato sperimentale (3a ed.)</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-fuchsia-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/scrum-study.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">ScrumStudy</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Marketing Strategy Fundamentals</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/NASA.jpg" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">NASA</div>
+            <span class="cert-year">2018</span>
+          </div>
+          <h3>GALACTIC PROBLEM SOLVER</h3>
+          <p>International Space Apps Challenge</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/BitDegree.pdf" target="_blank" rel="noopener" class="cert-card vendor-purple hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">BitDegree</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>How to Become a Hacker</h3>
+          <p>Learn to Hack How Ethical White Hats Do</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-purple-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CloudComputing.pdf" target="_blank" rel="noopener" class="cert-card vendor-amber hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">CLOUD GURU</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Introduction to Cloud Computing</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-amber-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/ef-set-english.pdf" target="_blank" rel="noopener" class="cert-card vendor-violet hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">EF SET</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>English Certificate</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-violet-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/BusinessSociety.pdf" target="_blank" rel="noopener" class="cert-card vendor-yellow hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">University of Virginia</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>New Models of Business Society</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-yellow-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/Igea.pdf" target="_blank" rel="noopener" class="cert-card vendor-rose hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">IGEA</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Il potere della comunicazione non verbale</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-rose-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/GoogleAnalytics.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">GOOGLE</div>
+            <span class="cert-year">2023</span>
+          </div>
+          <h3>Google Analytics</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CertificazioneGDPR.pdf" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">CERTIFICAZIONE GDPR</div>
+            <span class="cert-year">2020</span>
+          </div>
+          <h3>Corso GDPR 679/2016</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/Security.pdf" target="_blank" rel="noopener" class="cert-card vendor-slate hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">ITF GROUP SRL</div>
+            <span class="cert-year">2015</span>
+          </div>
+          <h3>Capo Sicurezza</h3>
+          <p>Società sportiva</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-slate-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Pulsante Espandi -->
+    <div style="text-align: center; margin-top: 35px;">
+      <button id="toggleCertBtn" class="btn btn-ghost" onclick="toggleCertificazioni()">Mostra altro</button>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
   <div class="wrap">
     <div class="contact-wrap">
       <h2>I miei contatti</h2>
@@ -459,6 +848,86 @@
 </footer>
 
 <script>
+  function toggleProgetti() {
+    const hiddenCards = document.querySelectorAll('.proj-card.hidden, .proj-card.show-extra');
+    const btn = document.getElementById('toggleProjBtn');
+    
+    const isExpanded = btn.textContent === 'Mostra meno';
+
+    if (!isExpanded) {
+      hiddenCards.forEach(card => {
+        card.classList.remove('hidden');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(115px)';
+        card.classList.add('show-extra');
+        
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 20);
+      });
+      btn.textContent = 'Mostra meno';
+    } else {
+      // NASCONDI I PROGETTI EXTRA
+      hiddenCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(115px)';
+        
+        setTimeout(() => {
+          card.classList.add('hidden');
+          card.classList.remove('show-extra');
+        });
+      });
+      btn.textContent = 'Mostra altro';
+    }
+  }
+
+  function toggleCertificazioni() {
+    const cards = document.querySelectorAll('.hidden-cert, .show-cert');
+    const btn = document.getElementById('toggleCertBtn');
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    const DURATION = 400;
+
+    if (!isExpanded) {
+      cards.forEach(card => {
+        card.classList.remove('hidden-cert');
+        card.classList.add('show-cert');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(115px)';
+
+        // doppio rAF: il browser registra lo stato iniziale prima di animare
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }));
+
+        // a fine animazione ripulisco: così torna a valere il :hover del CSS
+        setTimeout(() => {
+          card.style.opacity = '';
+          card.style.transform = '';
+        }, DURATION);
+      });
+
+      btn.textContent = 'Mostra meno';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(115px)';
+
+        setTimeout(() => {
+          card.classList.add('hidden-cert');
+          card.classList.remove('show-cert');
+          card.style.opacity = '';
+          card.style.transform = '';
+        }, DURATION);
+      });
+
+      btn.textContent = 'Mostra altro';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
   // mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navList = document.getElementById('navList');
