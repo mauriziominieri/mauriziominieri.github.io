@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e Docente di programmazione, informatica e robotica. Scopri i miei progetti e prenota una lezione." />
+  <meta name="description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica. Scopri i progetti e prenota una lezione." />
   <meta name="author" content="Maurizio Minieri">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50%' y='55%' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='65' fill='%234CF2C0'>M</text></svg>">
+  <!-- Icone: file reali nella root del sito (Google non legge le icone inline data:) -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mauriziominieri.github.io/" />
   <meta property="og:title" content="Maurizio Minieri — Ingegnere Software" />
-  <meta property="og:description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e Docente di programmazione, informatica e robotica." />
+  <meta property="og:description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica." />
   <meta property="og:image" content="https://mauriziominieri.github.io/profile_red.png" />
+  <meta property="og:image:alt" content="Ritratto di Maurizio Minieri" />
+  <meta property="og:site_name" content="Maurizio Minieri" />
+  <meta property="og:locale" content="it_IT" />
+  <meta name="twitter:card" content="summary" />
   <title>Maurizio Minieri — Ingegnere Software</title>
   <link rel="canonical" href="https://mauriziominieri.github.io/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +28,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Maurizio Minieri",
-    "jobTitle": "Ingegnere Software",
-    "url": "https://mauriziominieri.github.io/",
-    "sameAs": [
-      "https://www.linkedin.com/in/maurizio-minieri-0b4992174",
-      "https://github.com/mauriziominieri",
-      "https://gitlab.com/DOPPIA3MME"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance & Docente"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://mauriziominieri.github.io/#website",
+        "url": "https://mauriziominieri.github.io/",
+        "name": "Maurizio Minieri",
+        "alternateName": "Maurizio Minieri Software Engineer",
+        "inLanguage": "it"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://mauriziominieri.github.io/#person",
+        "name": "Maurizio Minieri",
+        "url": "https://mauriziominieri.github.io/",
+        "image": "https://mauriziominieri.github.io/profile_red.png",
+        "jobTitle": "Ingegnere Software",
+        "description": "Ingegnere software, specializzato in realtà virtuale, e docente PON di programmazione, informatica e robotica.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Università degli Studi di Napoli Federico II"
+        },
+        "knowsAbout": ["Kubernetes", "Java", "Unity", "Realtà virtuale", "Programmazione", "Robotica educativa"],
+        "sameAs": [
+          "https://www.linkedin.com/in/maurizio-minieri-0b4992174",
+          "https://github.com/mauriziominieri",
+          "https://gitlab.com/DOPPIA3MME",
+          "https://www.instagram.com/doppia3mme/"
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -363,7 +387,7 @@
           <div class="proj-links">
             <a href="https://github.com/mauriziominieri/Manus-VR" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
-              GitLab
+              GitHub
             </a>
           </div>
         </div>
@@ -530,6 +554,48 @@
 
       <!-- (Nascosta inizialmente) -->
 
+      <a href="https://www.udemy.com/certificate/UC-824b4b32-e07f-46ea-abd4-7fdaeabbc6c2/" target="_blank" rel="noopener" class="cert-card vendor-purple hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">Udemy</div>
+            <span class="cert-year">2024</span>
+          </div>
+          <h3>CKA</h3>
+          <p>Practice Test</p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-purple-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://learn.kodekloud.com/learn/certificate/a42567f7-233d-4a69-82c0-488478c63e41" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">KodeKloud</div>
+            <span class="cert-year">2024</span>
+          </div>
+          <h3>CKA</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://learn.kodekloud.com/learn/certificate/f5613884-1e7d-4bf0-aba8-440a7f1b7927" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">KodeKloud</div>
+            <span class="cert-year">2024</span>
+          </div>
+          <h3>JSON Path Test</h3>
+          <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
       <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/certificatoGoogle.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
         <div>
           <div class="cert-header">
@@ -656,20 +722,6 @@
         </div>
       </a>
 
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/NASA.jpg" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">NASA</div>
-            <span class="cert-year">2018</span>
-          </div>
-          <h3>GALACTIC PROBLEM SOLVER</h3>
-          <p>International Space Apps Challenge</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
       <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/BitDegree.pdf" target="_blank" rel="noopener" class="cert-card vendor-purple hidden-cert">
         <div>
           <div class="cert-header">
@@ -744,7 +796,7 @@
         <div>
           <div class="cert-header">
             <div class="cert-badge">GOOGLE</div>
-            <span class="cert-year">2023</span>
+            <span class="cert-year">2020</span>
           </div>
           <h3>Google Analytics</h3>
           <p></p>
@@ -762,6 +814,20 @@
           </div>
           <h3>Corso GDPR 679/2016</h3>
           <p></p>
+        </div>
+        <div class="cert-footer">
+          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
+        </div>
+      </a>
+
+      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/NASA.jpg" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
+        <div>
+          <div class="cert-header">
+            <div class="cert-badge">NASA</div>
+            <span class="cert-year">2018</span>
+          </div>
+          <h3>GALACTIC PROBLEM SOLVER</h3>
+          <p>International Space Apps Challenge</p>
         </div>
         <div class="cert-footer">
           <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
@@ -786,7 +852,7 @@
 
     <!-- Pulsante Espandi -->
     <div style="text-align: center; margin-top: 35px;">
-      <button id="toggleCertBtn" class="btn btn-ghost" onclick="toggleCertificazioni()">Mostra altro</button>
+      <button id="toggleCertBtn" class="btn btn-ghost" aria-expanded="false" onclick="toggleCertificazioni()">Mostra altro</button>
     </div>
   </div>
 </section>
