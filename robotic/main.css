@@ -136,7 +136,6 @@
   .chip-b{ bottom: 10%; right: -8%; animation-delay: 1.2s; color: var(--violet); }
   .chip-c{ top: 46%; right: -14%; animation-delay: 2.4s; color: var(--amber); }
   @keyframes floaty{ 0%,100%{ transform: translateY(0px); } 50%{ transform: translateY(-10px); } }
-  @media (max-width: 900px){ .chip-a, .chip-b, .chip-c{ display:none; } }
 
   /* ---------- HERO ---------- */
   .hero{
@@ -632,27 +631,115 @@
   transform: translateY(-5px);
 }
 
+  /* ---------- Lezioni ---------- */
 
-  /* ---------- CONTACT ---------- */
-  .contact-wrap{
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  .contact-wrap h2{ font-size: clamp(30px,4vw,44px); }
-  .contact-links{ display:flex; flex-direction:column; gap: 14px; }
-  .contact-links a{
-    display:flex; align-items:center; gap:12px;
-    text-decoration:none;
-    font-size: 15.5px;
-    color: var(--text-muted);
-    transition: color .18s ease;
-  }
-  .contact-links a:hover{ color: var(--mint); }
-  .contact-links svg{ width:18px; height:18px; flex-shrink:0; }
+.contact-num{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: var(--mint);
+}
 
+/* ---------- Griglia a due colonne ---------- */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* ---------- Colonna sinistra ---------- */
+.contact-pitch h3{
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+.contact-pitch p{
+  color: var(--text-muted);
+  margin: 0 0 28px;
+  max-width: 46ch;
+}
+.contact-actions{
+  display:flex; flex-wrap:wrap; gap: 12px;
+}
+.contact-actions .btn{ width:auto; }   /* niente più bottoni a tutta larghezza */
+
+/* ---------- Card terminale ---------- */
+.contact-card{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.contact-card:hover{
+  border-color: var(--mint);
+  box-shadow: 0 8px 25px rgba(44, 221, 141, .12);
+}
+.contact-card .term-dot{
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ---------- Lista contatti ---------- */
+.contact-list{
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+}
+.contact-list a{
+  display: grid;
+  grid-template-columns: 20px 74px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+.contact-list svg{ width: 18px; height: 18px; }
+.c-label{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 12px;
+  opacity: .7;
+}
+.c-value{ font-size: 14.5px; overflow-wrap: anywhere; }
+.c-arrow{
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.contact-list a:hover,
+.contact-list a:focus-visible{
+  background: rgba(255,255,255,.04);
+  color: var(--mint);
+  outline: none;
+}
+.contact-list a:hover .c-arrow,
+.contact-list a:focus-visible .c-arrow{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px){
+  .contact-grid{ grid-template-columns: 1fr; gap: 28px; }
+  .contact-actions .btn{ flex: 1 1 100%; justify-content: center; }
+  .contact-list a{ grid-template-columns: 20px 64px 1fr auto; }
+}
+
+  /* ---------- PRENOTA UNA LEZIONE ---------- */
+:root{ --wa: #25D366; --wa-glow: rgba(37,211,102,0.35); }
+.book-simple{ text-align:center; max-width: 560px; }
+.book-simple h2{ font-size: clamp(28px, 4vw, 40px); }
+.book-simple p{ color: var(--text-muted); margin: 12px 0 28px; }
+.book-buttons{ display:flex; flex-direction:column; gap: 14px; }
+.btn svg{ width:20px; height:20px; flex-shrink:0; }
+.btn-lg{ min-height: 58px; min-width: 200px; justify-content:center; font-size: 18px; width:100%; }
+.btn-wa{ background: var(--wa); color:#04140A; font-weight:600; }
+.btn-wa:hover{ box-shadow: 0 0 26px var(--wa-glow); transform: translateY(-1px); }
+
+  /* ---------- FOOTER ---------- */
   footer{
     border-top: 1px solid var(--border);
     padding: 28px 0;
@@ -663,14 +750,3 @@
     flex-wrap: wrap; gap: 10px;
   }
   footer .wrap span.mono{ font-family:'IBM Plex Mono', monospace; }
-
-  /* ---------- PRENOTA UNA LEZIONE ---------- */
-:root{ --wa: #25D366; --wa-glow: rgba(37,211,102,0.35); }
-.book-simple{ text-align:center; max-width: 560px; }
-.book-simple h2{ font-size: clamp(28px, 4vw, 40px); }
-.book-simple p{ color: var(--text-muted); margin: 12px 0 28px; }
-.book-buttons{ display:flex; flex-direction:column; gap: 14px; }
-.btn svg{ width:20px; height:20px; flex-shrink:0; }
-.btn-lg{ min-height: 58px; justify-content:center; font-size: 18px; width:100%; }
-.btn-wa{ background: var(--wa); color:#04140A; font-weight:600; }
-.btn-wa:hover{ box-shadow: 0 0 26px var(--wa-glow); transform: translateY(-1px); }
