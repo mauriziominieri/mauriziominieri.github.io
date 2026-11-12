@@ -33,11 +33,6 @@ jobs:
           fi
       - name: Build
         run: npm run build
-      - name: Preserve legacy /2022 static folder if present
-        run: |
-          if [ -d "2022" ]; then
-            cp -r 2022 dist/2022
-          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

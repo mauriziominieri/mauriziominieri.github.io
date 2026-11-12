@@ -47,7 +47,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       >
         <div className="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-zinc-800 bg-[#121216]/95 px-4 py-3.5 backdrop-blur sm:px-6 sm:py-4">
           <div className="flex items-center gap-2 text-xs text-zinc-400 tabular-nums">
-            <span className="font-medium text-[#EB6131]">{project.category}</span>
+            <span className="font-medium text-accent">{project.category}</span>
             <span aria-hidden="true">·</span>
             <span>{project.year}</span>
           </div>
@@ -91,7 +91,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
             <p className="font-mono text-xs text-zinc-300">{project.stack.join(' · ')}</p>
-            <p className="text-xs font-medium text-[#EB6131]">{project.impact}</p>
+            <p className="text-xs font-medium text-accent">{project.impact}</p>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -100,7 +100,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackClarityEvent('whatsapp_project_click')}
-              className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-[#EB6131] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#d85325]"
+              className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
             >
               <MessageCircle className="h-4 w-4" aria-hidden="true" />
               <span>Chiedi su WhatsApp</span>

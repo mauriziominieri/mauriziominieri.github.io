@@ -7,7 +7,7 @@ export const SkillsSection: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-medium text-[#EB6131]">Competenze</p>
+            <p className="text-sm font-medium text-accent">Competenze</p>
             <h2 className="mt-1 font-display text-3xl font-semibold tracking-tight text-zinc-100">
               Stack tecnico e didattica.
             </h2>
@@ -24,7 +24,7 @@ export const SkillsSection: React.FC = () => {
               className="rounded-xl border border-zinc-800 bg-[#111115] p-5 sm:p-6"
             >
               <div className="flex items-baseline gap-2.5">
-                <span className="font-mono text-sm font-medium text-[#EB6131] tabular-nums">
+                <span className="font-mono text-sm font-medium text-accent tabular-nums">
                   {domain.index}
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-tight text-zinc-100">

@@ -79,7 +79,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
         <div className="rounded-2xl border border-zinc-800 bg-[#121216] p-4 sm:p-8 lg:p-10">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-12">
             <div className="lg:col-span-6">
-              <p className="text-sm font-medium text-[#EB6131]">Contatto Immediato</p>
+              <p className="text-sm font-medium text-accent">Contatto Immediato</p>
               <h2
                 className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl"
                 style={{ textWrap: 'balance' }}
@@ -108,7 +108,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                         }}
                         className={`min-h-[42px] rounded-lg border px-3 py-2 text-left text-xs font-medium transition-colors cursor-pointer ${
                           isSelected
-                            ? 'border-[#EB6131] bg-[#EB6131]/15 text-white'
+                            ? 'border-accent bg-accent/15 text-white'
                             : 'border-zinc-800 bg-[#121216] text-zinc-300 hover:border-zinc-700 hover:text-white'
                         }`}
                       >
@@ -124,7 +124,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClarityEvent('whatsapp_booking_click')}
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-lg bg-[#EB6131] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#d85325]"
+                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     <span>Apri WhatsApp</span>
@@ -136,7 +136,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     onClick={() => trackClarityEvent('phone_call_click')}
                     className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-[#121216] px-5 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:text-white tabular-nums"
                   >
-                    <Phone className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+                    <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
                     <span>{PROFILE.phoneDisplay}</span>
                   </a>
                 </div>
@@ -145,9 +145,9 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                   <a
                     href={mailHref}
                     onClick={() => trackClarityEvent('email_click')}
-                    className="inline-flex min-w-0 items-center gap-2 font-mono text-xs text-zinc-300 transition-colors hover:text-[#EB6131]"
+                    className="inline-flex min-w-0 items-center gap-2 font-mono text-xs text-zinc-300 transition-colors hover:text-accent"
                   >
-                    <Mail className="h-3.5 w-3.5 shrink-0 text-[#EB6131]" aria-hidden="true" />
+                    <Mail className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
                     <span className="break-all">{PROFILE.email}</span>
                   </a>
 
@@ -159,7 +159,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     >
                       {copiedType === 'phone' ? (
                         <>
-                          <Check className="h-3 w-3 text-[#EB6131]" aria-hidden="true" />
+                          <Check className="h-3 w-3 text-accent" aria-hidden="true" />
                           <span>Copiato</span>
                         </>
                       ) : (
@@ -177,7 +177,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     >
                       {copiedType === 'email' ? (
                         <>
-                          <Check className="h-3 w-3 text-[#EB6131]" aria-hidden="true" />
+                          <Check className="h-3 w-3 text-accent" aria-hidden="true" />
                           <span>Copiata</span>
                         </>
                       ) : (

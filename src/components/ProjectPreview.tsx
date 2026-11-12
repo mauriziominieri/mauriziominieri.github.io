@@ -12,15 +12,15 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[260px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
               <span>MANUS VR · UNITY</span>
-              <span className="text-[#EB6131]">11 SENSORI</span>
+              <span className="text-accent">11 SENSORI</span>
             </div>
             <svg viewBox="0 0 220 100" className="mt-3 w-full" aria-hidden="true">
               <circle cx="110" cy="72" r="18" fill="none" stroke="#3F3F46" strokeWidth="1.5" />
-              <line x1="110" y1="54" x2="72" y2="26" stroke="#EB6131" strokeWidth="1.5" />
-              <line x1="110" y1="54" x2="92" y2="16" stroke="#EB6131" strokeWidth="1.5" />
-              <line x1="110" y1="54" x2="112" y2="12" stroke="#EB6131" strokeWidth="1.5" />
-              <line x1="110" y1="54" x2="132" y2="18" stroke="#EB6131" strokeWidth="1.5" />
-              <line x1="126" y1="68" x2="156" y2="48" stroke="#EB6131" strokeWidth="1.5" />
+              <line x1="110" y1="54" x2="72" y2="26" stroke="var(--brand-accent)" strokeWidth="1.5" />
+              <line x1="110" y1="54" x2="92" y2="16" stroke="var(--brand-accent)" strokeWidth="1.5" />
+              <line x1="110" y1="54" x2="112" y2="12" stroke="var(--brand-accent)" strokeWidth="1.5" />
+              <line x1="110" y1="54" x2="132" y2="18" stroke="var(--brand-accent)" strokeWidth="1.5" />
+              <line x1="126" y1="68" x2="156" y2="48" stroke="var(--brand-accent)" strokeWidth="1.5" />
               {[
                 [72, 26],
                 [92, 16],
@@ -34,7 +34,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                 [142, 56],
                 [110, 72],
               ].map(([cx, cy], idx) => (
-                <circle key={idx} cx={cx} cy={cy} r="3" fill={idx < 5 ? '#EB6131' : '#F4F4F5'} />
+                <circle key={idx} cx={cx} cy={cy} r="3" fill={idx < 5 ? 'var(--brand-accent)' : '#F4F4F5'} />
               ))}
             </svg>
             <p className="mt-2 font-mono text-[10px] text-zinc-500">
@@ -50,7 +50,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[270px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex items-center justify-between border-b border-zinc-800 pb-2.5 text-[11px] font-mono">
               <span className="text-zinc-200 font-semibold">my TV</span>
-              <span className="text-[#EB6131]">Next.js · TS</span>
+              <span className="text-accent">Next.js · TS</span>
             </div>
             <div className="mt-3 space-y-2.5">
               {[
@@ -65,7 +65,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                   </div>
                   <div className="mt-1.5 h-1 w-full rounded-full bg-zinc-800">
                     <div
-                      className="h-1 rounded-full bg-[#EB6131]"
+                      className="h-1 rounded-full bg-accent"
                       style={{ width: show.pct }}
                     />
                   </div>
@@ -85,18 +85,18 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
               <path
                 d="M 10 55 Q 35 15, 65 38 T 92 22"
                 fill="none"
-                stroke="#EB6131"
+                stroke="var(--brand-accent)"
                 strokeWidth="2"
                 strokeDasharray="3 3"
               />
-              <circle cx="52" cy="36" r="10" fill="#EB6131" />
+              <circle cx="52" cy="36" r="10" fill="var(--brand-accent)" />
               <circle cx="56" cy="34" r="2" fill="#09090C" />
               <rect x="78" y="0" width="10" height="22" rx="2" fill="#27272A" />
               <rect x="78" y="48" width="10" height="32" rx="2" fill="#27272A" />
             </svg>
             <div className="flex items-center justify-between font-mono text-[9px] text-zinc-400">
               <span>SWIFT</span>
-              <span className="text-[#EB6131]">iOS</span>
+              <span className="text-accent">iOS</span>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="grid w-full max-w-[270px] grid-cols-2 gap-2.5">
             <div className="rounded-xl border border-zinc-800 bg-[#111116] p-3">
               <p className="font-mono text-[10px] text-zinc-500">CLIENT</p>
-              <p className="mt-2 font-display text-2xl font-bold text-[#EB6131] tabular-nums">
+              <p className="mt-2 font-display text-2xl font-bold text-accent tabular-nums">
                 A-42
               </p>
               <p className="mt-1 text-[11px] text-zinc-400">In attesa · 2 min</p>
@@ -133,7 +133,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[265px] rounded-xl border border-zinc-800 bg-[#111116] p-4 font-mono">
             <div className="flex items-center justify-between gap-2 text-[10px] text-zinc-400">
               <span className="truncate">$ ./battlebash --threads</span>
-              <span className="shrink-0 text-[#EB6131]">C · POSIX</span>
+              <span className="shrink-0 text-accent">C · POSIX</span>
             </div>
             <div className="mt-3 grid grid-cols-6 gap-1">
               {Array.from({ length: 18 }).map((_, idx) => {
@@ -144,7 +144,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                     key={idx}
                     className={`h-5 rounded border ${
                       hit
-                        ? 'border-[#EB6131] bg-[#EB6131]/30'
+                        ? 'border-accent bg-accent/30'
                         : ship
                           ? 'border-zinc-500 bg-zinc-700/60'
                           : 'border-zinc-800 bg-[#09090C]'
@@ -166,10 +166,10 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="grid grid-cols-4 gap-1.5">
               {[
-                '#EB6131', '#EB6131', '#3F3F46', '#27272A',
-                '#EB6131', '#F59E0B', '#F59E0B', '#3F3F46',
+                'var(--brand-accent)', 'var(--brand-accent)', '#3F3F46', '#27272A',
+                'var(--brand-accent)', '#F59E0B', '#F59E0B', '#3F3F46',
                 '#27272A', '#F59E0B', '#52525B', '#18181B',
-                '#18181B', '#3F3F46', '#EB6131', '#EB6131',
+                '#18181B', '#3F3F46', 'var(--brand-accent)', 'var(--brand-accent)',
               ].map((color, idx) => (
                 <div
                   key={idx}
@@ -195,7 +195,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                   key={num}
                   className={`flex h-7 w-7 items-center justify-center rounded-md border ${
                     num === 0
-                      ? 'border-dashed border-[#EB6131]/60 bg-[#EB6131]/10 text-[#EB6131]'
+                      ? 'border-dashed border-accent/60 bg-accent/10 text-accent'
                       : 'border-zinc-700 bg-[#18181D] text-zinc-200'
                   }`}
                 >
@@ -212,10 +212,10 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
         <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
           <svg viewBox="0 0 240 120" className="w-full max-w-[250px]" aria-hidden="true">
             <line x1="120" y1="24" x2="68" y2="60" stroke="#3F3F46" strokeWidth="1.8" />
-            <line x1="120" y1="24" x2="172" y2="60" stroke="#EB6131" strokeWidth="1.8" />
+            <line x1="120" y1="24" x2="172" y2="60" stroke="var(--brand-accent)" strokeWidth="1.8" />
             <line x1="68" y1="60" x2="42" y2="96" stroke="#3F3F46" strokeWidth="1.8" />
             <line x1="68" y1="60" x2="94" y2="96" stroke="#3F3F46" strokeWidth="1.8" />
-            <line x1="172" y1="60" x2="146" y2="96" stroke="#EB6131" strokeWidth="1.8" />
+            <line x1="172" y1="60" x2="146" y2="96" stroke="var(--brand-accent)" strokeWidth="1.8" />
             <line x1="172" y1="60" x2="198" y2="96" stroke="#3F3F46" strokeWidth="1.8" />
             {[
               { x: 120, y: 24, v: '42', hi: true },
@@ -231,8 +231,8 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                   cx={n.x}
                   cy={n.y}
                   r="13"
-                  fill={n.hi ? '#EB6131' : '#18181D'}
-                  stroke={n.hi ? '#EB6131' : '#3F3F46'}
+                  fill={n.hi ? 'var(--brand-accent)' : '#18181D'}
+                  stroke={n.hi ? 'var(--brand-accent)' : '#3F3F46'}
                   strokeWidth="1.5"
                 />
                 <text
@@ -257,7 +257,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[250px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex items-center justify-between font-mono text-[10px] text-zinc-400">
               <span>NASA SPACE APPS</span>
-              <span className="text-[#EB6131]">C# · UNITY</span>
+              <span className="text-accent">C# · UNITY</span>
             </div>
             <svg viewBox="0 0 200 80" className="mt-2 w-full" aria-hidden="true">
               <ellipse
@@ -270,8 +270,8 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                 strokeDasharray="4 4"
                 strokeWidth="1.2"
               />
-              <circle cx="100" cy="42" r="14" fill="#18181D" stroke="#EB6131" strokeWidth="1.5" />
-              <circle cx="168" cy="30" r="4.5" fill="#EB6131" />
+              <circle cx="100" cy="42" r="14" fill="#18181D" stroke="var(--brand-accent)" strokeWidth="1.5" />
+              <circle cx="168" cy="30" r="4.5" fill="var(--brand-accent)" />
               <circle cx="32" cy="20" r="1.5" fill="#71717A" />
               <circle cx="170" cy="64" r="1.5" fill="#71717A" />
             </svg>
@@ -283,7 +283,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
       return (
         <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
           <div className="w-full max-w-[235px] space-y-2 font-mono text-[11px]">
-            <div className="rounded-lg bg-[#EB6131] px-3 py-2 font-medium text-white">
+            <div className="rounded-lg bg-accent px-3 py-2 font-medium text-white">
               quando si clicca su ⚑
             </div>
             <div className="ml-3 rounded-lg border border-amber-500/40 bg-amber-500/15 px-3 py-2 text-amber-200">
@@ -302,7 +302,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[250px] space-y-2.5 rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex justify-between font-mono text-[10px] text-zinc-400">
               <span>CORSIA 01</span>
-              <span className="text-[#EB6131]">JAVA OOP</span>
+              <span className="text-accent">JAVA OOP</span>
             </div>
             {[
               { pos: '18%', w: '34px', accent: true },
@@ -312,7 +312,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
               <div key={i} className="relative h-5 rounded border border-dashed border-zinc-800 bg-[#09090C]">
                 <div
                   className={`absolute top-1 h-3 rounded-sm ${
-                    lane.accent ? 'bg-[#EB6131]' : 'bg-zinc-400'
+                    lane.accent ? 'bg-accent' : 'bg-zinc-400'
                   }`}
                   style={{ left: lane.pos, width: lane.w }}
                 />
@@ -330,13 +330,13 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="w-full max-w-[260px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex items-center justify-between gap-2 font-mono text-[10px] text-zinc-400">
               <span className="truncate uppercase">{projectId.replace(/-/g, ' ')}</span>
-              <span className="shrink-0 text-[#EB6131]">LIVE UI</span>
+              <span className="shrink-0 text-accent">LIVE UI</span>
             </div>
             <div className="mt-3 flex items-end gap-2 h-16">
               {[38, 62, 48, 86, 68, 94, 72].map((h, i) => (
                 <div
                   key={i}
-                  className={`flex-1 rounded-t-sm ${i === 3 || i === 5 ? 'bg-[#EB6131]' : 'bg-zinc-700'}`}
+                  className={`flex-1 rounded-t-sm ${i === 3 || i === 5 ? 'bg-accent' : 'bg-zinc-700'}`}
                   style={{ height: `${h}%` }}
                 />
               ))}
@@ -352,11 +352,11 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
           <div className="flex h-[162px] w-[104px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">
             <div className="mx-auto h-1 w-8 rounded-full bg-zinc-700" />
             <div className="space-y-2">
-              <div className="h-8 w-8 rounded-lg bg-[#EB6131]/20 border border-[#EB6131]/50 mx-auto" />
+              <div className="h-8 w-8 rounded-lg bg-accent/20 border border-accent/50 mx-auto" />
               <div className="h-2 w-14 rounded bg-zinc-700 mx-auto" />
               <div className="h-2 w-10 rounded bg-zinc-800 mx-auto" />
             </div>
-            <div className="text-center font-mono text-[9px] text-[#EB6131]">
+            <div className="text-center font-mono text-[9px] text-accent">
               SWIFT · iOS
             </div>
           </div>

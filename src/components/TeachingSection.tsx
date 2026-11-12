@@ -28,7 +28,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
-            <p className="text-sm font-medium text-[#EB6131]">Didattica PON &amp; Lezioni</p>
+            <p className="text-sm font-medium text-accent">Didattica PON &amp; Lezioni</p>
             <h2
               className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100"
               style={{ textWrap: 'balance' }}
@@ -52,7 +52,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
               }}
               className={`inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-lg px-2.5 py-2 text-center text-xs font-medium leading-tight transition-colors cursor-pointer sm:gap-2 sm:px-4 sm:text-sm sm:whitespace-nowrap ${
                 audienceTab === 'studenti'
-                  ? 'bg-[#EB6131] text-white'
+                  ? 'bg-accent text-white'
                   : 'text-zinc-400 hover:text-zinc-100'
               }`}
             >
@@ -69,7 +69,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
               }}
               className={`inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-lg px-2.5 py-2 text-center text-xs font-medium leading-tight transition-colors cursor-pointer sm:gap-2 sm:px-4 sm:text-sm sm:whitespace-nowrap ${
                 audienceTab === 'docenti'
-                  ? 'bg-[#EB6131] text-white'
+                  ? 'bg-accent text-white'
                   : 'text-zinc-400 hover:text-zinc-100'
               }`}
             >
@@ -91,7 +91,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                       <h3 className="font-display text-lg font-semibold text-zinc-100">
                         {school.schoolName}
                       </h3>
-                      <span className="font-mono text-xs text-[#EB6131] tabular-nums">
+                      <span className="font-mono text-xs text-accent tabular-nums">
                         {school.coursesCount} · {school.studentsCount}
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                     aria-expanded={isGalleryOpen}
                     className={`inline-flex min-h-[44px] sm:min-h-[38px] shrink-0 self-start sm:self-auto items-center gap-2 rounded-lg border px-3.5 py-1.5 text-xs font-medium transition-colors cursor-pointer ${
                       isGalleryOpen
-                        ? 'border-[#EB6131]/60 bg-[#EB6131]/10 text-[#EB6131]'
+                        ? 'border-accent/60 bg-accent/10 text-accent'
                         : 'border-zinc-800 bg-[#09090B] text-zinc-200 hover:border-zinc-700 hover:text-white'
                     }`}
                   >
@@ -137,7 +137,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                             />
                           ) : (
                             <div className="flex h-full w-full flex-col items-center justify-center p-4 text-center">
-                              <School className="h-6 w-6 text-[#EB6131]" aria-hidden="true" />
+                              <School className="h-6 w-6 text-accent" aria-hidden="true" />
                               <p className="mt-2 text-xs text-zinc-400">{photo.alt}</p>
                             </div>
                           )}
@@ -173,7 +173,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                     {track.topics.map((topic) => (
                       <li key={topic} className="flex items-start gap-2.5 text-sm text-zinc-300">
                         <Check
-                          className="mt-0.5 h-4 w-4 shrink-0 text-[#EB6131]"
+                          className="mt-0.5 h-4 w-4 shrink-0 text-accent"
                           aria-hidden="true"
                         />
                         <span>{topic}</span>
@@ -188,7 +188,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClarityEvent(`whatsapp_track_${track.id}`)}
-                    className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-[#EB6131] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#d85325]"
+                    className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     <span>Prenota su WhatsApp</span>

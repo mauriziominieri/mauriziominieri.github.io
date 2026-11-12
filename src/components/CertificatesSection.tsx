@@ -14,7 +14,7 @@ export const CertificatesSection: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-medium text-[#EB6131]">Certificazioni</p>
+            <p className="text-sm font-medium text-accent">Certificazioni</p>
             <h2 className="mt-1 font-display text-3xl font-semibold tracking-tight text-zinc-100">
               Titoli ufficiali verificabili.
             </h2>
@@ -32,9 +32,9 @@ export const CertificatesSection: React.FC = () => {
                 : `Vedi tutti i ${CERTIFICATES.length} certificati`}
             </span>
             {showAll ? (
-              <ChevronUp className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+              <ChevronUp className="h-4 w-4 text-accent" aria-hidden="true" />
             ) : (
-              <ChevronDown className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+              <ChevronDown className="h-4 w-4 text-accent" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -46,11 +46,11 @@ export const CertificatesSection: React.FC = () => {
               href={cert.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121216] p-5 transition-colors duration-150 hover:border-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131]"
+              className="group flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121216] p-5 transition-colors duration-150 hover:border-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 text-xs tabular-nums">
-                  <span className="font-medium text-[#EB6131]">{cert.issuer}</span>
+                  <span className="font-medium text-accent">{cert.issuer}</span>
                   <span className="font-mono text-zinc-400">{cert.year}</span>
                 </div>
 
@@ -59,9 +59,9 @@ export const CertificatesSection: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="mt-4 flex items-center justify-between border-t border-zinc-800/80 pt-3 text-xs font-medium text-zinc-400 group-hover:text-[#EB6131]">
+              <div className="mt-4 flex items-center justify-between border-t border-zinc-800/80 pt-3 text-xs font-medium text-zinc-400 group-hover:text-accent">
                 <span className="inline-flex items-center gap-1.5">
-                  <Award className="h-3.5 w-3.5 text-[#EB6131]" aria-hidden="true" />
+                  <Award className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                   <span>{cert.category}</span>
                 </span>
                 <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />

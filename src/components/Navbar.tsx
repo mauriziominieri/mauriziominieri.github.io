@@ -32,7 +32,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
         {/* Zone 1: Brand Title + Custom SVG Logo */}
         <a
           href="#top"
-          className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-zinc-100 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131] rounded-md"
+          className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-zinc-100 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
           aria-label={`${PROFILE.name} - Torna all'inizio`}
         >
           <img
@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
             <a
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap shrink-0 py-1 text-zinc-400 transition-colors duration-150 hover:text-zinc-100 hover:underline hover:decoration-[#EB6131] hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131] rounded-sm"
+              className="whitespace-nowrap shrink-0 py-1 text-zinc-400 transition-colors duration-150 hover:text-zinc-100 hover:underline hover:decoration-accent hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               {item.label}
             </a>
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
           <button
             type="button"
             onClick={onBookClick}
-            className="hidden sm:inline-flex min-h-[40px] items-center justify-center whitespace-nowrap shrink-0 rounded-lg bg-[#EB6131] px-4 py-2 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#d85325] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131] focus-visible:ring-offset-2 focus-visible:ring-offset-[#09090B] cursor-pointer"
+            className="hidden sm:inline-flex min-h-[40px] items-center justify-center whitespace-nowrap shrink-0 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#09090B] cursor-pointer"
           >
             Prenota Lezione
           </button>
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
             aria-label={mobileOpen ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-800 bg-[#121216] text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131] cursor-pointer"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-800 bg-[#121216] text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
               <button
                 type="button"
                 onClick={handleBookFromMobile}
-                className="flex min-h-[46px] w-full items-center justify-center rounded-lg bg-[#EB6131] px-4 py-2.5 text-base font-semibold text-white transition-colors hover:bg-[#d85325] cursor-pointer"
+                className="flex min-h-[46px] w-full items-center justify-center rounded-lg bg-accent px-4 py-2.5 text-base font-semibold text-white transition-colors hover:bg-accent-hover cursor-pointer"
               >
                 Prenota una Lezione
               </button>

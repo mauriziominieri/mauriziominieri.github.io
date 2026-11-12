@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
               scuole.
             </p>
 
-            <p className="mt-4 font-display text-sm font-medium text-[#EB6131]">
+            <p className="mt-4 font-display text-sm font-medium text-accent">
               Vieni ad imparare!
             </p>
           </div>
@@ -47,9 +47,9 @@ export const Footer: React.FC = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 font-medium text-zinc-200 transition-colors hover:text-[#EB6131]"
+                  className="inline-flex items-center gap-2.5 font-medium text-zinc-200 transition-colors hover:text-accent"
                 >
-                  <MessageCircle className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+                  <MessageCircle className="h-4 w-4 text-accent" aria-hidden="true" />
                   <span>WhatsApp · Scrivimi subito</span>
                 </a>
               </li>

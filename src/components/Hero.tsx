@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="flex flex-col justify-center lg:col-span-7">
             <div className="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-medium text-zinc-400">
-              <span className="text-[#EB6131]">Software Engineer</span>
+              <span className="text-accent">Software Engineer</span>
               <span aria-hidden="true">·</span>
               <span>Docente PON</span>
               <span aria-hidden="true">·</span>
@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               className="font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
               style={{ textWrap: 'balance' }}
             >
-              <span className="text-[#EB6131]">Maurizio Minieri</span>: ingegnere software e docente PON.
+              <span className="text-accent">Maurizio Minieri</span>: ingegnere software e docente PON.
             </h1>
 
             <p className="mt-4 sm:mt-5 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-lg">
@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackClarityEvent('whatsapp_hero_click')}
-                className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2.5 whitespace-nowrap rounded-lg bg-[#EB6131] px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#d85325] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EB6131]"
+                className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2.5 whitespace-nowrap rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 <span>Scrivimi su WhatsApp</span>
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 className="inline-flex min-h-[48px] flex-1 sm:flex-initial items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-5 py-3 text-sm font-medium text-zinc-100 transition-colors duration-150 hover:border-zinc-700 hover:text-white cursor-pointer"
               >
                 <span>Prenota in 1 clic</span>
-                <ArrowDown className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+                <ArrowDown className="h-4 w-4 text-accent" aria-hidden="true" />
               </button>
 
               <a
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 onClick={() => trackClarityEvent('cv_download_click')}
                 className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg px-3 py-3 text-sm font-medium text-zinc-400 transition-colors hover:text-zinc-100"
               >
-                <FileText className="h-4 w-4 text-[#EB6131]" aria-hidden="true" />
+                <FileText className="h-4 w-4 text-accent" aria-hidden="true" />
                 <span>CV (PDF)</span>
               </a>
             </div>
@@ -84,7 +84,11 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
             <div className="relative flex w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] min-h-[340px] sm:min-h-[420px] lg:min-h-full">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_55%_32%,rgba(235,97,49,0.22),rgba(18,18,22,0)_62%)]"
+                className="pointer-events-none absolute inset-0 opacity-25"
+                style={{
+                  background:
+                    'radial-gradient(circle at 55% 32%, var(--brand-accent), rgba(18,18,22,0) 64%)',
+                }}
               />
               <div
                 aria-hidden="true"
@@ -106,11 +110,11 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                   fetchPriority="high"
                   decoding="async"
                   referrerPolicy="no-referrer"
-                  className="max-h-[400px] lg:max-h-[440px] w-auto object-contain object-bottom drop-shadow-[0_18px_36px_rgba(0,0,0,0.65)]"
+                  className="max-h-[400px] lg:max-h-[440px] w-auto object-contain object-bottom brightness-[1.03] contrast-[1.04] saturate-[0.92] drop-shadow-[0_18px_36px_rgba(0,0,0,0.75)]"
                 />
               </div>
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#09090B] via-[#09090B]/75 to-transparent px-5 pb-5 pt-16 sm:px-6">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#09090B] via-[#09090B]/80 to-transparent px-5 pb-5 pt-20 sm:px-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="font-display text-base font-semibold text-zinc-100">
@@ -120,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                       C# · Unity VR · Full-Stack · Docente PON
                     </p>
                   </div>
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-700/80 bg-[#121216]/90 text-[#EB6131]">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-700/80 bg-[#121216]/90 text-accent">
                     <GraduationCap className="h-4 w-4" aria-hidden="true" />
                   </div>
                 </div>
@@ -136,7 +140,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               <p className="font-display text-base sm:text-xl font-semibold tracking-tight text-zinc-100 tabular-nums">
                 {metric.value}
               </p>
-              <p className="mt-0.5 text-xs sm:text-sm font-medium text-[#EB6131]">{metric.label}</p>
+              <p className="mt-0.5 text-xs sm:text-sm font-medium text-accent">{metric.label}</p>
             </div>
           ))}
         </div>

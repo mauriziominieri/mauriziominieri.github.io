@@ -9,7 +9,7 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
           {/* Left Column: Crisp Summary & Links */}
           <div className="lg:col-span-5">
-            <p className="text-sm font-medium text-[#EB6131]">Chi sono</p>
+            <p className="text-sm font-medium text-accent">Chi sono</p>
             <h2
               className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100"
               style={{ textWrap: 'balance' }}
@@ -37,7 +37,7 @@ export const AboutSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <Play className="h-3.5 w-3.5 text-[#EB6131]" aria-hidden="true" />
+                <Play className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 <span>Video Tesi VR</span>
               </a>
               <a
@@ -46,7 +46,7 @@ export const AboutSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <ExternalLink className="h-3.5 w-3.5 text-[#EB6131]" aria-hidden="true" />
+                <ExternalLink className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 <span>Paper Springer</span>
               </a>
               <a
@@ -55,7 +55,7 @@ export const AboutSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <FileText className="h-3.5 w-3.5 text-[#EB6131]" aria-hidden="true" />
+                <FileText className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                 <span>Scarica CV</span>
               </a>
             </div>
@@ -81,7 +81,7 @@ export const AboutSection: React.FC = () => {
                         href={entry.link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-medium text-[#EB6131] hover:underline"
+                        className="text-xs font-medium text-accent hover:underline"
                       >
                         {entry.link.label} ↗
                       </a>
