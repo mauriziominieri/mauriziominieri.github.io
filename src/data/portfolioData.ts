@@ -81,10 +81,10 @@ export const PROFILE = {
   phoneDisplay: '333 536 8000',
   phoneHref: 'tel:+393335368000',
   whatsappNumber: '393335368000',
-  cvUrl: 'https://mauriziominieri.github.io/2022/static/2020/certificati/CV-MaurizioMinieri-it.pdf',
+  cvUrl: 'https://mauriziominieri.github.io/public/documents/CV-MaurizioMinieri-it.pdf',
   springerUrl: 'https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84',
-  thesisVideoUrl: 'https://mauriziominieri.github.io/2022/static/2020/videos/PresentazioneManusVRMinieri.mp4',
-  vrGameVideoUrl: 'https://mauriziominieri.github.io/2022/static/2020/videos/PresentazioneManusVRMinieriCut.mp4',
+  thesisVideoUrl: 'https://mauriziominieri.github.io/public/videos/PresentazioneManusVRMinieri.mp4',
+  vrGameVideoUrl: 'https://mauriziominieri.github.io/public/videos/PresentazioneManusVRMinieriCut.mp4',
   linkedinUrl: 'https://www.linkedin.com/in/maurizio-minieri-0b4992174',
   githubUrl: 'https://github.com/mauriziominieri',
   gitlabUrl: 'https://gitlab.com/DOPPIA3MME',
@@ -190,8 +190,8 @@ export const PROJECTS: ProjectItem[] = [
     links: [
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/Manus-VR' },
       { label: 'Paper Springer', url: 'https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84' },
-      { label: 'Video Tesi', url: 'https://mauriziominieri.github.io/2022/static/2020/videos/PresentazioneManusVRMinieri.mp4' },
-      { label: 'Gioco VR', url: 'https://mauriziominieri.github.io/2022/static/2020/videos/PresentazioneManusVRMinieriCut.mp4' },
+      { label: 'Video Tesi', url: 'https://mauriziominieri.github.io/public/videos/PresentazioneManusVRMinieri.mp4' },
+      { label: 'Gioco VR', url: 'https://mauriziominieri.github.io/public/videos/PresentazioneManusVRMinieriCut.mp4' },
     ],
     featured: true,
   },
@@ -475,15 +475,15 @@ export const PON_SCHOOLS: PonSchoolExperience[] = [
     subjects: 'Robotica · Programmazione · Informatica',
     photos: [
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/titoLivio1.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/titoLivio1.jpeg',
         alt: 'Laboratorio PON al Liceo Tito Livio - foto 1',
       },
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/titoLivio2.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/titoLivio2.jpeg',
         alt: 'Laboratorio PON al Liceo Tito Livio - foto 2',
       },
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/titoLivio3.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/titoLivio3.jpeg',
         alt: 'Laboratorio PON al Liceo Tito Livio - foto 3',
       },
     ],
@@ -495,11 +495,11 @@ export const PON_SCHOOLS: PonSchoolExperience[] = [
     subjects: 'Programmazione · Informatica',
     photos: [
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/Plinio1.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/Plinio1.jpeg',
         alt: 'Corso PON al Liceo Plinio Seniore - foto 1',
       },
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/Plinio2.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/Plinio2.jpeg',
         alt: 'Corso PON al Liceo Plinio Seniore - foto 2',
       },
     ],
@@ -511,15 +511,15 @@ export const PON_SCHOOLS: PonSchoolExperience[] = [
     subjects: 'Robotica · Programmazione',
     photos: [
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/deCarlo1.jpeg',
+        src: 'https://mauriziominieri.github.io/public/images/deCarlo1.jpeg',
         alt: 'Laboratorio PON al Liceo De Carlo - foto 1',
       },
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/deCarlo2.jpg',
+        src: 'https://mauriziominieri.github.io/public/images/deCarlo2.jpg',
         alt: 'Laboratorio PON al Liceo De Carlo - foto 2',
       },
       {
-        src: 'https://mauriziominieri.github.io/2022/static/2020/img/didattica/deCarlo3.jpg',
+        src: 'https://mauriziominieri.github.io/public/images/deCarlo3.jpg',
         alt: 'Laboratorio PON al Liceo De Carlo - foto 3',
       },
     ],
@@ -611,7 +611,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Apple Developer Academy 2019/2020',
     issuer: 'Apple',
     category: 'iOS & Sviluppo App',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/apple_certification.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/apple_certification.pdf',
     featured: true,
   },
   {
@@ -620,7 +620,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Cisco CCNA Routing & Switching Essentials',
     issuer: 'Cisco',
     category: 'Networking',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/RSE20.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/RSE20.pdf',
     featured: true,
   },
   {
@@ -629,7 +629,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Cisco CCNA Introduction to Networks',
     issuer: 'Cisco',
     category: 'Networking',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/ITN20.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/ITN20.pdf',
     featured: true,
   },
   {
@@ -662,7 +662,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'iOS App Development & Swift Playgrounds',
     issuer: 'Apple Developer Academy',
     category: 'Didattica & iOS',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/CertificatoAppleTeacher.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/CertificatoAppleTeacher.pdf',
   },
   {
     id: 'redhat-do080',
@@ -670,7 +670,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Deploying Containerized Applications Technical Overview (DO080)',
     issuer: 'Red Hat',
     category: 'Container & Linux',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/DO080.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/DO080.pdf',
   },
   {
     id: 'cloud-guru',
@@ -678,7 +678,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Introduction to Cloud Computing',
     issuer: 'A Cloud Guru',
     category: 'Cloud & Sistemi',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/CloudComputing.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/CloudComputing.pdf',
   },
   {
     id: 'bitdegree-hacker',
@@ -686,7 +686,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'How to Become a Hacker — Ethical White Hats',
     issuer: 'BitDegree',
     category: 'Sicurezza',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/BitDegree.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/BitDegree.pdf',
   },
   {
     id: 'agile-pm',
@@ -694,7 +694,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Agile Project Management',
     issuer: 'Life Learning',
     category: 'Management',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/AgileProjectManagement.jpeg',
+    url: 'https://mauriziominieri.github.io/public/images/AgileProjectManagement.jpeg',
   },
   {
     id: 'eduopen-statistica',
@@ -702,7 +702,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Analisi statistica e valutazione del dato sperimentale (3a ed.)',
     issuer: 'EduOpen',
     category: 'Data Analysis',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/AnalisiStatistica-ValutazioneDelDatoSperimentale.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/AnalisiStatistica-ValutazioneDelDatoSperimentale.pdf',
   },
   {
     id: 'leeds-coding',
@@ -710,7 +710,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'University of Leeds & Institute of Coding',
     issuer: 'FutureLearn',
     category: 'Coding & Web',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/university-of-leeds.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/university-of-leeds.pdf',
   },
   {
     id: 'accenture-skills',
@@ -718,7 +718,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Accenture Digital Skills',
     issuer: 'FutureLearn',
     category: 'Competenze Digitali',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/accenture.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/accenture.pdf',
   },
   {
     id: 'google-digital',
@@ -726,7 +726,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Google Digital Training — Fondamenti di Marketing Digitale',
     issuer: 'Google',
     category: 'Digital & Analytics',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/certificatoGoogle.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/certificatoGoogle.pdf',
   },
   {
     id: 'google-analytics',
@@ -734,7 +734,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Google Analytics',
     issuer: 'Google',
     category: 'Digital & Analytics',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/GoogleAnalytics.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/GoogleAnalytics.pdf',
   },
   {
     id: 'scrumstudy',
@@ -742,7 +742,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Marketing Strategy Fundamentals',
     issuer: 'ScrumStudy',
     category: 'Management',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/scrum-study.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/scrum-study.pdf',
   },
   {
     id: 'ef-set',
@@ -750,7 +750,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'English Certificate',
     issuer: 'EF SET',
     category: 'Lingue',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/ef-set-english.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/ef-set-english.pdf',
   },
   {
     id: 'virginia-business',
@@ -758,7 +758,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'New Models of Business Society',
     issuer: 'University of Virginia',
     category: 'Management',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/BusinessInSociety.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/BusinessInSociety.pdf',
   },
   {
     id: 'igea-comunicazione',
@@ -766,7 +766,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Il potere della comunicazione non verbale',
     issuer: 'IGEA',
     category: 'Soft Skills & Didattica',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/Igea.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/Igea.pdf',
   },
   {
     id: 'gdpr-2020',
@@ -774,7 +774,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Corso GDPR 679/2016',
     issuer: 'Certificazione GDPR',
     category: 'Privacy & Normativa',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/CertificazioneGDPR.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/CertificazioneGDPR.pdf',
   },
   {
     id: 'who-hygiene',
@@ -782,7 +782,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Standard Precautions — Hand Hygiene',
     issuer: 'World Health Organization',
     category: 'Altro',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/World-health-organization.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/World-health-organization.pdf',
   },
   {
     id: 'nasa-space-apps',
@@ -790,7 +790,7 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Galactic Problem Solver — International Space Apps Challenge',
     issuer: 'NASA',
     category: 'Hackathon & Innovazione',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/NASA.jpg',
+    url: 'https://mauriziominieri.github.io/public/images/NASA.jpg',
   },
   {
     id: 'itf-security',
@@ -798,6 +798,6 @@ export const CERTIFICATES: CertificateItem[] = [
     title: 'Capo Sicurezza Società Sportiva',
     issuer: 'ITF Group SRL',
     category: 'Sicurezza',
-    url: 'https://mauriziominieri.github.io/2022/static/2020/certificati/Security.pdf',
+    url: 'https://mauriziominieri.github.io/public/documents/Security.pdf',
   },
 ];
