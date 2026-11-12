@@ -1,1196 +1,337 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica. Scopri i progetti e prenota una lezione." />
-  <meta name="author" content="Maurizio Minieri">
+<!doctype html>
+<html lang="it" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maurizio Minieri — Ingegnere Software e Docente PON</title>
+    <meta
+      name="description"
+      content="Sito ufficiale di Maurizio Minieri, Ingegnere Software (Federico II, Apple Developer Academy) e Docente PON. Progetti VR, app iOS, certificazioni CKA/Java e lezioni di informatica."
+    />
+    <meta
+      name="keywords"
+      content="Maurizio Minieri, Ingegnere Software, Docente PON, ripetizioni informatica, programmazione, robotica educativa, Unity VR, Manus VR, Apple Developer Academy, Federico II, Java, C, Python"
+    />
+    <meta name="author" content="Maurizio Minieri" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://mauriziominieri.github.io/" />
+    <link rel="alternate" hreflang="it" href="https://mauriziominieri.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://mauriziominieri.github.io/" />
 
-  <!-- Icona -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="1024x1024" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  
-  <!-- Manifest e Theme Color -->
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#eb6131" />
+    <!-- Verified Identity (rel="me") -->
+    <link rel="me" href="https://www.linkedin.com/in/maurizio-minieri-0b4992174" />
+    <link rel="me" href="https://github.com/mauriziominieri" />
+    <link rel="me" href="https://gitlab.com/DOPPIA3MME" />
+    <link rel="me" href="https://www.instagram.com/doppia3mme/" />
 
-  <!-- browserconfig.xml e l'MStile di Windows -->
-  <meta name="msapplication-config" content="/browserconfig.xml" />
-  <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
-  <meta name="msapplication-TileColor" content="#eb6131" />
+    <!-- Icons, Manifest & Theme Color -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="1024x1024" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#eb6131" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileImage" content="/favicon.png" />
+    <meta name="msapplication-TileColor" content="#eb6131" />
+    <meta name="apple-mobile-web-app-title" content="Maurizio Minieri" />
 
-  <meta name="apple-mobile-web-app-title" content="Maurizio Minieri" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mauriziominieri.github.io/" />
-  <meta property="og:title" content="Maurizio Minieri — Ingegnere Software" />
-  <meta property="og:description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica." />
-  <meta property="og:image" content="https://mauriziominieri.github.io/profile_red.png" />
-  <meta property="og:image:alt" content="Ritratto di Maurizio Minieri" />
-  <meta property="og:site_name" content="Maurizio Minieri" />
-  <meta property="og:locale" content="it_IT" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Maurizio Minieri — Ingegnere Software" />
-  <meta name="twitter:description" content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica." />
-  <meta name="twitter:image" content="https://mauriziominieri.github.io/profile_red.png" />
-  <title>Maurizio Minieri — Ingegnere Software</title>
-  <link rel="canonical" href="https://mauriziominieri.github.io/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/robotic/main.css" />
+    <!-- OpenGraph -->
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Maurizio" />
+    <meta property="profile:last_name" content="Minieri" />
+    <meta property="profile:username" content="mauriziominieri" />
+    <meta property="og:url" content="https://mauriziominieri.github.io/" />
+    <meta property="og:site_name" content="Maurizio Minieri" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:title" content="Maurizio Minieri — Ingegnere Software e Docente PON" />
+    <meta
+      property="og:description"
+      content="Sito ufficiale di Maurizio Minieri, Ingegnere Software e docente PON di programmazione e robotica. Scopri i 18 progetti, 27 certificazioni e prenota una lezione."
+    />
+    <meta property="og:image" content="https://mauriziominieri.github.io/profile_red.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="842" />
+    <meta property="og:image:height" content="1264" />
+    <meta property="og:image:alt" content="Ritratto di Maurizio Minieri" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maurizio Minieri — Ingegnere Software e Docente PON" />
+    <meta
+      name="twitter:description"
+      content="Portfolio ufficiale di Maurizio Minieri, Ingegnere Software e Docente PON. Progetti VR, app iOS, certificazioni e lezioni di informatica e robotica."
+    />
+    <meta name="twitter:image" content="https://mauriziominieri.github.io/profile_red.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data (ProfilePage, Person, ScholarlyArticle, Service) -->
+    <script type="application/ld+json">
       {
-        "@type": "WebSite",
-        "@id": "https://mauriziominieri.github.io/#website",
-        "url": "https://mauriziominieri.github.io/",
-        "name": "Maurizio Minieri",
-        "alternateName": "Maurizio Minieri Software Engineer",
-        "inLanguage": "it"
-      },
-      {
-        "@type": "ScholarlyArticle",
-        "@id": "https://mauriziominieri.github.io/#paper-mandri",
-        "headline": "ManDri: A New Proposal of Manus VR Facility Integration in Everyday Car Driving",
-        "author": [
-          { "@type": "Person", "name": "Walter Balzano" },
-          { "@id": "https://mauriziominieri.github.io/#person" },
-          { "@type": "Person", "name": "Silvia Stranieri" }
-        ],
-        "datePublished": "2019-03-15",
-        "pagination": "860-869",
-        "isPartOf": {
-          "@type": "Book",
-          "name": "Web, Artificial Intelligence and Network Applications (WAINA 2019)",
-          "isbn": "978-3-030-15035-8",
-          "publisher": { "@type": "Organization", "name": "Springer" }
-        },
-        "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.1007/978-3-030-15035-8_84" },
-        "url": "https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84",
-        "sameAs": "https://doi.org/10.1007/978-3-030-15035-8_84",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "Person",
-        "@id": "https://mauriziominieri.github.io/#person",
-        "name": "Maurizio Minieri",
-        "url": "https://mauriziominieri.github.io/",
-        "image": "https://mauriziominieri.github.io/profile_red.png",
-        "jobTitle": "Ingegnere Software",
-        "description": "Ingegnere software, specializzato in realtà virtuale, e docente PON di programmazione, informatica e robotica.",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Università degli Studi di Napoli Federico II"
-        },
-        "knowsAbout": ["Kubernetes", "Java", "Unity", "Realtà virtuale", "Programmazione", "Robotica educativa"],
-        "sameAs": [
-          "https://www.linkedin.com/in/maurizio-minieri-0b4992174",
-          "https://github.com/mauriziominieri",
-          "https://gitlab.com/DOPPIA3MME",
-          "https://www.instagram.com/doppia3mme/"
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://mauriziominieri.github.io/#website",
+            "url": "https://mauriziominieri.github.io/",
+            "name": "Maurizio Minieri",
+            "alternateName": "Maurizio Minieri Software Engineer",
+            "inLanguage": "it",
+            "publisher": { "@id": "https://mauriziominieri.github.io/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://mauriziominieri.github.io/#profilepage",
+            "url": "https://mauriziominieri.github.io/",
+            "name": "Maurizio Minieri — Ingegnere Software e Docente PON",
+            "inLanguage": "it",
+            "dateModified": "2026-11-12",
+            "isPartOf": { "@id": "https://mauriziominieri.github.io/#website" },
+            "mainEntity": { "@id": "https://mauriziominieri.github.io/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://mauriziominieri.github.io/#person",
+            "name": "Maurizio Minieri",
+            "givenName": "Maurizio",
+            "familyName": "Minieri",
+            "alternateName": ["Maurizio Minieri", "DOPPIA3MME", "mauriziominieri"],
+            "url": "https://mauriziominieri.github.io/",
+            "mainEntityOfPage": "https://mauriziominieri.github.io/",
+            "image": "https://mauriziominieri.github.io/profile_red.png",
+            "email": "mailto:mauminieri@gmail.com",
+            "telephone": "+393335368000",
+            "jobTitle": "Ingegnere Software e Docente PON",
+            "description": "Maurizio Minieri, dottore in Informatica all'Università Federico II di Napoli, Apple Developer Academy, ingegnere software specializzato in realtà virtuale e docente PON di programmazione e robotica.",
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Napoli, Campania, Italia"
+            },
+            "knowsLanguage": ["it", "en"],
+            "alumniOf": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Università degli Studi di Napoli Federico II"
+              },
+              {
+                "@type": "EducationalOrganization",
+                "name": "Apple Developer Academy"
+              }
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Laurea in Informatica",
+                "credentialCategory": "degree",
+                "recognizedBy": {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Università degli Studi di Napoli Federico II"
+                }
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Certified Kubernetes Administrator (CKA)",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Cloud Native Computing Foundation"
+                }
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Oracle Certified Professional: Java SE 11 Developer",
+                "credentialCategory": "certification",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Oracle"
+                }
+              }
+            ],
+            "knowsAbout": [
+              "Kubernetes",
+              "Java",
+              "C#",
+              "C",
+              "Python",
+              "Unity",
+              "Realtà virtuale",
+              "Swift",
+              "React",
+              "Next.js",
+              "Programmazione",
+              "Robotica educativa"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/maurizio-minieri-0b4992174",
+              "https://github.com/mauriziominieri",
+              "https://gitlab.com/DOPPIA3MME",
+              "https://www.instagram.com/doppia3mme/",
+              "https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84"
+            ]
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://mauriziominieri.github.io/#paper-mandri",
+            "headline": "ManDri: A New Proposal of Manus VR Facility Integration in Everyday Car Driving",
+            "author": [
+              { "@type": "Person", "name": "Walter Balzano" },
+              { "@id": "https://mauriziominieri.github.io/#person" },
+              { "@type": "Person", "name": "Silvia Stranieri" }
+            ],
+            "datePublished": "2019-03-15",
+            "pagination": "860-869",
+            "isPartOf": {
+              "@type": "Book",
+              "name": "Web, Artificial Intelligence and Network Applications (WAINA 2019)",
+              "isbn": "978-3-030-15035-8",
+              "publisher": { "@type": "Organization", "name": "Springer" }
+            },
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "DOI",
+              "value": "10.1007/978-3-030-15035-8_84"
+            },
+            "url": "https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84",
+            "sameAs": "https://doi.org/10.1007/978-3-030-15035-8_84",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://mauriziominieri.github.io/#lessons",
+            "name": "Lezioni private di informatica, programmazione e docenza PON",
+            "provider": { "@id": "https://mauriziominieri.github.io/#person" },
+            "serviceType": "Ripetizioni di informatica, preparazione esami universitari e moduli PON di robotica",
+            "areaServed": {
+              "@type": "Country",
+              "name": "IT"
+            },
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://mauriziominieri.github.io/#contatti"
+            }
+          }
         ]
       }
-    ]
-  }
-  </script>
-</head>
+    </script>
+  </head>
+  <body class="bg-[#09090B] text-zinc-100 antialiased selection:bg-[#EB6131]/30 selection:text-white">
+    <div id="root"></div>
 
-<body>
-
-<header>
-  <div class="navrow">
-    <a href="#top" class="logo">
-      <span class="logo-avatar"><img src="favicon_ext_cropped.svg" alt="Maurizio Minieri" loading="lazy"></span>
-      Maurizio Minieri
-    </a>
-    <button id="navToggle" aria-label="Apri menu" aria-expanded="false">☰</button>
-    <nav>
-      <ul id="navList">
-        <li><a href="#about">Chi sono</a></li>
-        <li><a href="#teaching">Didattica</a></li>
-        <li><a href="#skills">Skill</a></li>
-        <li><a href="#projects">Progetti</a></li>
-        <li><a href="#certifications">Certificazioni</a></li>
-        <li><a href="#lezioni">Prenota una lezione</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<section class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow-mark"><span class="bar"></span>Software Engineer · Virtual Reality</div>
-      <h1>Maurizio Minieri <span class="accent">Ingegnere software.</span></h1>
-      <div class="role-line"><span class="prompt">&gt;</span> <span id="roleText">sviluppo software</span><span class="cursor-blink"></span></div>
-      <p class="lede">Dottore in informatica laureato alla Federico II e alla Apple Developer Academy. Oggi sviluppo siti e applicazioni in una grande azienda e insegno programmazione e informatica con passione.</p>
-      <div class="cta-row">
-        <a href="#lezioni" class="btn btn-primary" data-goatcounter-click="click-prenota-hero">Prenota una lezione</a>
-        <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CV-MaurizioMinieri-it.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Guarda il mio CV</a>
-      </div>
-      <a class="pub-badge" href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84" target="_blank" rel="noopener" data-goatcounter-click="click-paper-hero">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 21h15M9 8h6M9 12h6"/></svg>
-        <span>Autore di una pubblicazione Springer · <em>ManDri</em>, WAINA 2019</span>
-        <span class="pub-badge-arrow" aria-hidden="true">↗</span>
-      </a>
-    </div>
-
-    <div class="hero-photo-col">
-      <div class="photo-glow"></div>
-      <div class="orbit-ring"></div>
-      <div class="photo-stage" id="photoStage">
-        <img src="profile_red.png" alt="Ritratto di Maurizio Minieri">
-      </div>
-      <div class="float-chip chip-a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>C# · Unity</div>
-      <div class="float-chip chip-b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>VR Developer</div>
-      <div class="float-chip chip-c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z"/></svg>Docente PON</div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">00</span><h2>Chi sono</h2></div>
-    <div class="about-grid">
-      <div>
-        <p>Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose, ero il bambino che smontava i propri giocattoli per capire come funzionassero piuttosto che giocarci. Quella curiosità, unita a una crescente passione per i videogiochi, mi ha portato dritto verso l'informatica.</p>
-        <p>Dopo il liceo scientifico sperimentale mi sono laureato all' <strong>Università Federico II</strong>, dove mi sono immerso in questo mondo vasto e affascinante. Mi colpisce quanto l'informatica sia ormai presente in ogni oggetto della vita quotidiana, e immagino un futuro di videogiochi incredibilmente immersivi, videochiamate olografiche, auto che guidano da sole e case che si puliscono in autonomia.</p>
-        <p>All'università ho imparato diversi linguaggi di programmazione e ho iniziato a creare applicazioni e siti web. Il tirocinio presso <a href="https://www.digitalcomoedia.com/landing/" target="_blank" rel="noopener">DigitalComoedia</a> è stato il punto di svolta: lì ho realizzato un gioco in <strong>realtà virtuale</strong>.</p>
-        <p>Nella tesi mi sono concentrato sui <strong>Manus VR</strong>, guanti per la realtà virtuale dotati di sensori (undici per mano) che rilevano i movimenti di mani e dita e li riportano nell'ambiente virtuale: al posto di un controller si usano le proprie mani. Con Unity e C# ho sviluppato un ambiente per esplorarne le potenzialità. Sugli stessi guanti ho scritto anche una <strong>pubblicazione scientifica</strong>, <a href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84" target="_blank" rel="noopener" data-goatcounter-click="click-paper-testo"><em>ManDri</em></a>, pubblicata negli atti del WAINA 2019 (Springer): propone di usarli per comandare con i gesti le funzioni dell'auto durante la guida.</p>
-        <div class="cta-row">
-          <a href="2022/static/2020/videos/PresentazioneManusVRMinieri.mp4" target="_blank" rel="noopener" class="btn btn-primary">La mia tesi</a>
-          <a href="2022/static/2020/videos/PresentazioneManusVRMinieriCut.mp4" target="_blank" rel="noopener" class="btn btn-ghost">Gioco VR</a>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84" target="_blank" rel="noopener" class="btn btn-ghost" data-goatcounter-click="click-paper-about">Il paper su Springer</a>
-        </div>
-      </div>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-year">Oggi</div>
-          <div class="tl-title">Ingegnere software, docente</div>
-          <div class="tl-desc">Sviluppo applicazioni e progetti software/VR e insegno programmazione e informatica.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2019 - 2020</div>
-          <div class="tl-title">Apple Developer Academy</div>
-          <div class="tl-desc">Laurea Apple. Linguaggio Swift per iPhone, iPad, MacBook, AppleWatch.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">Docente PON</div>
-          <div class="tl-title">Fondazione Cultura & Innovazione</div>
-          <div class="tl-desc">Docenza PON in varie scuole. Il mio motto? Non è un voto scritto da un insegnante a poter definire chi sei.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">Tirocinio</div>
-          <div class="tl-title">DigitalComoedia</div>
-          <div class="tl-desc">Primo contatto professionale con la realtà virtuale: da lì nasce la mia specializzazione.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2014 — 2018</div>
-          <div class="tl-title">Università Federico II</div>
-          <div class="tl-desc">Laurea in Informatica. Linguaggi, sviluppo web e applicativo.</div>
-          <div class="tl-title">Pubblicazione scientifica</div>
-          <div class="tl-desc"><a href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84" target="_blank" rel="noopener" data-goatcounter-click="click-paper-timeline"><em>ManDri</em></a>, sui guanti Manus VR, negli atti del WAINA 2019 (Springer).</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2009 — 2014</div>
-          <div class="tl-title">Liceo Scientifico Sperimentale</div>
-          <div class="tl-desc">Le basi logico-matematiche-fisiche e i primi approcci alla tecnologia.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="teaching">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">01</span><h2>Didattica</h2></div>
-    <div class="teach-grid">
-      <div>
-        <p>Oltre allo sviluppo software, ho insegnato come <strong>docente PON</strong> in diverse scuole, in anni diversi e con materie diverse — tra cui <strong>robotica</strong> e <strong>programmazione</strong> — adattando ogni volta l'approccio al livello degli studenti, dalle elementari alle superiori.</p>
-        <p>Portare l'informatica in classe, con linguaggio semplice e progetti pratici, è un modo per restituire quella stessa curiosità che da bambino mi ha spinto a smontare i miei giocattoli.</p>
-        <div class="teach-stats">
-          <div>
-            <div class="stat-num">2</div>
-            <div class="stat-label">corsi svolti</div>
-          </div>
-          <div>
-            <div class="stat-num">12</div>
-            <div class="stat-label">studenti</div>
-          </div>
-          <div>
-            <div class="stat-num">3</div>
-            <div class="stat-label">materie: robotica, programmazione, informatica</div>
-          </div>
-        </div>
-      </div>
-      <div class="photo-grid">
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/titoLivio1.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/titoLivio1.jpeg" alt="Tito_Livio_1">
-          </a>
-        </div>
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/titoLivio2.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/titoLivio2.jpeg" alt="Tito_Livio_2">
-          </a>
-        </div>
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/titoLivio3.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/titoLivio3.jpeg" alt="Tito_Livio_3">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="teach-grid">
-      <div>
-        <h2>Liceo Plinio Seniore</h2>
-        <div class="teach-stats">
-          <div>
-            <div class="stat-num">1</div>
-            <div class="stat-label">corso svolto</div>
-          </div>
-          <div>
-            <div class="stat-num">22</div>
-            <div class="stat-label">studenti</div>
-          </div>
-          <div>
-            <div class="stat-num">2</div>
-            <div class="stat-label">materie: programmazione, informatica</div>
-          </div>
-        </div>
-      </div>
-      <div class="photo-grid stacked">
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/Plinio1.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/Plinio1.jpeg" alt="Plinio_1">
-          </a>
-        </div>
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/Plinio2.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/Plinio2.jpeg" alt="Plinio_2">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="teach-grid">
-      <div>
-        <h2>Liceo De Carlo</h2>
-        <div class="teach-stats">
-          <div>
-            <div class="stat-num">2</div>
-            <div class="stat-label">corsi svolti</div>
-          </div>
-          <div>
-            <div class="stat-num">27</div>
-            <div class="stat-label">studenti</div>
-          </div>
-          <div>
-            <div class="stat-num">2</div>
-            <div class="stat-label">materie: robotica, programmazione</div>
-          </div>
-        </div>
-      </div>
-      <div class="photo-grid">
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/deCarlo1.jpeg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/deCarlo1.jpeg" alt="DeCarlo_1">
-          </a>
-        </div>
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/deCarlo2.jpg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/deCarlo2.jpg" alt="DeCarlo_2">
-          </a>
-        </div>
-        <div class="photo-ph">
-          <a href="2022/static/2020/img/didattica/deCarlo3.jpg" target="_blank" rel="noopener">
-            <img src="2022/static/2020/img/didattica/deCarlo3.jpg" alt="DeCarlo_3">
-          </a>
-        </div>
-      </div>
-    </div>
-
-   
-    <!-- Pulsante Espandi -->
-    <div style="text-align: center; margin-top: 30px;">
-      <button id="toggleProjBtn" class="btn btn-ghost" onclick="toggleProgetti()">Mostra altro</button>
-    </div>
-
-
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">02</span><h2>Skill</h2></div>
-    <div class="skill-groups">
-      <div class="skill-cat">
-        <h3>Linguaggi</h3>
-        <div class="pill-row">
-          <span class="pill">Python</span>
-          <span class="pill">C</span>
-          <span class="pill">C++</span>
-          <span class="pill">Java</span>
-          <span class="pill">C#</span>
-          <span class="pill">JavaScript</span>
-          <span class="pill">Visual Basic</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Scratch</span>
-          <span class="pill">PHP</span>
-          <span class="pill">Swift</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Development</h3>
-        <div class="pill-row">
-          <span class="pill">Unity</span>
-          <span class="pill">Visual Studio</span>
-          <span class="pill">Visual Studio Code</span>
-          <span class="pill">IntelliJ IDEA</span>
-          <span class="pill">Eclipse</span>
-          <span class="pill">Xcode</span>
-          <span class="pill">Android Studio</span>
-          <span class="pill">Vim</span>
-          <span class="pill">Code::Blocks</span>
-          <span class="pill">Dev C++</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Web &amp; Strumenti</h3>
-        <div class="pill-row">
-          <span class="pill">HTML</span>
-          <span class="pill">CSS</span>
-          <span class="pill">React</span>
-          <span class="pill">Node.js</span>
-          <span class="pill">Angular</span>
-          <span class="pill">Bootstrap</span>
-          <span class="pill">jQuery</span>
-          <span class="pill">Next.js</span>
-          <span class="pill">TypeScript</span>
-          <span class="pill">Git</span>
-          <span class="pill">GitHub</span>
-          <span class="pill">GitLab</span>
-          <span class="pill">Docker</span>
-          <span class="pill">Firebase</span>
-          <span class="pill">Supabase</span>
-          <span class="pill">PostgreSQL</span>
-          <span class="pill">MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <h3>Altro</h3>
-        <div class="pill-row">
-          <span class="pill">Robotica educativa</span>
-          <span class="pill">Arduino</span>
-          <span class="pill">Raspberry Pi</span>
-          <span class="pill">Public speaking</span>
-          <span class="pill">Problem solving</span>
-          <span class="pill">Algoritmi</span>
-          <span class="pill">Data Analysis</span>
-          <span class="pill">Networking</span>
-          <span class="pill">Project Management</span>
-          <span class="pill">UX/UI</span>
-          <span class="pill">Automazione</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="projects">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">03</span><h2>Progetti</h2></div>
-    <div class="proj-grid">
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="term-dot t1"></span><span class="term-dot t2"></span><span class="term-dot t3"></span><span class="proj-cmd">progetto-0</span></div>
-        <div class="proj-body">
-          <h3>Change Color</h3>
-          <p>Una matrice a colori. In C è tanta roba!</p>
-          <div class="proj-tags"><span class="tag">Code::Blocks</span><span class="tag">C</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/mauriziominieri/ChangeColor" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-              GitHub
-            </a>
-            <a href="https://mauriziominieri.github.io/ChangeColor/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-              Gioca
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="term-dot t1"></span><span class="term-dot t2"></span><span class="term-dot t3"></span><span class="proj-cmd">progetto-1</span></div>
-        <div class="proj-body">
-          <h3>Manus-VR</h3>
-          <p>Ambiente in realtà virtuale per l'approfondimento dei guanti tecnologici Manus VR.</p>
-          <div class="proj-tags"><span class="tag">Unity</span><span class="tag">C#</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/mauriziominieri/Manus-VR" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-              GitHub
-            </a>
-            <a href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84" target="_blank" rel="noopener" data-goatcounter-click="click-paper-progetto">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5z"/><path d="M4 21h15M9 8h6M9 12h6"/></svg>
-              Paper Springer
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="term-dot t1"></span><span class="term-dot t2"></span><span class="term-dot t3"></span><span class="proj-cmd">progetto-2</span></div>
-        <div class="proj-body">
-          <h3>Gioco del Quindici</h3>
-          <p>Un gioco simpatico utilizzando una matrice di numeri.</p>
-          <div class="proj-tags"><span class="tag">Dev C++</span><span class="tag">C</span></div>
-          <div class="proj-links">
-            <a href="https://github.com/mauriziominieri/GiocoDelQuindici" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-              GitHub
-            </a>
-            <a href="https://mauriziominieri.github.io/GiocoDelQuindici/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg>
-              Gioca
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="proj-card">
-        <div class="proj-top"><span class="term-dot t1"></span><span class="term-dot t2"></span><span class="term-dot t3"></span><span class="proj-cmd">progetto-3</span></div>
-        <div class="proj-body">
-          <h3>DANCE</h3>
-          <p>Un gioco di ballo sviluppato con la programmazione a blocchi.</p>
-          <div class="proj-tags"><span class="tag">Scratch</span></div>
-          <div class="proj-links">
-            <a href="https://scratch.mit.edu/projects/312466034/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="12" height="5" rx="1.2"/>
-                <rect x="9" y="10" width="12" height="5" rx="1.2"/>
-                <rect x="3" y="17" width="12" height="4" rx="1.2"/>
-              </svg>
-              Scratch
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hidden -->
-      <!-- Progetto 5 (inizialmente nascosto con la classe hidden) -->
-      <div class="proj-card hidden">
-        <div class="proj-top">
-          <span class="term-dot t1"></span>
-          <span class="term-dot t2"></span>
-          <span class="term-dot t3"></span>
-          <span class="proj-cmd">progetto-4</span>
-        </div>
-        <div class="proj-body">
-          <h3>Prossimamente</h3>
-          <p>Descrizione del progetto in arrivo...</p>
-          <div class="proj-tags"><span class="tag">Python</span></div>
-          <div class="proj-links">
-            <a href="#" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Pulsante Espandi -->
-    <div style="text-align: center; margin-top: 30px;">
-      <button id="toggleProjBtn" class="btn btn-ghost" onclick="toggleProgetti()">Mostra altro</button>
-    </div>
-  </div>
-</section>
-
-<section id="certifications">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">04</span><h2>Certificazioni</h2></div>
-    
-    <div class="cert-grid">
-
-      <a href="https://www.credly.com/badges/c7a04ede-108b-4c66-b5b3-1a431752e5ab/linked_in_profile" target="_blank" rel="noopener" class="cert-card vendor-blue">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">LINUX FOUNDATION</div>
-            <span class="cert-year">2026</span>
-          </div>
-          <h3>CKA</h3>
-          <p>Certified Kubernetes Administrator</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-blue-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6CDA6207592BA4F20A9368608471C747EAC2B3338F3332A70D7926F39BCE070B" target="_blank" rel="noopener" class="cert-card vendor-red">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">ORACLE</div>
-            <span class="cert-year">2023</span>
-          </div>
-          <h3>Oracle Certified Professional</h3>
-          <p>Java SE 11 Developer</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://www.credly.com/badges/bfeb2a50-eca8-4e1a-961d-76d80bce548d?source=linked_in_profile" target="_blank" rel="noopener" class="cert-card vendor-red">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">ORACLE</div>
-            <span class="cert-year">2021</span>
-          </div>
-          <h3>Oracle Certified Associate</h3>
-          <p>Java SE 8 Programmer</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/apple_certification.pdf" target="_blank" rel="noopener" class="cert-card vendor-white">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">APPLE</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Apple Developer Academy</h3>
-          <p>Apple Developer Academy 2019/2020</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-white-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/RSE20.pdf" target="_blank" rel="noopener" class="cert-card vendor-cyan">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">CISCO</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Cisco CCNA</h3>
-          <p>Routing &amp; Switching Essentials</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-cyan-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/ITN20.pdf" target="_blank" rel="noopener" class="cert-card vendor-cyan">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">CISCO</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Cisco CCNA</h3>
-          <p>Introduction to Networks</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-cyan-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <!-- (Nascosta inizialmente) -->
-
-      <a href="https://www.udemy.com/certificate/UC-824b4b32-e07f-46ea-abd4-7fdaeabbc6c2/" target="_blank" rel="noopener" class="cert-card vendor-purple hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Udemy</div>
-            <span class="cert-year">2024</span>
-          </div>
-          <h3>CKA</h3>
-          <p>Practice Test</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-purple-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://learn.kodekloud.com/learn/certificate/a42567f7-233d-4a69-82c0-488478c63e41" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">KodeKloud</div>
-            <span class="cert-year">2024</span>
-          </div>
-          <h3>CKA</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://learn.kodekloud.com/learn/certificate/f5613884-1e7d-4bf0-aba8-440a7f1b7927" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">KodeKloud</div>
-            <span class="cert-year">2024</span>
-          </div>
-          <h3>JSON Path Test</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/certificatoGoogle.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Google</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Google Digital Training</h3>
-          <p>Fondamenti di Marketing Digitale</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CertificatoAppleTeacher.pdf" target="_blank" rel="noopener" class="cert-card vendor-white hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">APPLE</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Apple Developer Academy</h3>
-          <p>iOS App Development &amp; Swift Playgrounds</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-white-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/AgileProjectManagement.jpeg" target="_blank" rel="noopener" class="cert-card vendor-slate hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Life Learning</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>AGILE PROJECT MANAGEMENT</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-slate-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/DO080.pdf" target="_blank" rel="noopener" class="cert-card vendor-red hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Red Hat</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Deploying Containerized Applications Technical Overview</h3>
-          <p>DO080</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-red-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/World-health-organization.pdf" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">World Health Organization</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Standard precautions</h3>
-          <p>Hand Hygiene</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/university-of-leeds.pdf" target="_blank" rel="noopener" class="cert-card vendor-orange hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Future Learn </div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>UNIVERSITY OF LEEDS AND INSTITUTE OF CODING</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-orange-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/accenture.pdf" target="_blank" rel="noopener" class="cert-card vendor-orange hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">Future Learn</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>ACCENTURE</h3>
-          <p>DIGITAL SKILLS</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-orange-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/AnalisiStatistica-ValutazioneDelDatoSperimentale.pdf" target="_blank" rel="noopener" class="cert-card vendor-fuchsia hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">EduOpen</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Analisi statistica e valutazione del dato sperimentale (3a ed.)</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-fuchsia-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/scrum-study.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">ScrumStudy</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Marketing Strategy Fundamentals</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/BitDegree.pdf" target="_blank" rel="noopener" class="cert-card vendor-purple hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">BitDegree</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>How to Become a Hacker</h3>
-          <p>Learn to Hack How Ethical White Hats Do</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-purple-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CloudComputing.pdf" target="_blank" rel="noopener" class="cert-card vendor-amber hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">CLOUD GURU</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Introduction to Cloud Computing</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-amber-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/ef-set-english.pdf" target="_blank" rel="noopener" class="cert-card vendor-violet hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">EF SET</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>English Certificate</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-violet-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/BusinessInSociety.pdf" target="_blank" rel="noopener" class="cert-card vendor-yellow hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">University of Virginia</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>New Models of Business Society</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-yellow-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/Igea.pdf" target="_blank" rel="noopener" class="cert-card vendor-rose hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">IGEA</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Il potere della comunicazione non verbale</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-rose-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/GoogleAnalytics.pdf" target="_blank" rel="noopener" class="cert-card vendor-green hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">GOOGLE</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Google Analytics</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-green-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/CertificazioneGDPR.pdf" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">CERTIFICAZIONE GDPR</div>
-            <span class="cert-year">2020</span>
-          </div>
-          <h3>Corso GDPR 679/2016</h3>
-          <p></p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/NASA.jpg" target="_blank" rel="noopener" class="cert-card vendor-sky hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">NASA</div>
-            <span class="cert-year">2018</span>
-          </div>
-          <h3>GALACTIC PROBLEM SOLVER</h3>
-          <p>International Space Apps Challenge</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-sky-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-      <a href="https://mauriziominieri.github.io/2022/static/2020/certificati/Security.pdf" target="_blank" rel="noopener" class="cert-card vendor-slate hidden-cert">
-        <div>
-          <div class="cert-header">
-            <div class="cert-badge">ITF GROUP SRL</div>
-            <span class="cert-year">2015</span>
-          </div>
-          <h3>Capo Sicurezza</h3>
-          <p>Società sportiva</p>
-        </div>
-        <div class="cert-footer">
-          <span class="cert-link-slate-text">Visualizza certificato &rarr;</span>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- Pulsante Espandi -->
-    <div style="text-align: center; margin-top: 35px;">
-      <button id="toggleCertBtn" class="btn btn-ghost" aria-expanded="false" onclick="toggleCertificazioni()">Mostra altro</button>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="lezioni">
-  <div class="wrap">
-    <div class="section-head"><span class="idx">05</span><h2>Prenota una lezione</h2></div>
-
-    <div class="contact-grid">
-
-      <!-- Colonna sinistra: invito all'azione -->
-      <div class="contact-pitch" id="lezioni">
-        <h3>Mandami un messaggio</h3>
-        <p>Scrivimi e ti rispondo il prima possibile.</p>
-        <div class="contact-actions">
-          <a id="waBtn" class="btn btn-wa btn-lg" href="#" target="_blank" rel="noopener" data-goatcounter-click="click-whatsapp">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.3L3 20.5l1.8-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
-            WhatsApp
-          </a>
-          <a id="mailBtn" class="btn btn-ghost btn-lg" href="#" data-goatcounter-click="click-email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-            Email
-          </a>
-        </div>
-      </div>
-
-      <!-- Colonna destra: card "terminale" come nei progetti -->
-      <div class="contact-card">
-        <div class="proj-top">
-          <span class="term-dot"></span>
-          <span class="term-dot"></span>
-          <span class="term-dot"></span>
-          <span class="proj-cmd">contatti</span>
-        </div>
-
-        <ul class="contact-list">
-          <li>
-            <a href="tel:+393335368000" data-goatcounter-click="click-telefono">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
-              <span class="c-label">tel</span>
-              <span class="c-value">333 536 8000</span>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:mauminieri@gmail.com">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-              <span class="c-label">email</span>
-              <span class="c-value">mauminieri@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/maurizio-minieri-0b4992174" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5c0-1.4 1-2.5 2.3-2.5 1.3 0 2.2 1 2.2 2.5V17"/></svg>
-              <span class="c-label">linkedin</span>
-              <span class="c-value">maurizio-minieri</span>
-              <span class="c-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/mauriziominieri" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
-              <span class="c-label">github</span>
-              <span class="c-value">mauriziominieri</span>
-              <span class="c-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://gitlab.com/DOPPIA3MME" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
-              <span class="c-label">gitlab</span>
-              <span class="c-value">DOPPIA3MME</span>
-              <span class="c-arrow" aria-hidden="true">↗</span>
-            </a>
-          </li>
+    <noscript>
+      <main style="max-width:760px;margin:40px auto;padding:24px;font-family:sans-serif;line-height:1.6;">
+        <h1>Maurizio Minieri — Ingegnere Software e Docente PON</h1>
+        <p>
+          Portfolio ufficiale di <strong>Maurizio Minieri</strong>, laureato in Informatica
+          all’Università Federico II di Napoli, diplomato Apple Developer Academy, Software Engineer
+          e docente PON di programmazione, informatica e robotica educativa.
+        </p>
+        <h2>Didattica PON &amp; Lezioni</h2>
+        <ul>
+          <li>Liceo Tito Livio — 2 corsi, 12 studenti</li>
+          <li>Liceo Plinio Seniore — 1 corso, 22 studenti</li>
+          <li>Liceo De Carlo — 2 corsi, 27 studenti</li>
         </ul>
-      </div>
+        <h2>Contatti</h2>
+        <p>
+          WhatsApp / Telefono: +39 333 536 8000 · Email:
+          <a href="mailto:mauminieri@gmail.com">mauminieri@gmail.com</a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/maurizio-minieri-0b4992174">LinkedIn</a> ·
+          <a href="https://github.com/mauriziominieri">GitHub</a> ·
+          <a href="https://gitlab.com/DOPPIA3MME">GitLab</a> ·
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84">Paper Springer ManDri</a>
+        </p>
+      </main>
+    </noscript>
 
-    </div>
-  </div>
-</section>
+    <script type="module" src="/src/main.tsx"></script>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="year"></span> Maurizio Minieri</span>
-    <span class="mono">Vieni ad imparare!</span>
-  </div>
-</footer>
+    <!-- Pipedream Visit Tracking (bot-filtered, once per session, UTM-aware) -->
+    <script>
+      (() => {
+        const ua = navigator.userAgent || "";
+        if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
+        const host = location.hostname;
+        if (host === "localhost" || host === "127.0.0.1") return;
+        try {
+          if (sessionStorage.getItem("visit_sent")) return;
+          sessionStorage.setItem("visit_sent", "1");
+        } catch {}
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+        const browser =
+          /Edg\//.test(ua) ? "Edge" :
+          /OPR\//.test(ua) ? "Opera" :
+          /Firefox|FxiOS/.test(ua) ? "Firefox" :
+          /Chrome|CriOS/.test(ua) ? "Chrome" :
+          /Safari/.test(ua) ? "Safari" : "Sconosciuto";
+        const isTouchMac = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+        const shortSide = Math.min(screen.width, screen.height);
+        const os =
+          isTouchMac || /iPhone|iPad|iPod/.test(ua) ? "iOS" :
+          /Android/.test(ua) ? "Android" :
+          /Windows/.test(ua) ? "Windows" :
+          /Mac/.test(ua) ? "macOS" :
+          /Linux/.test(ua) ? "Linux" : "Sconosciuto";
+        const device =
+          isTouchMac ? (shortSide < 700 ? "Mobile" : "Tablet") :
+          /iPad|Tablet/i.test(ua) ? "Tablet" :
+          /Mobi|Android|iPhone/i.test(ua) ? "Mobile" : "Desktop";
 
-<script>
-  function toggleProgetti() {
-    const hiddenCards = document.querySelectorAll('.proj-card.hidden, .proj-card.show-extra');
-    const btn = document.getElementById('toggleProjBtn');
-    
-    const isExpanded = btn.textContent === 'Mostra meno';
+        const params = new URLSearchParams(location.search);
+        const utmSource = params.get("utm_source") || undefined;
+        const utmMedium = params.get("utm_medium") || undefined;
+        const utmCampaign = params.get("utm_campaign") || undefined;
 
-    if (!isExpanded) {
-      hiddenCards.forEach(card => {
-        card.classList.remove('hidden');
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(115px)';
-        card.classList.add('show-extra');
-        
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 20);
-      });
-      btn.textContent = 'Mostra meno';
-    } else {
-      // NASCONDI I PROGETTI EXTRA
-      hiddenCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(115px)';
-        
-        setTimeout(() => {
-          card.classList.add('hidden');
-          card.classList.remove('show-extra');
-        });
-      });
-      btn.textContent = 'Mostra altro';
-    }
-  }
+        let ref = "Diretto";
+        try {
+          if (document.referrer) ref = new URL(document.referrer).origin;
+        } catch {}
 
-  function toggleCertificazioni() {
-    const cards = document.querySelectorAll('.hidden-cert, .show-cert');
-    const btn = document.getElementById('toggleCertBtn');
-    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-    const DURATION = 400;
+        fetch("https://eol87daxqdu9qm7.m.pipedream.net", {
+          method: "POST",
+          keepalive: true,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            dataLocale: new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" }),
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            referrer: ref,
+            browser,
+            os,
+            device,
+            lingua: navigator.language,
+            host,
+            ...(utmSource ? { utmSource } : {}),
+            ...(utmMedium ? { utmMedium } : {}),
+            ...(utmCampaign ? { utmCampaign } : {})
+          })
+        }).catch(() => {});
+      })();
+    </script>
 
-    if (!isExpanded) {
-      cards.forEach(card => {
-        card.classList.remove('hidden-cert');
-        card.classList.add('show-cert');
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(115px)';
-
-        // doppio rAF: il browser registra lo stato iniziale prima di animare
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }));
-
-        // a fine animazione ripulisco: così torna a valere il :hover del CSS
-        setTimeout(() => {
-          card.style.opacity = '';
-          card.style.transform = '';
-        }, DURATION);
-      });
-
-      btn.textContent = 'Mostra meno';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(115px)';
-
-        setTimeout(() => {
-          card.classList.add('hidden-cert');
-          card.classList.remove('show-cert');
-          card.style.opacity = '';
-          card.style.transform = '';
-        }, DURATION);
-      });
-
-      btn.textContent = 'Mostra altro';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  }
-
-  // mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navList = document.getElementById('navList');
-  navToggle.addEventListener('click', () => {
-    const open = navList.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navList.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  // hero role typing effect
-  const roles = ['sviluppatore software', 'dottore in informatica', 'professore di programmazione e robotica', 'appassionato di videogiochi e realtà virtuale'];
-  const roleEl = document.getElementById('roleText');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (reduceMotion) {
-    roleEl.textContent = roles[0];
-  } else {
-    let ri = 0, ci = 0, deleting = false;
-
-    function tick(){
-      const current = roles[ri];
-      if (!deleting){
-        ci++;
-        roleEl.textContent = current.slice(0, ci);
-        if (ci === current.length){
-          deleting = true;
-          setTimeout(tick, 1400);
-          return;
-        }
-        setTimeout(tick, 55);
-      } else {
-        ci--;
-        roleEl.textContent = current.slice(0, ci);
-        if (ci === 0){
-          deleting = false;
-          ri = (ri + 1) % roles.length;
-          setTimeout(tick, 300);
-          return;
-        }
-        setTimeout(tick, 30);
-      }
-    }
-    setTimeout(tick, 600);
-  }
-
-  // ---------- prenotazione lezioni ----------
-  // Numero WhatsApp in formato internazionale, senza + né spazi
-  const WA_NUMBER = '393335368000';
-  const MSG = 'Ciao Maurizio, vorrei organizzare una lezione. ';
-  document.getElementById('waBtn').href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(MSG);
-  document.getElementById('mailBtn').href = 'mailto:mauminieri@gmail.com?subject=' + encodeURIComponent('Richiesta lezione') + '&body=' + encodeURIComponent(MSG);
-</script>
-
-<script>
-(() => {
-  const ua = navigator.userAgent;
-  if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
-
-  try {
-    if (sessionStorage.getItem("visit_sent")) return;
-    sessionStorage.setItem("visit_sent", "1");
-  } catch {}
-
-  const browser =
-    /Edg\//.test(ua) ? "Edge" :
-    /OPR\//.test(ua) ? "Opera" :
-    /Firefox|FxiOS/.test(ua) ? "Firefox" :
-    /Chrome|CriOS/.test(ua) ? "Chrome" :
-    /Safari/.test(ua) ? "Safari" : "Sconosciuto";
-
-  const isTouchMac = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
-  const shortSide = Math.min(screen.width, screen.height);
-
-  const os =
-    isTouchMac || /iPhone|iPad|iPod/.test(ua) ? "iOS" :
-    /Android/.test(ua) ? "Android" :
-    /Windows/.test(ua) ? "Windows" :
-    /Mac/.test(ua) ? "macOS" :
-    /Linux/.test(ua) ? "Linux" : "Sconosciuto";
-
-  const device =
-    isTouchMac ? (shortSide < 700 ? "Mobile" : "Tablet") :
-    /iPad|Tablet/i.test(ua) ? "Tablet" :
-    /Mobi|Android|iPhone/i.test(ua) ? "Mobile" : "Desktop";
-
-  const p = new URLSearchParams(location.search);
-  let ref = "Diretto";
-  try { if (document.referrer) ref = new URL(document.referrer).origin; } catch {}
-
-  fetch("https://eol87daxqdu9qm7.m.pipedream.net", {
-    method: "POST",
-    keepalive: true,
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      dataLocale: new Date().toLocaleString("it-IT", { timeZone: "Europe/Rome" }),
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      referrer: ref,
-      browser, os, device,
-      lingua: navigator.language
-    })
-  }).catch(() => {});
-})();
-</script>
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "z8w4c6qu8y");
-</script>
-
-</body>
+    <!-- Microsoft Clarity (bot-filtered) -->
+    <script type="text/javascript">
+      (() => {
+        const ua = navigator.userAgent || "";
+        if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "z8w4c6qu8y");
+      })();
+    </script>
+  </body>
 </html>

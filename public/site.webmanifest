@@ -1,0 +1,25 @@
+{
+  "name": "Maurizio Minieri — Ingegnere Software e Docente PON",
+  "short_name": "Maurizio Minieri",
+  "description": "Portfolio, progetti e lezioni di informatica e robotica di Maurizio Minieri.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#eb6131",
+  "background_color": "#09090B",
+  "display": "standalone",
+  "lang": "it"
+}
