@@ -89,10 +89,10 @@
   nav a:hover, nav a:focus-visible{ color: var(--text); }
   #navToggle{ display:none; background:none; border:1px solid var(--border); color:var(--text); border-radius:6px; padding:8px 10px; font-size:18px; cursor:pointer; }
   header{ position: sticky; top:0; z-index: 50; backdrop-filter: blur(10px); background: rgba(8,11,18,0.72); border-bottom: 1px solid var(--border); }
-  .navrow{ display:flex; align-items:center; justify-content: space-between; padding: 16px 32px; max-width: var(--maxw); margin: 0 auto; position:relative; z-index:2; }
+  .navrow{ display:flex; align-items:center; justify-content: space-between; padding: 0px 32px; max-width: var(--maxw); margin: 0 auto; position:relative; z-index:2; }
   .logo{ font-family:'Space Grotesk', sans-serif; font-weight:600; font-size: 18px; display:flex; align-items:center; gap:10px; text-decoration:none; }
-  .logo-avatar{ width:34px; height:34px; border-radius:50%; overflow:hidden; border:1.5px solid var(--mint); box-shadow: 0 0 12px var(--mint-glow); flex-shrink:0; }
-  .logo-avatar img{ width:100%; height:100%; object-fit: cover; object-position: top center; }
+  .logo-avatar{ width:70px; height:65px; }
+  .logo-avatar img{ width:100%; height:100%; }
 
   @media (max-width: 760px){
     nav ul{
