@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -16,6 +16,42 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [bookingAudience, setBookingAudience] = useState<BookingAudience>('Studente');
   const [bookingSubject, setBookingSubject] = useState<string>('Lezioni per mio figlio/a');
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const scrollToHash = (behavior: ScrollBehavior = 'smooth') => {
+      if (cancelled) return;
+      const hash = window.location.hash.replace(/^#/, '');
+      if (!hash) return;
+      const target = document.getElementById(decodeURIComponent(hash));
+      if (!target) return;
+      target.scrollIntoView({ behavior, block: 'start' });
+    };
+
+    const rafId = window.requestAnimationFrame(() => {
+      window.setTimeout(() => scrollToHash('smooth'), 60);
+    });
+
+    const handleLoad = () => {
+      if (window.scrollY < 40) {
+        scrollToHash('smooth');
+      }
+    };
+    const handleHashChange = () => scrollToHash('smooth');
+
+    if (document.readyState !== 'complete') {
+      window.addEventListener('load', handleLoad, { once: true });
+    }
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener('load', handleLoad);
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   const scrollToBooking = (
     audience?: BookingAudience,
@@ -46,31 +82,31 @@ export default function App() {
         <Navbar onBookClick={() => scrollToBooking()} />
 
         <main id="main-content">
-        <Hero onBookForAudience={(audience) => scrollToBooking(audience)} />
-        <AboutSection />
-        <TeachingSection
-          onSelectTrackForBooking={(audience, subject) =>
-            scrollToBooking(audience, subject)
-          }
-        />
-        <SkillsSection />
-        <PortfolioSection onSelectProject={setSelectedProject} />
-        <CertificatesSection />
-        <BookingContactSection
-          selectedAudience={bookingAudience}
-          selectedSubject={bookingSubject}
-          onAudienceChange={setBookingAudience}
-          onSubjectChange={setBookingSubject}
-        />
-      </main>
+          <Hero onBookForAudience={(audience) => scrollToBooking(audience)} />
+          <AboutSection />
+          <TeachingSection
+            onSelectTrackForBooking={(audience, subject) =>
+              scrollToBooking(audience, subject)
+            }
+          />
+          <SkillsSection />
+          <PortfolioSection onSelectProject={setSelectedProject} />
+          <CertificatesSection />
+          <BookingContactSection
+            selectedAudience={bookingAudience}
+            selectedSubject={bookingSubject}
+            onAudienceChange={setBookingAudience}
+            onSubjectChange={setBookingSubject}
+          />
+        </main>
 
-      <Footer />
+        <Footer />
 
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-        onBookSimilar={(topic) => scrollToBooking('Studente', topic)}
-      />
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+          onBookSimilar={(topic) => scrollToBooking('Studente', topic)}
+        />
       </div>
     </MotionConfig>
   );
