@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, BookOpen, ExternalLink, FileText, Mail, MessageCircle, Phone } from 'lucide-react';
 import { PROFILE } from '../data/portfolioData';
+import { trackClarityEvent } from '../utils/analytics';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -22,22 +23,22 @@ export const Footer: React.FC = () => {
             </a>
 
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-zinc-400">
-              Dottore in Informatica (Federico II), Apple Developer Academy, Ingegnere Software e
-              Docente. Sviluppo digitale, realtà virtuale e formazione pratica per ragazzi e
-              scuole.
+              Dottore in Informatica (Federico II), diplomato Apple Developer Academy, Ingegnere
+              Software e Docente. Sviluppo digitale, realtà virtuale e formazione pratica per
+              studenti e scuole.
             </p>
 
             <p className="mt-3 font-display text-sm font-medium text-accent">
-              Vieni ad imparare!
+              Vieni a imparare!
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-7 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:col-span-7">
             <div>
               <h3 className="text-xs font-semibold tracking-wide text-zinc-300">
                 Contatti diretti
               </h3>
-              <ul className="mt-3.5 space-y-2.5 text-sm">
+              <ul className="mt-3.5 space-y-2 text-sm">
                 <li>
                   <a
                     href={`https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(
@@ -45,7 +46,8 @@ export const Footer: React.FC = () => {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-2 font-medium text-zinc-200 transition-colors hover:text-accent"
+                    onClick={() => trackClarityEvent('footer_whatsapp_click')}
+                    className="inline-flex min-h-[38px] items-center gap-2.5 font-medium text-zinc-200 transition-colors hover:text-accent"
                   >
                     <MessageCircle className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
                     <span>WhatsApp</span>
@@ -54,19 +56,21 @@ export const Footer: React.FC = () => {
                 <li>
                   <a
                     href={PROFILE.phoneHref}
-                    className="inline-flex min-h-[36px] items-center gap-2 text-zinc-300 transition-colors hover:text-white tabular-nums"
+                    onClick={() => trackClarityEvent('footer_phone_click')}
+                    className="inline-flex min-h-[38px] items-center gap-2.5 text-zinc-300 transition-colors hover:text-white tabular-nums"
                   >
                     <Phone className="h-4 w-4 shrink-0 text-zinc-500" aria-hidden="true" />
-                    <span>{PROFILE.phoneDisplay}</span>
+                    <span className="whitespace-nowrap">{PROFILE.phoneDisplay}</span>
                   </a>
                 </li>
                 <li>
                   <a
                     href={`mailto:${PROFILE.email}`}
-                    className="inline-flex min-h-[36px] items-center gap-2 font-mono text-xs text-zinc-300 transition-colors hover:text-white"
+                    onClick={() => trackClarityEvent('footer_email_click')}
+                    className="inline-flex min-h-[38px] max-w-full items-center gap-2.5 font-mono text-xs text-zinc-300 transition-colors hover:text-white"
                   >
                     <Mail className="h-4 w-4 shrink-0 text-zinc-500" aria-hidden="true" />
-                    <span className="break-all">{PROFILE.email}</span>
+                    <span className="whitespace-nowrap">{PROFILE.email}</span>
                   </a>
                 </li>
                 <li>
@@ -74,7 +78,8 @@ export const Footer: React.FC = () => {
                     href={PROFILE.cvUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-2 text-zinc-300 transition-colors hover:text-zinc-100"
+                    onClick={() => trackClarityEvent('footer_cv_click')}
+                    className="inline-flex min-h-[38px] items-center gap-2.5 text-zinc-300 transition-colors hover:text-zinc-100"
                   >
                     <FileText className="h-4 w-4 shrink-0 text-zinc-500" aria-hidden="true" />
                     <span>CV (PDF)</span>
@@ -87,13 +92,14 @@ export const Footer: React.FC = () => {
               <h3 className="text-xs font-semibold tracking-wide text-zinc-300">
                 Sviluppo &amp; Profili
               </h3>
-              <ul className="mt-3.5 space-y-2.5 text-sm text-zinc-400">
+              <ul className="mt-3.5 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-zinc-400 sm:block sm:space-y-2">
                 <li>
                   <a
                     href={PROFILE.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-1.5 transition-colors hover:text-zinc-100"
+                    onClick={() => trackClarityEvent('footer_github_click')}
+                    className="inline-flex min-h-[38px] items-center gap-1.5 transition-colors hover:text-zinc-100"
                   >
                     <span>GitHub</span>
                     <ExternalLink className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -104,7 +110,8 @@ export const Footer: React.FC = () => {
                     href={PROFILE.gitlabUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-1.5 transition-colors hover:text-zinc-100"
+                    onClick={() => trackClarityEvent('footer_gitlab_click')}
+                    className="inline-flex min-h-[38px] items-center gap-1.5 transition-colors hover:text-zinc-100"
                   >
                     <span>GitLab</span>
                     <ExternalLink className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -115,7 +122,8 @@ export const Footer: React.FC = () => {
                     href={PROFILE.linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-1.5 transition-colors hover:text-zinc-100"
+                    onClick={() => trackClarityEvent('footer_linkedin_click')}
+                    className="inline-flex min-h-[38px] items-center gap-1.5 transition-colors hover:text-zinc-100"
                   >
                     <span>LinkedIn</span>
                     <ExternalLink className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -126,18 +134,18 @@ export const Footer: React.FC = () => {
                     href={PROFILE.springerUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-1.5 transition-colors hover:text-zinc-100"
+                    className="inline-flex min-h-[38px] items-center gap-1.5 whitespace-nowrap transition-colors hover:text-zinc-100"
                   >
                     <BookOpen className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
                     <span>Springer (Paper)</span>
                   </a>
                 </li>
-                <li>
+                <li className="col-span-2 sm:col-span-1">
                   <a
                     href="https://www.credly.com/badges/c7a04ede-108b-4c66-b5b3-1a431752e5ab/linked_in_profile"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[36px] items-center gap-1.5 transition-colors hover:text-zinc-100"
+                    className="inline-flex min-h-[38px] items-center gap-1.5 whitespace-nowrap transition-colors hover:text-zinc-100"
                   >
                     <Award className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
                     <span>Credly (CKA)</span>

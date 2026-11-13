@@ -1,0 +1,21 @@
+# Maurizio Minieri
+
+> Ingegnere Software (Full Stack Developer), specialista in Realtà Virtuale (Manus VR) e Docente di Programmazione, Informatica e Robotica Educativa.
+
+## Informazioni Principali
+- Sito ufficiale: https://mauriziominieri.github.io/
+- Formazione: Laurea in Informatica presso l'Università degli Studi Federico II; Diploma Apple Developer Academy (iOS & Swift).
+- Pubblicazione scientifica: ManDri (WAINA 2019, Springer) — https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84
+- Certificazioni principali: Certified Kubernetes Administrator (CKA), Oracle Certified Professional Java SE 11 Developer, Oracle Certified Associate Java SE 8 Programmer, Cisco CCNA.
+
+## Didattica & Lezioni
+- Lezioni private di informatica e programmazione (Python, C, C++, Java, JavaScript, TypeScript, React, SQL) per scuole superiori, preparazione Maturità ed esami universitari.
+- Docenze PON / PNRR e laboratori STEM di programmazione e robotica (Arduino, Raspberry Pi, Scratch) presso I.C. Tito Livio, Liceo Plinio Seniore e Liceo De Carlo.
+
+## Profili & Contatti
+- GitHub: https://github.com/mauriziominieri
+- GitLab: https://gitlab.com/DOPPIA3MME
+- LinkedIn: https://www.linkedin.com/in/maurizio-minieri-0b4992174
+- Credly (CKA): https://www.credly.com/badges/c7a04ede-108b-4c66-b5b3-1a431752e5ab/linked_in_profile
+- Email: mauminieri@gmail.com
+- Telefono / WhatsApp: +39 333 536 8000

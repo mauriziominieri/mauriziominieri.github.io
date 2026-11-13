@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Award, ExternalLink } from 'lucide-react';
 import { CERTIFICATES, CertificateItem } from '../data/portfolioData';
+import { setClarityTag, trackClarityEvent } from '../utils/analytics';
 
 type CertFilter =
   | 'Principali'
@@ -82,7 +83,11 @@ export const CertificatesSection: React.FC = () => {
                   type="button"
                   role="tab"
                   aria-selected={isActive}
-                  onClick={() => setActiveFilter(filter)}
+                  onClick={() => {
+                    setActiveFilter(filter);
+                    setClarityTag('certificate_filter', filter);
+                    trackClarityEvent('certificate_filter_change');
+                  }}
                   className={`min-h-[40px] sm:min-h-[38px] whitespace-nowrap shrink-0 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors duration-150 cursor-pointer ${
                     isActive
                       ? 'bg-accent text-white'

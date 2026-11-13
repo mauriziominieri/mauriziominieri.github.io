@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { PROJECTS, ProjectCategory, ProjectItem } from '../data/portfolioData';
 import { ProjectPreview } from './ProjectPreview';
+import { setClarityTag, trackClarityEvent } from '../utils/analytics';
 
 const CATEGORIES: ProjectCategory[] = [
   'Tutti',
@@ -55,7 +56,11 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                   type="button"
                   role="tab"
                   aria-selected={isActive}
-                  onClick={() => setActiveCategory(category)}
+                  onClick={() => {
+                    setActiveCategory(category);
+                    setClarityTag('project_category', category);
+                    trackClarityEvent('project_filter_change');
+                  }}
                   className={`min-h-[40px] sm:min-h-[38px] whitespace-nowrap shrink-0 rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors duration-150 cursor-pointer ${
                     isActive
                       ? 'bg-accent text-white'

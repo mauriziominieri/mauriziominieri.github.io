@@ -18,13 +18,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
     if (!project) return;
     setClarityTag('last_project_opened', project.id);
     trackClarityEvent('project_modal_open');
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         onClose();
       }
     };
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [project, onClose]);
 
   if (!project) return null;

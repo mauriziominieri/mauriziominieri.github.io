@@ -135,7 +135,7 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
   {
     period: 'Tirocinio',
     title: 'DigitalComoedia',
-    subtitle: 'Primo contatto professionale con la realtà virtuale: lì ho realizzato un gioco in VR e da lì nasce la mia specializzazione.',
+    subtitle: 'Primo contatto professionale con la realtà virtuale: lì ho realizzato un gioco in VR e da lì è nata la mia specializzazione.',
     link: {
       label: 'DigitalComoedia',
       url: 'https://www.digitalcomoedia.com/landing/',
@@ -312,12 +312,12 @@ export const PROJECTS: ProjectItem[] = [
     title: 'Il Gioco del 15',
     category: 'VR & Giochi',
     year: '2020',
-    role: 'C (Dev C++) & Versione Web',
-    summary: 'Un gioco simpatico e intramontabile realizzato utilizzando una matrice di numeri 4×4 in C (Dev C++) e giocabile subito online.',
+    role: 'C (Dev-C++) & Versione Web',
+    summary: 'Un gioco simpatico e intramontabile realizzato utilizzando una matrice di numeri 4×4 in C (Dev-C++) e giocabile subito online.',
     challenge: 'Validazione delle mosse adiacenti alla casella vuota, mescolamento risolvibile e controllo vittoria.',
     solution: 'Logica su matrice bidimensionale sviluppata in C e pubblicata anche come web game interattivo.',
     impact: 'Giocabile online',
-    stack: ['C', 'Dev C++', 'Web'],
+    stack: ['C', 'Dev-C++', 'Web'],
     links: [
       { label: 'Gioca ora', url: 'https://mauriziominieri.github.io/GiocoDelQuindici/' },
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/GiocoDelQuindici' },
@@ -504,15 +504,15 @@ export const PON_SCHOOLS: PonSchoolExperience[] = [
     photos: [
       {
         src: 'https://mauriziominieri.github.io/images/titoLivio1.jpeg',
-        alt: 'Laboratorio PON al Liceo Tito Livio - foto 1',
+        alt: 'Laboratorio PON all’I.C. Tito Livio - foto 1',
       },
       {
         src: 'https://mauriziominieri.github.io/images/titoLivio2.jpeg',
-        alt: 'Laboratorio PON al Liceo Tito Livio - foto 2',
+        alt: 'Laboratorio PON all’I.C. Tito Livio - foto 2',
       },
       {
         src: 'https://mauriziominieri.github.io/images/titoLivio3.jpeg',
-        alt: 'Laboratorio PON al Liceo Tito Livio - foto 3',
+        alt: 'Laboratorio PON all’I.C. Tito Livio - foto 3',
       },
     ],
   },
@@ -727,7 +727,7 @@ export const CERTIFICATES: CertificateItem[] = [
   {
     id: 'eduopen-statistica',
     year: '2020',
-    title: 'Analisi statistica e valutazione del dato sperimentale (3a ed.)',
+    title: 'Analisi statistica e valutazione del dato sperimentale (3ª ed.)',
     issuer: 'EduOpen',
     category: 'Data Analysis',
     url: 'https://mauriziominieri.github.io/documents/AnalisiStatistica-ValutazioneDelDatoSperimentale.pdf',

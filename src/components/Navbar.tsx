@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { PROFILE } from '../data/portfolioData';
 
@@ -16,8 +16,67 @@ const NAV_LINKS = [
 
 export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  const handleLinkClick = () => {
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((item) => item.href.slice(1));
+    let rafId = 0;
+
+    const updateNavState = () => {
+      rafId = 0;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+      setScrollProgress(ratio);
+
+      const probeY = Math.max(110, Math.min(240, window.innerHeight * 0.3));
+      const contactEl = document.getElementById('contatti');
+      if (contactEl && contactEl.getBoundingClientRect().top <= probeY) {
+        setActiveSection('');
+        return;
+      }
+
+      let current = '';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= probeY && rect.bottom > 96) {
+          current = `#${id}`;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    const scheduleUpdate = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(updateNavState);
+    };
+
+    updateNavState();
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate, { passive: true });
+
+    return () => {
+      if (rafId) window.cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [mobileOpen]);
+
+  const handleLinkClick = (href: string) => {
+    setActiveSection(href);
     setMobileOpen(false);
   };
 
@@ -31,7 +90,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:gap-8 lg:px-8">
         <a
           href="#top"
-          className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-zinc-100 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
+          onClick={() => setActiveSection('')}
+          className="flex shrink-0 items-center gap-2.5 whitespace-nowrap rounded-md text-zinc-100 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           aria-label={`${PROFILE.name} - Torna all'inizio`}
         >
           <img
@@ -46,17 +106,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
 
         <nav
           aria-label="Navigazione principale"
-          className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-zinc-400"
+          className="hidden md:flex items-center gap-3.5 lg:gap-6 text-[13px] lg:text-sm font-medium text-zinc-400"
         >
-          {NAV_LINKS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="whitespace-nowrap shrink-0 py-1 text-zinc-400 transition-colors duration-150 hover:text-zinc-100 hover:underline hover:decoration-accent hover:underline-offset-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-            >
-              {item.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((item) => {
+            const isActive = activeSection === item.href;
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? 'location' : undefined}
+                className={`whitespace-nowrap shrink-0 rounded-sm py-1 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                  isActive
+                    ? 'text-zinc-100 underline decoration-accent underline-offset-8'
+                    : 'text-zinc-400 hover:text-zinc-100 hover:underline hover:decoration-accent hover:underline-offset-8'
+                }`}
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
@@ -81,23 +149,37 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
         </div>
       </div>
 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] origin-left bg-accent/90 transition-transform duration-100"
+        style={{ transform: `scaleX(${scrollProgress})` }}
+      />
+
       {mobileOpen && (
         <div
           id="mobile-navigation"
-          className="border-b border-zinc-800 bg-[#0D0D10] px-4 pb-6 pt-3 md:hidden"
+          className="border-b border-zinc-800 bg-[#0D0D10] px-4 pb-6 pt-3 shadow-xl md:hidden"
         >
           <nav aria-label="Menu mobile" className="flex flex-col gap-1">
-            {NAV_LINKS.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={handleLinkClick}
-                className="flex min-h-[44px] items-center rounded-lg px-3 text-base font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
-            <div className="mt-3 pt-3 border-t border-zinc-800/80">
+            {NAV_LINKS.map((item) => {
+              const isActive = activeSection === item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => handleLinkClick(item.href)}
+                  className={`flex min-h-[44px] items-center justify-between rounded-lg px-3 text-base font-medium transition-colors ${
+                    isActive
+                      ? 'bg-accent/15 text-white'
+                      : 'text-zinc-300 hover:bg-zinc-900 hover:text-white'
+                  }`}
+                >
+                  <span>{item.label}</span>
+                  {isActive && <span className="text-xs font-mono text-accent">Attuale</span>}
+                </a>
+              );
+            })}
+            <div className="mt-3 border-t border-zinc-800/80 pt-3">
               <button
                 type="button"
                 onClick={handleBookFromMobile}

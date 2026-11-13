@@ -396,7 +396,9 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                   className="flex items-center justify-between rounded-md border border-zinc-800/80 bg-[#09090C] px-2.5 py-1.5 text-[10px] text-zinc-300"
                 >
                   <span className="truncate">{item}</span>
-                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${idx === 0 ? 'bg-accent' : 'bg-zinc-600'}`} />
+                  <span className={`font-mono text-[10px] shrink-0 ${idx === 0 ? 'text-accent' : 'text-zinc-500'}`}>
+                    ↗
+                  </span>
                 </div>
               ))}
             </div>

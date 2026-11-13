@@ -11,7 +11,7 @@ interface HeroProps {
 const ROLES = [
   'sviluppatore software',
   'dottore in informatica',
-  'professore di programmazione e robotica',
+  'docente di programmazione e robotica',
   'appassionato di videogiochi e realtà virtuale',
 ];
 
@@ -92,22 +92,26 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               className="font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
               style={{ textWrap: 'balance' }}
             >
-              <span className="text-accent">Maurizio Minieri</span> Ingegnere software.
+              <span className="block text-accent">Maurizio Minieri</span>
+              <span>Ingegnere software.</span>
             </h1>
 
-            <p className="mt-3 flex min-h-[1.5rem] items-center gap-2 font-mono text-sm text-zinc-300 sm:text-base">
-              <span className="text-accent font-semibold">&gt;</span>
+            <p className="mt-3 min-h-[2.75rem] font-mono text-sm leading-snug text-zinc-300 sm:min-h-[1.75rem] sm:text-base">
+              <span className="mr-2 font-semibold text-accent">&gt;</span>
               <span>{roleText}</span>
-              <span className="inline-block h-4 w-[2px] animate-pulse bg-accent" aria-hidden="true" />
+              <span
+                className="ml-1 inline-block h-4 w-[2px] animate-pulse bg-accent align-middle"
+                aria-hidden="true"
+              />
             </p>
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
-              Dottore in informatica laureato alla Federico II e alla Apple Developer Academy. Oggi
+              Dottore in Informatica alla Federico II, diplomato alla Apple Developer Academy. Oggi
               sviluppo siti e applicazioni in una grande azienda e insegno programmazione, robotica
-              e informatica con passione per studenti, universitari e scuole.
+              e informatica con passione a studenti, universitari e scuole.
             </p>
 
-            <div className="mt-6 sm:mt-7 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
               <a
                 href={quickWaUrl}
                 target="_blank"
@@ -119,29 +123,33 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 <span>Prenota una lezione</span>
               </a>
 
-              <button
-                type="button"
-                onClick={() => onBookForAudience('Studente')}
-                className="inline-flex min-h-[48px] flex-1 sm:flex-initial items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-5 py-3 text-sm font-medium text-zinc-100 transition-colors duration-150 hover:border-zinc-700 hover:text-white cursor-pointer"
-              >
-                <span>I miei contatti</span>
-                <ArrowDown className="h-4 w-4 text-accent" aria-hidden="true" />
-              </button>
+              <div className="grid grid-cols-2 gap-2.5 sm:contents">
+                <button
+                  type="button"
+                  onClick={() => {
+                    trackClarityEvent('hero_contacts_scroll');
+                    onBookForAudience('Studente');
+                  }}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-4 py-3 text-sm font-medium text-zinc-100 transition-colors duration-150 hover:border-zinc-700 hover:text-white cursor-pointer sm:px-5"
+                >
+                  <span>I miei contatti</span>
+                  <ArrowDown className="h-4 w-4 text-accent" aria-hidden="true" />
+                </button>
 
-              <a
-                href={PROFILE.cvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackClarityEvent('cv_download_click')}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg px-3 py-3 text-sm font-medium text-zinc-300 transition-colors hover:text-zinc-100"
-              >
-                <FileText className="h-4 w-4 text-accent" aria-hidden="true" />
-                <span>Guarda il mio CV</span>
-              </a>
+                <a
+                  href={PROFILE.cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClarityEvent('cv_download_click')}
+                  className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800/80 bg-[#0D0D11] px-4 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100 sm:border-transparent sm:bg-transparent sm:px-3"
+                >
+                  <FileText className="h-4 w-4 text-accent" aria-hidden="true" />
+                  <span>Guarda il mio CV</span>
+                </a>
+              </div>
             </div>
 
             <div className="mt-6 flex flex-col gap-3 border-t border-zinc-800/80 pt-5">
-            
               <a
                 href={PROFILE.springerUrl}
                 target="_blank"
@@ -154,19 +162,17 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 </span>
                 <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
               </a>
-
-              
             </div>
           </div>
 
-          <div className="lg:col-span-5 flex">
+          <div className="flex lg:col-span-5">
             <motion.div
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               initial={{ opacity: 0, y: 18, scale: 0.985 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative flex w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] min-h-[340px] sm:min-h-[420px] lg:min-h-full transition-colors duration-300 hover:border-zinc-700"
+              className="group relative flex min-h-[340px] w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] transition-colors duration-300 hover:border-zinc-700 sm:min-h-[420px] lg:min-h-full"
             >
               <motion.div
                 aria-hidden="true"
@@ -210,7 +216,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               />
 
               <motion.div
-                className="relative z-10 flex h-full w-full items-end justify-center pt-6 px-4"
+                className="relative z-10 flex h-full w-full items-end justify-center px-4 pt-6"
                 animate={
                   prefersReducedMotion
                     ? undefined
@@ -234,7 +240,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  className="max-h-[400px] lg:max-h-[440px] w-auto object-contain object-bottom brightness-[1.03] contrast-[1.04] saturate-[0.92] drop-shadow-[0_18px_36px_rgba(0,0,0,0.75)]"
+                  className="max-h-[400px] w-auto object-contain object-bottom brightness-[1.03] contrast-[1.04] saturate-[0.92] drop-shadow-[0_18px_36px_rgba(0,0,0,0.75)] lg:max-h-[440px]"
                 />
               </motion.div>
 
@@ -260,10 +266,10 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 lg:grid-cols-4">
           {HERO_METRICS.map((metric) => (
             <div key={metric.label} className="bg-[#111115] p-4 sm:p-5">
-              <p className="font-display text-base sm:text-xl font-semibold tracking-tight text-zinc-100 tabular-nums">
+              <p className="font-display text-base font-semibold tracking-tight text-zinc-100 tabular-nums sm:text-xl">
                 {metric.value}
               </p>
-              <p className="mt-0.5 text-xs sm:text-sm font-medium text-accent">{metric.label}</p>
+              <p className="mt-0.5 text-xs font-medium text-accent sm:text-sm">{metric.label}</p>
             </div>
           ))}
         </div>

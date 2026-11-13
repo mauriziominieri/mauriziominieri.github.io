@@ -36,9 +36,16 @@ export default function App() {
   return (
     <MotionConfig reducedMotion="user">
       <div className="min-h-screen overflow-x-clip bg-[#09090B] text-zinc-100">
-      <Navbar onBookClick={() => scrollToBooking()} />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:outline-none"
+        >
+          Vai al contenuto principale
+        </a>
 
-      <main>
+        <Navbar onBookClick={() => scrollToBooking()} />
+
+        <main id="main-content">
         <Hero onBookForAudience={(audience) => scrollToBooking(audience)} />
         <AboutSection />
         <TeachingSection

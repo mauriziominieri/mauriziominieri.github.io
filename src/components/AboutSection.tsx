@@ -18,7 +18,7 @@ export const AboutSection: React.FC = () => {
 
             <div className="mt-4 space-y-3.5 text-sm leading-relaxed text-zinc-300 sm:text-base">
               <p>
-                Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose, ero il
+                Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose: ero il
                 bambino che smontava i propri giocattoli per capire come funzionassero piuttosto che
                 giocarci. Quella curiosità, unita a una crescente passione per i videogiochi, mi ha
                 portato dritto verso l&apos;informatica.
@@ -27,7 +27,7 @@ export const AboutSection: React.FC = () => {
                 Dopo il liceo scientifico sperimentale mi sono laureato all&apos;
                 <strong className="text-zinc-100">Università Federico II</strong>, dove mi sono
                 immerso in questo mondo vasto e affascinante. Mi colpisce quanto l&apos;informatica
-                sia ormai presente in ogni oggetto della vita quotidiana, e immagino un futuro di
+                sia ormai presente in ogni oggetto della vita quotidiana e immagino un futuro di
                 videogiochi incredibilmente immersivi, videochiamate olografiche, auto che guidano da
                 sole e case che si puliscono in autonomia.
               </p>

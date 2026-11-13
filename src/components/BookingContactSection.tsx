@@ -67,6 +67,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
     try {
       await navigator.clipboard.writeText(value);
       setCopiedType(type);
+      trackClarityEvent(type === 'email' ? 'copy_email_click' : 'copy_phone_click');
       window.setTimeout(() => setCopiedType(null), 2200);
     } catch {
       setCopiedType(null);
@@ -77,8 +78,8 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
     <section id="contatti" className="bg-[#09090B]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="rounded-2xl border border-zinc-800 bg-[#121216] p-4 sm:p-8 lg:p-10">
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-12">
-            <div className="lg:col-span-6">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-10">
+            <div className="lg:col-span-5">
               <p className="text-sm font-medium text-accent">Prenota una lezione</p>
               <h2
                 className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl"
@@ -87,12 +88,12 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                 Mandami un messaggio, ti rispondo il prima possibile.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                Scegli l&apos;argomento qui accanto e scrivimi subito su WhatsApp o via email:
-                lezioni individuali o di gruppo online e in presenza.
+                Scegli l&apos;argomento e scrivimi subito su WhatsApp o via email: lezioni
+                individuali o di gruppo, online e in presenza.
               </p>
             </div>
 
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-7">
               <div className="rounded-xl border border-zinc-800 bg-[#09090B] p-3.5 sm:p-5">
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {QUICK_TOPICS.map((topic) => {
