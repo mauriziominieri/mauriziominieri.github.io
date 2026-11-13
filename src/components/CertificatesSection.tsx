@@ -1,42 +1,99 @@
 import React, { useState } from 'react';
-import { Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
-import { CERTIFICATES } from '../data/portfolioData';
+import { Award, ExternalLink } from 'lucide-react';
+import { CERTIFICATES, CertificateItem } from '../data/portfolioData';
+
+type CertFilter =
+  | 'Principali'
+  | 'Tutte'
+  | 'Cloud & DevOps'
+  | 'Programmazione & App'
+  | 'Sicurezza & Reti'
+  | 'Management'
+  | 'Digital & Dati'
+  | 'Lingue & Extra';
+
+const CERT_FILTERS: CertFilter[] = [
+  'Principali',
+  'Tutte',
+  'Cloud & DevOps',
+  'Programmazione & App',
+  'Sicurezza & Reti',
+  'Management',
+  'Digital & Dati',
+  'Lingue & Extra',
+];
+
+function matchesCertFilter(cert: CertificateItem, filter: CertFilter): boolean {
+  switch (filter) {
+    case 'Principali':
+      return Boolean(cert.featured);
+    case 'Tutte':
+      return true;
+    case 'Cloud & DevOps':
+      return ['Cloud & Kubernetes', 'Container & Linux', 'Cloud & Sistemi'].includes(cert.category);
+    case 'Programmazione & App':
+      return ['Programmazione Java', 'iOS & Sviluppo App', 'Didattica & iOS', 'Coding & Web'].includes(
+        cert.category
+      );
+    case 'Sicurezza & Reti':
+      return ['Networking', 'Sicurezza', 'Privacy & Normativa'].includes(cert.category);
+    case 'Management':
+      return cert.category === 'Management';
+    case 'Digital & Dati':
+      return ['Data Analysis', 'Competenze Digitali', 'Digital & Analytics'].includes(cert.category);
+    case 'Lingue & Extra':
+      return ['Lingue', 'Soft Skills & Didattica', 'Hackathon & Innovazione', 'Altro'].includes(
+        cert.category
+      );
+  }
+}
 
 export const CertificatesSection: React.FC = () => {
-  const [showAll, setShowAll] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<CertFilter>('Principali');
 
-  const visibleCertificates = showAll
-    ? CERTIFICATES
-    : CERTIFICATES.filter((c) => c.featured);
+  const visibleCertificates = CERTIFICATES.filter((cert) =>
+    matchesCertFilter(cert, activeFilter)
+  );
 
   return (
     <section id="certificati" className="border-b border-zinc-800/70 bg-[#0B0B0E]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm font-medium text-accent">Certificazioni</p>
+            <p className="text-sm font-medium text-accent">
+              Certificazioni
+            </p>
             <h2 className="mt-1 font-display text-3xl font-semibold tracking-tight text-zinc-100">
               Titoli ufficiali.
             </h2>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setShowAll((prev) => !prev)}
-            aria-expanded={showAll}
-            className="inline-flex min-h-[40px] shrink-0 items-center justify-center gap-2 self-start rounded-lg border border-zinc-800 bg-[#121216] px-4 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white md:self-auto cursor-pointer"
+          <div
+            role="tablist"
+            aria-label="Filtra certificazioni per categoria"
+            className="flex flex-nowrap items-center gap-1 overflow-x-auto rounded-xl border border-zinc-800 bg-[#121216] p-1 max-w-full [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            <span>
-              {showAll
-                ? 'Mostra solo i principali'
-                : `Vedi tutti i ${CERTIFICATES.length} certificati`}
-            </span>
-            {showAll ? (
-              <ChevronUp className="h-4 w-4 text-accent" aria-hidden="true" />
-            ) : (
-              <ChevronDown className="h-4 w-4 text-accent" aria-hidden="true" />
-            )}
-          </button>
+            {CERT_FILTERS.map((filter) => {
+              const isActive = activeFilter === filter;
+              const label = filter === 'Tutte' ? `Tutte (${CERTIFICATES.length})` : filter;
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`min-h-[40px] sm:min-h-[38px] whitespace-nowrap shrink-0 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors duration-150 cursor-pointer ${
+                    isActive
+                      ? 'bg-accent text-white'
+                      : 'text-zinc-400 hover:text-zinc-100'
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

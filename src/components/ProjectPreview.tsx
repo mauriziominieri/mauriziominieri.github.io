@@ -323,16 +323,48 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
       );
 
     case 'find-your-pc':
-    case 'dashboard-gierre':
-    case 'uil-scuola-napoli':
       return (
         <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
           <div className="w-full max-w-[260px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
             <div className="flex items-center justify-between gap-2 font-mono text-[10px] text-zinc-400">
-              <span className="truncate uppercase">{projectId.replace(/-/g, ' ')}</span>
-              <span className="shrink-0 text-accent">LIVE UI</span>
+              <span>FIND YOUR PC</span>
+              <span className="text-accent">JAVA · CONFIG</span>
             </div>
-            <div className="mt-3 flex items-end gap-2 h-16">
+            <div className="mt-3 flex items-center gap-3">
+              <svg viewBox="0 0 64 56" className="h-14 w-16 shrink-0" aria-hidden="true">
+                <rect x="4" y="6" width="38" height="28" rx="3" fill="#18181D" stroke="#52525B" strokeWidth="1.5" />
+                <rect x="8" y="10" width="30" height="20" rx="1.5" fill="#09090C" />
+                <path d="M14 20h18M14 25h11" stroke="var(--brand-accent)" strokeWidth="2" strokeLinecap="round" />
+                <path d="M18 34v6M28 34v6M13 40h20" stroke="#52525B" strokeWidth="1.8" strokeLinecap="round" />
+                <rect x="46" y="10" width="14" height="30" rx="2" fill="#18181D" stroke="var(--brand-accent)" strokeWidth="1.5" />
+                <circle cx="53" cy="17" r="2" fill="var(--brand-accent)" />
+                <line x1="50" y1="24" x2="56" y2="24" stroke="#52525B" strokeWidth="1.5" />
+                <line x1="50" y1="28" x2="56" y2="28" stroke="#52525B" strokeWidth="1.5" />
+              </svg>
+              <div className="flex-1 space-y-1.5 font-mono text-[9px] text-zinc-300">
+                <div>CPU · 92%</div>
+                <div className="h-1.5 w-full rounded-full bg-zinc-800">
+                  <div className="h-1.5 w-[92%] rounded-full bg-accent" />
+                </div>
+                <div>RAM · 16 GB</div>
+                <div className="h-1.5 w-full rounded-full bg-zinc-800">
+                  <div className="h-1.5 w-[75%] rounded-full bg-zinc-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'dashboard-gierre':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
+          <div className="w-full max-w-[260px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
+            <div className="flex items-center justify-between gap-2 font-mono text-[10px] text-zinc-400">
+              <span>DASHBOARD GIERRE</span>
+              <span className="text-accent">KPI · LIVE</span>
+            </div>
+            <div className="mt-3 flex items-end gap-2 h-14">
               {[38, 62, 48, 86, 68, 94, 72].map((h, i) => (
                 <div
                   key={i}
@@ -340,6 +372,111 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
                   style={{ height: `${h}%` }}
                 />
               ))}
+            </div>
+            <div className="mt-2.5 flex items-center justify-between border-t border-zinc-800 pt-2 font-mono text-[9px] text-zinc-400">
+              <span>CLIENTI ATTIVI</span>
+              <span className="text-zinc-200">+24.8%</span>
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'uil-scuola-napoli':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
+          <div className="w-full max-w-[260px] rounded-xl border border-zinc-800 bg-[#111116] p-4">
+            <div className="flex items-center justify-between gap-2 border-b border-zinc-800 pb-2 font-mono text-[10px]">
+              <span className="font-semibold text-zinc-200">UIL SCUOLA</span>
+              <span className="text-accent">AREA FLEGREA</span>
+            </div>
+            <div className="mt-3 space-y-2">
+              {['Circolare Docenti & ATA', 'Modulistica & Bandi', 'Calendario Scolastico'].map((item, idx) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-between rounded-md border border-zinc-800/80 bg-[#09090C] px-2.5 py-1.5 text-[10px] text-zinc-300"
+                >
+                  <span className="truncate">{item}</span>
+                  <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${idx === 0 ? 'bg-accent' : 'bg-zinc-600'}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'findone':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4">
+          <div className="flex h-[162px] w-[112px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">
+            <div className="mx-auto h-1 w-8 rounded-full bg-zinc-700" />
+            <svg viewBox="0 0 80 68" className="w-full" aria-hidden="true">
+              <circle cx="35" cy="30" r="18" fill="none" stroke="var(--brand-accent)" strokeWidth="1.8" strokeDasharray="3 3" opacity="0.55" />
+              <circle cx="35" cy="30" r="12" fill="#18181D" stroke="var(--brand-accent)" strokeWidth="2.2" />
+              <circle cx="35" cy="30" r="3.5" fill="var(--brand-accent)" />
+              <line x1="44" y1="39" x2="58" y2="53" stroke="#E4E4E7" strokeWidth="3" strokeLinecap="round" />
+            </svg>
+            <div className="text-center font-mono text-[9px] text-accent">
+              FINDONE · iOS
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'not-only-pasta':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4">
+          <div className="flex h-[162px] w-[112px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">
+            <div className="mx-auto h-1 w-8 rounded-full bg-zinc-700" />
+            <svg viewBox="0 0 80 72" className="w-full" aria-hidden="true">
+              <path d="M26 15c0-4 3-5 3-9M38 13c0-4 3-5 3-9M50 15c0-4 3-5 3-9" fill="none" stroke="var(--brand-accent-soft)" strokeWidth="1.8" strokeLinecap="round" opacity="0.7" />
+              <path d="M24 34c4-9 28-9 32 0" fill="none" stroke="var(--brand-accent)" strokeWidth="2.4" strokeLinecap="round" />
+              <path d="M20 34c8-6 32-6 40 0" fill="none" stroke="#F4F4F5" strokeWidth="1.6" strokeLinecap="round" />
+              <path d="M14 35h52c-2 13-11 21-26 21S16 48 14 35z" fill="#18181D" stroke="#52525B" strokeWidth="1.8" />
+              <rect x="26" y="56" width="28" height="3" rx="1.5" fill="#3F3F46" />
+            </svg>
+            <div className="text-center font-mono text-[9px] text-accent">
+              PASTA · RICETTE
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'cabway':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4">
+          <div className="flex h-[162px] w-[112px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">
+            <div className="mx-auto h-1 w-8 rounded-full bg-zinc-700" />
+            <svg viewBox="0 0 84 68" className="w-full" aria-hidden="true">
+              <path d="M12 50 C 28 50, 26 22, 46 22 S 64 38, 72 16" fill="none" stroke="var(--brand-accent)" strokeWidth="2.2" strokeDasharray="4 3" />
+              <circle cx="12" cy="50" r="4.5" fill="#F4F4F5" />
+              <path d="M72 8a6 6 0 0 1 6 6c0 4.5-6 10-6 10s-6-5.5-6-10a6 6 0 0 1 6-6z" fill="var(--brand-accent)" />
+              <circle cx="72" cy="14" r="2" fill="#09090C" />
+              <rect x="28" y="34" width="26" height="11" rx="3" fill="#18181D" stroke="#52525B" strokeWidth="1.4" />
+              <circle cx="34" cy="46" r="2.2" fill="#E4E4E7" />
+              <circle cx="48" cy="46" r="2.2" fill="#E4E4E7" />
+            </svg>
+            <div className="text-center font-mono text-[9px] text-accent">
+              CABWAY · MAPKIT
+            </div>
+          </div>
+        </div>
+      );
+
+    case 'geoall-ar-coredata':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4">
+          <div className="flex h-[162px] w-[112px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">
+            <div className="mx-auto h-1 w-8 rounded-full bg-zinc-700" />
+            <svg viewBox="0 0 80 72" className="w-full" aria-hidden="true">
+              <circle cx="40" cy="36" r="22" fill="#18181D" stroke="var(--brand-accent)" strokeWidth="1.8" />
+              <ellipse cx="40" cy="36" rx="10" ry="22" fill="none" stroke="#52525B" strokeWidth="1.3" />
+              <line x1="18" y1="36" x2="62" y2="36" stroke="#52525B" strokeWidth="1.3" />
+              <path d="M22 25h36M22 47h36" stroke="#3F3F46" strokeWidth="1.1" />
+              <circle cx="51" cy="26" r="4" fill="var(--brand-accent)" />
+              <path d="M12 20v-6h6M68 20v-6h-6M12 52v6h6M68 52v6h-6" fill="none" stroke="var(--brand-accent-soft)" strokeWidth="1.5" opacity="0.7" />
+            </svg>
+            <div className="text-center font-mono text-[9px] text-accent">
+              GEOALL · ARKIT
             </div>
           </div>
         </div>

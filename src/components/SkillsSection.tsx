@@ -13,11 +13,11 @@ export const SkillsSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm text-zinc-400">
-            Linguaggi, infrastrutture cloud e robotica educativa.
+            Linguaggi, framework, IDE, strumenti DevOps e robotica educativa.
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
           {SKILL_DOMAINS.map((domain) => (
             <article
               key={domain.index}

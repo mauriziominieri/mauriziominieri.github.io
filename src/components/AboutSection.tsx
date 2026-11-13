@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, FileText, Play } from 'lucide-react';
+import { BookOpen, ExternalLink, FileText, Play } from 'lucide-react';
 import { PROFILE, TIMELINE_ENTRIES } from '../data/portfolioData';
 
 export const AboutSection: React.FC = () => {
@@ -116,29 +116,58 @@ export const AboutSection: React.FC = () => {
               {TIMELINE_ENTRIES.map((entry) => (
                 <div
                   key={entry.title}
-                  className="flex flex-col gap-1.5 px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 sm:py-4"
+                  className="px-4 py-3.5 sm:px-5 sm:py-4"
                 >
-                  <div className="min-w-0">
-                    <h3 className="font-display text-base font-semibold text-zinc-100">
-                      {entry.title}
-                    </h3>
-                    <p className="text-xs text-zinc-400">{entry.subtitle}</p>
+                  <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                    <div className="min-w-0">
+                      <h3 className="font-display text-base font-semibold text-zinc-100">
+                        {entry.title}
+                      </h3>
+                      <p className="text-xs text-zinc-400">{entry.subtitle}</p>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 shrink-0">
+                      {entry.link && (
+                        <a
+                          href={entry.link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs font-medium text-accent hover:underline"
+                        >
+                          {entry.link.label} ↗
+                        </a>
+                      )}
+                      <span className="font-mono text-xs text-zinc-400 tabular-nums">
+                        {entry.period}
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 shrink-0">
-                    {entry.link && (
-                      <a
-                        href={entry.link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs font-medium text-accent hover:underline"
-                      >
-                        {entry.link.label} ↗
-                      </a>
-                    )}
-                    <span className="font-mono text-xs text-zinc-400 tabular-nums">
-                      {entry.period}
-                    </span>
-                  </div>
+
+                  {entry.publication && (
+                    <a
+                      href={entry.publication.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 flex flex-col gap-2 rounded-xl border border-zinc-800/90 bg-[#09090B]/80 p-3 transition-colors hover:border-accent/50 sm:flex-row sm:items-center sm:justify-between"
+                    >
+                      <div className="flex items-start gap-2.5 min-w-0">
+                        <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-accent/30 bg-accent/10 text-accent">
+                          <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-xs font-semibold text-zinc-100">
+                            {entry.publication.title}
+                          </p>
+                          <p className="mt-0.5 text-[11px] text-zinc-400">
+                            {entry.publication.description}
+                          </p>
+                        </div>
+                      </div>
+                      <span className="inline-flex shrink-0 items-center gap-1 self-start font-mono text-[11px] font-medium text-accent sm:self-center">
+                        <span>{entry.publication.venue}</span>
+                        <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      </span>
+                    </a>
+                  )}
                 </div>
               ))}
             </div>

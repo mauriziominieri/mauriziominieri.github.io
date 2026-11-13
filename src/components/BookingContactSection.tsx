@@ -118,74 +118,85 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                   })}
                 </div>
 
-                <div className="mt-4 flex flex-col gap-2.5 sm:flex-row">
+                <div className="mt-4 space-y-2.5">
                   <a
                     href={waHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => trackClarityEvent('whatsapp_booking_click')}
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                    className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    <span>Prenota lezione</span>
+                    <span>Prenota su WhatsApp</span>
                     <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   </a>
 
-                  <a
-                    href={PROFILE.phoneHref}
-                    onClick={() => trackClarityEvent('phone_call_click')}
-                    className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-[#121216] px-5 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:text-white tabular-nums"
-                  >
-                    <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
-                    <span>Chiamami</span>
-                  </a>
+                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                    <a
+                      href={PROFILE.phoneHref}
+                      onClick={() => trackClarityEvent('phone_call_click')}
+                      className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-[#121216] px-4 py-2.5 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:text-white tabular-nums"
+                    >
+                      <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
+                      <span>Chiama</span>
+                    </a>
+
+                    <a
+                      href={mailHref}
+                      onClick={() => trackClarityEvent('email_click')}
+                      className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-[#121216] px-4 py-2.5 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:text-white"
+                    >
+                      <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
+                      <span>Invia Email</span>
+                    </a>
+                  </div>
                 </div>
 
-                <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800/80 pt-3.5">
-                  <a
-                    href={mailHref}
-                    onClick={() => trackClarityEvent('email_click')}
-                    className="inline-flex min-w-0 items-center gap-2 font-mono text-xs text-zinc-300 transition-colors hover:text-accent"
-                  >
-                    <Mail className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
-                    <span className="break-all">{PROFILE.email}</span>
-                  </a>
-
-                  <div className="flex items-center gap-2">
+                <div className="mt-4 border-t border-zinc-800/80 pt-3.5">
+                  <p className="mb-2 text-[11px] font-medium text-zinc-400">
+                    Preferisci copiare i recapiti?
+                  </p>
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                     <button
                       type="button"
                       onClick={() => handleCopy(PROFILE.phoneDisplay, 'phone')}
-                      className="inline-flex min-h-[38px] sm:min-h-[32px] items-center gap-1 rounded-md border border-zinc-800 bg-[#121216] px-2.5 py-1 text-xs text-zinc-300 hover:text-white cursor-pointer"
+                      className="inline-flex min-h-[40px] items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-zinc-700 hover:text-white cursor-pointer"
                     >
-                      {copiedType === 'phone' ? (
-                        <>
-                          <Check className="h-3 w-3 text-accent" aria-hidden="true" />
-                          <span>Copiato</span>
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="h-3 w-3" aria-hidden="true" />
-                          <span>Tel</span>
-                        </>
-                      )}
+                      <span className="truncate font-mono tabular-nums">{PROFILE.phoneDisplay}</span>
+                      <span className="inline-flex shrink-0 items-center gap-1 font-medium text-accent">
+                        {copiedType === 'phone' ? (
+                          <>
+                            <Check className="h-3.5 w-3.5" aria-hidden="true" />
+                            <span>Copiato</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="h-3.5 w-3.5" aria-hidden="true" />
+                            <span>Copia cell</span>
+                          </>
+                        )}
+                      </span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => handleCopy(PROFILE.email, 'email')}
-                      className="inline-flex min-h-[38px] sm:min-h-[32px] items-center gap-1 rounded-md border border-zinc-800 bg-[#121216] px-2.5 py-1 text-xs text-zinc-300 hover:text-white cursor-pointer"
+                      className="inline-flex min-h-[40px] items-center justify-between gap-2 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-2 text-xs text-zinc-300 transition-colors hover:border-zinc-700 hover:text-white cursor-pointer"
                     >
-                      {copiedType === 'email' ? (
-                        <>
-                          <Check className="h-3 w-3 text-accent" aria-hidden="true" />
-                          <span>Copiata</span>
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="h-3 w-3" aria-hidden="true" />
-                          <span>Email</span>
-                        </>
-                      )}
+                      <span className="truncate font-mono">{PROFILE.email}</span>
+                      <span className="inline-flex shrink-0 items-center gap-1 font-medium text-accent">
+                        {copiedType === 'email' ? (
+                          <>
+                            <Check className="h-3.5 w-3.5" aria-hidden="true" />
+                            <span>Copiata</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="h-3.5 w-3.5" aria-hidden="true" />
+                            <span>Copia email</span>
+                          </>
+                        )}
+                      </span>
                     </button>
                   </div>
                 </div>

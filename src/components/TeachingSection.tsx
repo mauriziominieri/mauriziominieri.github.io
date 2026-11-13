@@ -12,10 +12,14 @@ interface TeachingSectionProps {
 
 export const TeachingSection: React.FC<TeachingSectionProps> = () => {
   const [audienceTab, setAudienceTab] = useState<'studenti' | 'docenti'>('studenti');
-  const [openGallerySchool, setOpenGallerySchool] = useState<string | null>(
-    PON_SCHOOLS[0].schoolName
-  );
+  const [openGalleries, setOpenGalleries] = useState<Record<string, boolean>>({
+    [PON_SCHOOLS[0].schoolName]: true,
+  });
   const [failedPhotos, setFailedPhotos] = useState<Record<string, boolean>>({});
+
+  const toggleGallery = (schoolName: string) => {
+    setOpenGalleries((prev) => ({ ...prev, [schoolName]: !prev[schoolName] }));
+  };
 
   const visibleTracks = TEACHING_TRACKS.filter((track) => track.audience === audienceTab);
 
@@ -143,7 +147,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
 
         <div className="mt-8 divide-y divide-zinc-800 rounded-2xl border border-zinc-800 bg-[#111115]">
           {PON_SCHOOLS.map((school) => {
-            const isGalleryOpen = openGallerySchool === school.schoolName;
+            const isGalleryOpen = Boolean(openGalleries[school.schoolName]);
             return (
               <div key={school.schoolName} className="p-4 sm:p-6">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -161,9 +165,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
 
                   <button
                     type="button"
-                    onClick={() =>
-                      setOpenGallerySchool(isGalleryOpen ? null : school.schoolName)
-                    }
+                    onClick={() => toggleGallery(school.schoolName)}
                     aria-expanded={isGalleryOpen}
                     className={`inline-flex min-h-[44px] sm:min-h-[38px] shrink-0 self-start sm:self-auto items-center gap-2 rounded-lg border px-3.5 py-1.5 text-xs font-medium transition-colors cursor-pointer ${
                       isGalleryOpen

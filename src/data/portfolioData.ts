@@ -42,6 +42,12 @@ export interface TimelineEntry {
     label: string;
     url: string;
   };
+  publication?: {
+    title: string;
+    venue: string;
+    description: string;
+    url: string;
+  };
 }
 
 export interface TeachingTrack {
@@ -139,6 +145,12 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
     period: '2014 – 2018',
     title: 'Università Federico II',
     subtitle: 'Laurea in Informatica. Linguaggi, sviluppo web e applicativo; tesi sperimentale in Unity e C# sui guanti Manus VR.',
+    publication: {
+      title: 'Pubblicazione scientifica · ManDri',
+      venue: 'Springer · WAINA 2019',
+      description: 'Integrazione dei guanti Manus VR per il controllo gestuale alla guida',
+      url: 'https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84',
+    },
   },
   {
     period: '2009 – 2014',
@@ -150,35 +162,42 @@ export const TIMELINE_ENTRIES: TimelineEntry[] = [
 export const SKILL_DOMAINS: SkillDomain[] = [
   {
     index: '01.',
-    title: 'Linguaggi & Ambienti',
+    title: 'Linguaggi & Paradigmi',
     items: [
-      { name: 'Python · C · C++ · Java · C#', detail: 'Oracle Java SE 8 & SE 11' },
-      { name: 'JavaScript · TypeScript · PHP · SQL · Visual Basic', detail: 'Web, Automazione & Database' },
-      { name: 'Swift · Scratch', detail: 'App iOS (iPhone, iPad, Mac, Watch) & Didattica' },
-      {
-        name: 'Unity · Xcode · Visual Studio · VS Code · IntelliJ IDEA · Eclipse',
-        detail: 'Android Studio · Code::Blocks · Dev C++ · Vim',
-      },
+      { name: 'Java · C · C++ · C# · Python', detail: 'OOP, Puntatori, Algoritmi · Oracle Java SE 8 & SE 11' },
+      { name: 'JavaScript · TypeScript · HTML5 · CSS3 · PHP', detail: 'ES6+, Sviluppo Web Moderno & Scripting' },
+      { name: 'SQL · PL/SQL · Bash / Shell · Visual Basic', detail: 'Database relazionali, Automazione & Terminale' },
+      { name: 'Swift · Kotlin · Dart · Scratch', detail: 'App iOS/Android & Didattica visuale' },
     ],
   },
   {
     index: '02.',
-    title: 'Web, Cloud & Dati',
+    title: 'Framework, Web & Mobile',
     items: [
-      { name: 'React · Next.js · Angular · HTML5 · CSS3', detail: 'Bootstrap · Tailwind CSS · jQuery' },
-      { name: 'Node.js · Firebase · Supabase', detail: 'API REST & Real-time' },
-      { name: 'PostgreSQL · MongoDB · SQL', detail: 'Modelli relazionali e NoSQL' },
-      { name: 'Kubernetes (CKA) · Docker · Git · GitHub · GitLab', detail: 'Reti Cisco CCNA & CI/CD' },
+      { name: 'React · Next.js · Angular · Vue.js · Vite', detail: 'Single Page App, SSR & Frontend reattivo' },
+      { name: 'Tailwind CSS · Bootstrap · Sass · jQuery', detail: 'Design System, UI Responsive & Animazioni' },
+      { name: 'Node.js · Express · Spring Boot · .NET', detail: 'REST API, GraphQL & Microservizi' },
+      { name: 'Unity 3D · SwiftUI · UIKit · ARKit · MapKit', detail: 'Realtà Virtuale (Manus VR) & Ecosistema Apple' },
     ],
   },
   {
     index: '03.',
-    title: 'Didattica & Robotica',
+    title: 'IDE, Editor & Software',
     items: [
-      { name: 'Robotica Educativa · Arduino · Raspberry Pi', detail: 'Moduli pratici PON dalle elementari alle superiori' },
-      { name: 'Algoritmi · Problem Solving · Data Analysis', detail: 'Preparazione esami universitari e Maturità' },
-      { name: 'Public Speaking · Project Management · Agile', detail: 'Gestione classe e lavoro in team' },
-      { name: 'Networking · UX/UI · Automazione', detail: 'Progettazione interfacce e cultura digitale' },
+      { name: 'VS Code · Visual Studio · IntelliJ IDEA · Eclipse', detail: 'NetBeans · PyCharm · WebStorm' },
+      { name: 'Xcode · Android Studio · Unity Editor', detail: 'Debug, Profiler & Simulatori Mobile/VR' },
+      { name: 'Code::Blocks · Dev-C++ · Vim · Nano', detail: 'Compilatori GCC/G++ & Editing da terminale' },
+      { name: 'Postman · FileZilla · Figma · Jira · Trello · Notion', detail: 'API Testing, FTP/SFTP, UI Design & Agile' },
+    ],
+  },
+  {
+    index: '04.',
+    title: 'Cloud, DevOps, Dati & Robotica',
+    items: [
+      { name: 'Docker · Kubernetes (CKA) · Git · GitHub · GitLab', detail: 'Container, Orchestrazione & GitHub Actions CI/CD' },
+      { name: 'PostgreSQL · MySQL · MongoDB · SQLite · Redis', detail: 'Firebase · Supabase · Modellazione dati' },
+      { name: 'Linux / Unix · SSH · Nginx · Apache · Cisco CCNA', detail: 'Networking, Sicurezza & Deployment' },
+      { name: 'Arduino · Raspberry Pi · Robotica Educativa · Agile', detail: 'Public Speaking, Problem Solving & Moduli PON' },
     ],
   },
 ];
