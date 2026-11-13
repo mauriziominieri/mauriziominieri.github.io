@@ -167,8 +167,8 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
             <div className="grid grid-cols-4 gap-1.5">
               {[
                 'var(--brand-accent)', 'var(--brand-accent)', '#3F3F46', '#27272A',
-                'var(--brand-accent)', '#F59E0B', '#F59E0B', '#3F3F46',
-                '#27272A', '#F59E0B', '#52525B', '#18181B',
+                'var(--brand-accent)', 'var(--brand-accent-soft)', 'var(--brand-accent-soft)', '#3F3F46',
+                '#27272A', 'var(--brand-accent-soft)', '#52525B', '#18181B',
                 '#18181B', '#3F3F46', 'var(--brand-accent)', 'var(--brand-accent)',
               ].map((color, idx) => (
                 <div

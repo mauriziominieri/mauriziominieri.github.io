@@ -1,15 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ==========================================================================
-   COLORE PRINCIPALE DEL SITO
-   Modifica questi 3 valori per cambiare il colore accent in tutto il sito
-   (pulsanti, link, icone, grafiche SVG, logo nella navbar, bordo focus).
-   ========================================================================== */
 :root {
-  --brand-accent: #D63A22;       /* Arancione scuro tendente al rosso */
-  --brand-accent-hover: #B82E19; /* Stato hover pulsanti */
-  --brand-accent-soft: #F06D54;  /* Sfumatura chiara per dettagli */
+  --brand-accent: #eb6131;
+  --brand-accent-hover: color-mix(in srgb, var(--brand-accent) 80%, #000000);
+  --brand-accent-soft: color-mix(in srgb, var(--brand-accent) 68%, #FFFFFF);
 
   --font-display: 'Outfit', system-ui, sans-serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;

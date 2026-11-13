@@ -4,6 +4,7 @@
  */
 
 import { useState } from 'react';
+import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -38,7 +39,8 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#09090B] text-zinc-100">
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen overflow-x-clip bg-[#09090B] text-zinc-100">
       <Navbar onBookClick={() => scrollToBooking()} />
 
       <main>
@@ -67,6 +69,7 @@ export default function App() {
         onClose={() => setSelectedProject(null)}
         onBookSimilar={(topic) => scrollToBooking('Studente', topic)}
       />
-    </div>
+      </div>
+    </MotionConfig>
   );
 }

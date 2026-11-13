@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { ArrowDown, FileText, GraduationCap, MessageCircle } from 'lucide-react';
 import { HERO_METRICS, PROFILE } from '../data/portfolioData';
 import { trackClarityEvent } from '../utils/analytics';
@@ -8,9 +9,24 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
+  const prefersReducedMotion = useReducedMotion();
+  const [pointer, setPointer] = useState({ x: 0, y: 0, active: false });
+
   const quickWaUrl = `https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(
     'Ciao Maurizio, vorrei informazioni per prenotare una lezione di informatica.'
   )}`;
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (prefersReducedMotion) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const normX = (event.clientX - rect.left) / rect.width - 0.5;
+    const normY = (event.clientY - rect.top) / rect.height - 0.5;
+    setPointer({ x: normX, y: normY, active: true });
+  };
+
+  const handleMouseLeave = () => {
+    setPointer({ x: 0, y: 0, active: false });
+  };
 
   return (
     <section id="top" className="border-b border-zinc-800/70 bg-[#09090B]">
@@ -79,17 +95,40 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
             </div>
           </div>
 
-          {/* Right Column: Editorial Cutout Portrait Frame */}
+          {/* Right Column: Animated Editorial Cutout Portrait Frame */}
           <div className="lg:col-span-5 flex">
-            <div className="relative flex w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] min-h-[340px] sm:min-h-[420px] lg:min-h-full">
-              <div
+            <motion.div
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              initial={{ opacity: 0, y: 18, scale: 0.985 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative flex w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] min-h-[340px] sm:min-h-[420px] lg:min-h-full transition-colors duration-300 hover:border-zinc-700"
+            >
+              {/* Ambient breathing radial aura synced with --brand-accent */}
+              <motion.div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 opacity-25"
+                animate={
+                  prefersReducedMotion
+                    ? undefined
+                    : {
+                        scale: [1, 1.09, 1],
+                        opacity: [0.22, 0.34, 0.22],
+                      }
+                }
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                className="pointer-events-none absolute inset-0"
                 style={{
                   background:
                     'radial-gradient(circle at 55% 32%, var(--brand-accent), rgba(18,18,22,0) 64%)',
                 }}
               />
+
+              {/* Subtle architectural grid */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -100,8 +139,31 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 }}
               />
 
-              <div className="relative z-10 flex h-full w-full items-end justify-center pt-6 px-4">
-                <img
+              {/* Interactive pointer spotlight on desktop hover */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+                style={{
+                  opacity: pointer.active ? 0.22 : 0,
+                  background: `radial-gradient(280px circle at ${(pointer.x + 0.5) * 100}% ${(pointer.y + 0.5) * 100}%, var(--brand-accent-soft), transparent 70%)`,
+                }}
+              />
+
+              {/* Portrait with subtle reveal, gentle hover lift & cursor micro-parallax */}
+              <motion.div
+                className="relative z-10 flex h-full w-full items-end justify-center pt-6 px-4"
+                animate={
+                  prefersReducedMotion
+                    ? undefined
+                    : {
+                        x: pointer.active ? pointer.x * 10 : 0,
+                        y: pointer.active ? pointer.y * 6 : 0,
+                        scale: pointer.active ? 1.025 : 1,
+                      }
+                }
+                transition={{ type: 'spring', stiffness: 180, damping: 24, mass: 0.6 }}
+              >
+                <motion.img
                   src="/assets/aistudio/profile_red_e772d2bd.png"
                   alt="Ritratto di Maurizio Minieri, Ingegnere Software e Docente PON"
                   width={842}
@@ -110,9 +172,12 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                   fetchPriority="high"
                   decoding="async"
                   referrerPolicy="no-referrer"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                   className="max-h-[400px] lg:max-h-[440px] w-auto object-contain object-bottom brightness-[1.03] contrast-[1.04] saturate-[0.92] drop-shadow-[0_18px_36px_rgba(0,0,0,0.75)]"
                 />
-              </div>
+              </motion.div>
 
               <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#09090B] via-[#09090B]/80 to-transparent px-5 pb-5 pt-20 sm:px-6">
                 <div className="flex items-center justify-between gap-4">
@@ -124,12 +189,12 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                       C# · Unity VR · Full-Stack · Docente PON
                     </p>
                   </div>
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-700/80 bg-[#121216]/90 text-accent">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-700/80 bg-[#121216]/90 text-accent transition-transform duration-300 group-hover:scale-105">
                     <GraduationCap className="h-4 w-4" aria-hidden="true" />
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
