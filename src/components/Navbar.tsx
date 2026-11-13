@@ -29,23 +29,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
   return (
     <header className="sticky top-0 z-40 h-16 border-b border-zinc-800/80 bg-[#09090B]/90 backdrop-blur-md">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:gap-8 lg:px-8">
-        {/* Zone 1: Brand Title + Custom SVG Logo */}
         <a
           href="#top"
           className="flex shrink-0 items-center gap-2.5 whitespace-nowrap text-zinc-100 transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-md"
           aria-label={`${PROFILE.name} - Torna all'inizio`}
         >
           <img
-            src="/assets/aistudio/favicon_ext_cropped_8e28a10c.svg"
-            alt="Logo personale volpe e M"
-            className="h-6 sm:h-7 w-auto object-contain"
+            src="/images/logo-fox.svg"
+            alt="Logo Maurizio Minieri"
+            className="h-6 sm:h-7 w-auto shrink-0 object-contain"
           />
           <span className="font-display text-base sm:text-lg font-semibold tracking-tight text-zinc-100">
             {PROFILE.name}
           </span>
         </a>
 
-        {/* Zone 2: Clean Single-Line Text Nav Links */}
         <nav
           aria-label="Navigazione principale"
           className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-zinc-400"
@@ -61,7 +59,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
           ))}
         </nav>
 
-        {/* Zone 3: Single Primary Action (+ Mobile Menu Button on small screens) */}
         <div className="flex shrink-0 items-center gap-3">
           <button
             type="button"
@@ -84,7 +81,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
       {mobileOpen && (
         <div
           id="mobile-navigation"

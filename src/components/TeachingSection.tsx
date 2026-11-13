@@ -79,7 +79,6 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
           </div>
         </div>
 
-        {/* PON Schools — Tito Livio Open by Default */}
         <div className="mt-8 divide-y divide-zinc-800 rounded-2xl border border-zinc-800 bg-[#111115]">
           {PON_SCHOOLS.map((school) => {
             const isGalleryOpen = openGallerySchool === school.schoolName;
@@ -151,7 +150,6 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
           })}
         </div>
 
-        {/* Concise Teaching Tracks */}
         <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
           {visibleTracks.map((track) => {
             const directWaHref = `https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(

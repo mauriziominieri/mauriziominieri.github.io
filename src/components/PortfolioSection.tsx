@@ -42,7 +42,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
             </h2>
           </div>
 
-          {/* Single-Line Non-Wrapping Filter Bar */}
           <div
             role="tablist"
             aria-label="Filtra progetti per categoria"
@@ -70,7 +69,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
           </div>
         </div>
 
-        {/* Clean 3-Column Grid with Cohesive Dark Minimalist Previews */}
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleProjects.map((project) => (
             <article

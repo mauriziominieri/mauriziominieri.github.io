@@ -2,6 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  /* Colore principale: modificando questo valore cambia tutto il tema */
   --brand-accent: #eb6131;
   --brand-accent-hover: color-mix(in srgb, var(--brand-accent) 80%, #000000);
   --brand-accent-soft: color-mix(in srgb, var(--brand-accent) 68%, #FFFFFF);

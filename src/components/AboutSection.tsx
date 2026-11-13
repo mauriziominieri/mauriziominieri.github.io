@@ -7,7 +7,6 @@ export const AboutSection: React.FC = () => {
     <section id="chi-sono" className="border-b border-zinc-800/70 bg-[#0B0B0E]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
-          {/* Left Column: Crisp Summary & Links */}
           <div className="lg:col-span-5">
             <p className="text-sm font-medium text-accent">Chi sono</p>
             <h2
@@ -61,7 +60,6 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Compact 5-Row Timeline */}
           <div className="lg:col-span-7">
             <div className="divide-y divide-zinc-800 rounded-2xl border border-zinc-800 bg-[#121216]">
               {TIMELINE_ENTRIES.map((entry) => (

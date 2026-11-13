@@ -8,15 +8,13 @@ export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-zinc-800 bg-[#060608]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        {/* Distinct 3-Column Editorial Footer (completely different from single-row Navbar) */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
-          {/* Column 1: Brand Identity & Motto */}
           <div className="md:col-span-5">
             <a href="#top" className="inline-flex items-center gap-3">
               <img
-                src="/assets/aistudio/favicon_ext_cropped_8e28a10c.svg"
-                alt="Logo volpe e M"
-                className="h-7 w-auto object-contain"
+                src="/images/logo-fox.svg"
+                alt="Logo Maurizio Minieri"
+                className="h-7 w-auto shrink-0 object-contain"
               />
               <span className="font-display text-lg font-semibold tracking-tight text-zinc-100">
                 {PROFILE.name}
@@ -34,7 +32,6 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Column 2: Direct Channels */}
           <div className="md:col-span-4">
             <h3 className="text-xs font-semibold tracking-wide text-zinc-300">
               Contatti diretti
@@ -74,7 +71,6 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Profiles & Resources */}
           <div className="md:col-span-3">
             <h3 className="text-xs font-semibold tracking-wide text-zinc-300">
               Profili &amp; Risorse
@@ -128,7 +124,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Copyright Bar */}
         <div className="mt-12 flex flex-col gap-3 border-t border-zinc-800/80 pt-6 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
           <p className="tabular-nums">
             © {currentYear} {PROFILE.name}. Tutti i diritti riservati.

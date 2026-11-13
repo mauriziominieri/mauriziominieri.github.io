@@ -346,7 +346,6 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
       );
 
     default:
-      // Clean dark iOS device card for FindOne, Not Only Pasta, Cabway, GeoAll / AR Images
       return (
         <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4">
           <div className="flex h-[162px] w-[104px] flex-col justify-between rounded-2xl border-2 border-zinc-700 bg-[#111116] p-3">

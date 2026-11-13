@@ -10,7 +10,6 @@ export function trackClarityEvent(eventName: string): void {
       window.clarity('event', eventName);
     }
   } catch {
-    // Ignore analytics errors to never block navigation
   }
 }
 
@@ -20,6 +19,5 @@ export function setClarityTag(key: string, value: string): void {
       window.clarity('set', key, value);
     }
   } catch {
-    // Ignore analytics errors
   }
 }

@@ -31,7 +31,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
   return (
     <section id="top" className="border-b border-zinc-800/70 bg-[#09090B]">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
-        {/* Split-Screen Hero */}
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12 lg:gap-12">
           <div className="flex flex-col justify-center lg:col-span-7">
             <div className="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-medium text-zinc-400">
@@ -54,7 +53,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               scuole con lezioni pratiche di programmazione, robotica e preparazione esami.
             </p>
 
-            {/* Primary 1-Tap Actions */}
             <div className="mt-6 sm:mt-7 flex flex-wrap items-center gap-3">
               <a
                 href={quickWaUrl}
@@ -95,7 +93,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
             </div>
           </div>
 
-          {/* Right Column: Animated Editorial Cutout Portrait Frame */}
           <div className="lg:col-span-5 flex">
             <motion.div
               onMouseMove={handleMouseMove}
@@ -105,7 +102,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               className="group relative flex w-full flex-col justify-end overflow-hidden rounded-2xl border border-zinc-800 bg-[#121216] min-h-[340px] sm:min-h-[420px] lg:min-h-full transition-colors duration-300 hover:border-zinc-700"
             >
-              {/* Ambient breathing radial aura synced with --brand-accent */}
               <motion.div
                 aria-hidden="true"
                 animate={
@@ -128,7 +124,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 }}
               />
 
-              {/* Subtle architectural grid */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -139,7 +134,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 }}
               />
 
-              {/* Interactive pointer spotlight on desktop hover */}
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 transition-opacity duration-300"
@@ -149,7 +143,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 }}
               />
 
-              {/* Portrait with subtle reveal, gentle hover lift & cursor micro-parallax */}
               <motion.div
                 className="relative z-10 flex h-full w-full items-end justify-center pt-6 px-4"
                 animate={
@@ -164,7 +157,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 transition={{ type: 'spring', stiffness: 180, damping: 24, mass: 0.6 }}
               >
                 <motion.img
-                  src="/assets/aistudio/profile_red_e772d2bd.png"
+                  src="/images/profile_red.png"
                   alt="Ritratto di Maurizio Minieri, Ingegnere Software e Docente PON"
                   width={842}
                   height={1264}
@@ -198,7 +191,6 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
           </div>
         </div>
 
-        {/* Compact 4-Column Metric Strip */}
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 lg:grid-cols-4">
           {HERO_METRICS.map((metric) => (
             <div key={metric.label} className="bg-[#111115] p-4 sm:p-5">
