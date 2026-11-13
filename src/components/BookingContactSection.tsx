@@ -79,16 +79,16 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
         <div className="rounded-2xl border border-zinc-800 bg-[#121216] p-4 sm:p-8 lg:p-10">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center lg:gap-12">
             <div className="lg:col-span-6">
-              <p className="text-sm font-medium text-accent">Contatto Immediato</p>
+              <p className="text-sm font-medium text-accent">Prenota una lezione</p>
               <h2
                 className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl"
                 style={{ textWrap: 'balance' }}
               >
-                Prenota in un tocco, zero moduli.
+                Mandami un messaggio, ti rispondo il prima possibile.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                Primo colloquio conoscitivo gratuito · Online o in presenza · Risposta rapida su
-                WhatsApp o telefono.
+                Scegli l&apos;argomento qui accanto e scrivimi subito su WhatsApp o via email:
+                lezioni individuali o di gruppo online e in presenza.
               </p>
             </div>
 
@@ -127,7 +127,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
                   >
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    <span>Apri WhatsApp</span>
+                    <span>Prenota lezione</span>
                     <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   </a>
 
@@ -137,7 +137,7 @@ export const BookingContactSection: React.FC<BookingContactSectionProps> = ({
                     className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-[#121216] px-5 py-3 text-sm font-semibold text-zinc-100 transition-colors hover:border-zinc-500 hover:text-white tabular-nums"
                   >
                     <Phone className="h-4 w-4 text-accent" aria-hidden="true" />
-                    <span>{PROFILE.phoneDisplay}</span>
+                    <span>Chiamami</span>
                   </a>
                 </div>
 

@@ -13,15 +13,57 @@ export const AboutSection: React.FC = () => {
               className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100"
               style={{ textWrap: 'balance' }}
             >
-              Passione per il codice, ricerca VR e didattica chiara.
+              Conosciamoci meglio
             </h2>
 
-            <p className="mt-4 text-sm leading-relaxed text-zinc-300 sm:text-base">
-              Da bambino smontavo i giocattoli per capire come funzionassero; oggi sviluppo
-              applicazioni in azienda e insegno informatica con linguaggio semplice. Con Unity e C#
-              ho realizzato la mia tesi sui guanti <strong className="text-zinc-100">Manus VR</strong>{' '}
-              e pubblicato il paper <em className="text-zinc-100">ManDri</em> su Springer.
-            </p>
+            <div className="mt-4 space-y-3.5 text-sm leading-relaxed text-zinc-300 sm:text-base">
+              <p>
+                Fin da piccolo mi ha sempre incuriosito il meccanismo che risiede nelle cose, ero il
+                bambino che smontava i propri giocattoli per capire come funzionassero piuttosto che
+                giocarci. Quella curiosità, unita a una crescente passione per i videogiochi, mi ha
+                portato dritto verso l&apos;informatica.
+              </p>
+              <p>
+                Dopo il liceo scientifico sperimentale mi sono laureato all&apos;
+                <strong className="text-zinc-100">Università Federico II</strong>, dove mi sono
+                immerso in questo mondo vasto e affascinante. Mi colpisce quanto l&apos;informatica
+                sia ormai presente in ogni oggetto della vita quotidiana, e immagino un futuro di
+                videogiochi incredibilmente immersivi, videochiamate olografiche, auto che guidano da
+                sole e case che si puliscono in autonomia.
+              </p>
+              <p>
+                All&apos;università ho imparato diversi linguaggi di programmazione e ho iniziato a
+                creare applicazioni e siti web. Il tirocinio presso{' '}
+                <a
+                  href="https://www.digitalcomoedia.com/landing/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                >
+                  DigitalComoedia
+                </a>{' '}
+                è stato il punto di svolta: lì ho realizzato un gioco in{' '}
+                <strong className="text-zinc-100">realtà virtuale</strong>.
+              </p>
+              <p>
+                Nella tesi mi sono concentrato sui <strong className="text-zinc-100">Manus VR</strong>
+                , guanti per la realtà virtuale dotati di sensori (undici per mano) che rilevano i
+                movimenti di mani e dita e li riportano nell&apos;ambiente virtuale: al posto di un
+                controller si usano le proprie mani. Con Unity e C# ho sviluppato un ambiente per
+                esplorarne le potenzialità. Sugli stessi guanti ho scritto anche una{' '}
+                <strong className="text-zinc-100">pubblicazione scientifica</strong>,{' '}
+                <a
+                  href={PROFILE.springerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="italic text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                >
+                  ManDri
+                </a>
+                , pubblicata negli atti del WAINA 2019 (Springer): propone di usarli per comandare con
+                i gesti le funzioni dell&apos;auto durante la guida.
+              </p>
+            </div>
 
             <blockquote className="mt-6 rounded-xl border border-zinc-800 bg-[#121216] px-5 py-4">
               <p className="font-display text-base font-medium text-zinc-100">
@@ -34,10 +76,19 @@ export const AboutSection: React.FC = () => {
                 href={PROFILE.thesisVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg bg-accent px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-accent-hover"
+              >
+                <Play className="h-3.5 w-3.5" aria-hidden="true" />
+                <span>La mia tesi</span>
+              </a>
+              <a
+                href={PROFILE.vrGameVideoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
                 <Play className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
-                <span>Video Tesi VR</span>
+                <span>Gioco VR</span>
               </a>
               <a
                 href={PROFILE.springerUrl}
@@ -46,7 +97,7 @@ export const AboutSection: React.FC = () => {
                 className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
                 <ExternalLink className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
-                <span>Paper Springer</span>
+                <span>Il paper su Springer</span>
               </a>
               <a
                 href={PROFILE.cvUrl}

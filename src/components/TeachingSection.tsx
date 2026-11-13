@@ -27,14 +27,29 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
     <section id="docenza" className="border-b border-zinc-800/70 bg-[#09090B]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-18 lg:px-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-xl">
-            <p className="text-sm font-medium text-accent">Didattica PON &amp; Lezioni</p>
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium text-accent">Didattica</p>
             <h2
               className="mt-2 font-display text-3xl font-semibold tracking-tight text-zinc-100"
               style={{ textWrap: 'balance' }}
             >
-              Insegnamento reale nelle scuole e ripetizioni su misura.
+              Insegnamento nelle scuole e ripetizioni su misura.
             </h2>
+            <div className="mt-4 space-y-2.5 text-sm leading-relaxed text-zinc-300 sm:text-base">
+              <p>
+                Oltre allo sviluppo software, ho insegnato come{' '}
+                <strong className="text-zinc-100">docente PON</strong> in diverse scuole, in anni
+                diversi e con materie diverse — tra cui{' '}
+                <strong className="text-zinc-100">robotica</strong> e{' '}
+                <strong className="text-zinc-100">programmazione</strong> — adattando ogni volta
+                l&apos;approccio al livello degli studenti, dalle elementari alle superiori.
+              </p>
+              <p>
+                Portare l&apos;informatica in classe, con linguaggio semplice e progetti pratici, è
+                un modo per restituire quella stessa curiosità che da bambino mi ha spinto a
+                smontare i miei giocattoli.
+              </p>
+            </div>
           </div>
 
           <div
@@ -77,6 +92,53 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
               <span>Docenti &amp; Scuole</span>
             </button>
           </div>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
+          {visibleTracks.map((track) => {
+            const directWaHref = `https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(
+              `Ciao Maurizio, vorrei informazioni per: ${track.title}.`
+            )}`;
+
+            return (
+              <article
+                key={track.id}
+                className="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-[#121216] p-5 sm:p-6"
+              >
+                <div>
+                  <h3 className="font-display text-xl font-semibold tracking-tight text-zinc-100">
+                    {track.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-zinc-400">{track.subtitle}</p>
+
+                  <ul className="mt-4 space-y-2 border-t border-zinc-800/80 pt-4">
+                    {track.topics.map((topic) => (
+                      <li key={topic} className="flex items-start gap-2.5 text-sm text-zinc-300">
+                        <Check
+                          className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                          aria-hidden="true"
+                        />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-zinc-800/80">
+                  <a
+                    href={directWaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackClarityEvent(`whatsapp_track_${track.id}`)}
+                    className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                  >
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    <span>Prenota su WhatsApp</span>
+                  </a>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
         <div className="mt-8 divide-y divide-zinc-800 rounded-2xl border border-zinc-800 bg-[#111115]">
@@ -150,52 +212,6 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
           })}
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
-          {visibleTracks.map((track) => {
-            const directWaHref = `https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(
-              `Ciao Maurizio, vorrei informazioni per: ${track.title}.`
-            )}`;
-
-            return (
-              <article
-                key={track.id}
-                className="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-[#121216] p-5 sm:p-6"
-              >
-                <div>
-                  <h3 className="font-display text-xl font-semibold tracking-tight text-zinc-100">
-                    {track.title}
-                  </h3>
-                  <p className="mt-1 text-xs text-zinc-400">{track.subtitle}</p>
-
-                  <ul className="mt-4 space-y-2 border-t border-zinc-800/80 pt-4">
-                    {track.topics.map((topic) => (
-                      <li key={topic} className="flex items-start gap-2.5 text-sm text-zinc-300">
-                        <Check
-                          className="mt-0.5 h-4 w-4 shrink-0 text-accent"
-                          aria-hidden="true"
-                        />
-                        <span>{topic}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-zinc-800/80">
-                  <a
-                    href={directWaHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackClarityEvent(`whatsapp_track_${track.id}`)}
-                    className="inline-flex min-h-[44px] w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
-                  >
-                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                    <span>Prenota su WhatsApp</span>
-                  </a>
-                </div>
-              </article>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

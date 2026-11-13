@@ -88,7 +88,7 @@ export const PROFILE = {
   linkedinUrl: 'https://www.linkedin.com/in/maurizio-minieri-0b4992174',
   githubUrl: 'https://github.com/mauriziominieri',
   gitlabUrl: 'https://gitlab.com/DOPPIA3MME',
-  motto: 'Non è un voto scritto da un insegnante a poter definire chi sei.',
+  motto: 'Beyond the common vision',
 };
 
 export const HERO_METRICS = [
@@ -113,32 +113,37 @@ export const HERO_METRICS = [
 export const TIMELINE_ENTRIES: TimelineEntry[] = [
   {
     period: 'Oggi',
-    title: 'Software Engineer & Docente',
-    subtitle: 'Sviluppo web/app e lezioni private di programmazione',
-  },
-  {
-    period: 'PON Scuole',
-    title: 'Fondazione Cultura & Innovazione',
-    subtitle: 'Docente esperto di robotica e coding nei licei statali',
+    title: 'Ingegnere software, docente',
+    subtitle: 'Sviluppo applicazioni e progetti software/VR in una grande azienda e insegno programmazione e informatica.',
   },
   {
     period: '2019 – 2020',
     title: 'Apple Developer Academy',
-    subtitle: 'Sviluppo app Swift per iPhone, iPad, Mac e Apple Watch',
+    subtitle: 'Laurea Apple. Linguaggio Swift per iPhone, iPad, MacBook e Apple Watch.',
   },
   {
-    period: 'Tirocinio & Tesi',
-    title: 'DigitalComoedia & Guanti Manus VR',
-    subtitle: 'Gioco VR in Unity/C# · Paper ManDri (WAINA 2019)',
+    period: 'Docente PON',
+    title: 'Fondazione Cultura & Innovazione',
+    subtitle: 'Docenza PON in varie scuole. Il mio motto? Non è un voto scritto da un insegnante a poter definire chi sei.',
+  },
+  {
+    period: 'Tirocinio',
+    title: 'DigitalComoedia',
+    subtitle: 'Primo contatto professionale con la realtà virtuale: lì ho realizzato un gioco in VR e da lì nasce la mia specializzazione.',
     link: {
-      label: 'Paper Springer',
-      url: 'https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84',
+      label: 'DigitalComoedia',
+      url: 'https://www.digitalcomoedia.com/landing/',
     },
   },
   {
     period: '2014 – 2018',
-    title: 'Università Federico II di Napoli',
-    subtitle: 'Laurea in Informatica',
+    title: 'Università Federico II',
+    subtitle: 'Laurea in Informatica. Linguaggi, sviluppo web e applicativo; tesi sperimentale in Unity e C# sui guanti Manus VR.',
+  },
+  {
+    period: '2009 – 2014',
+    title: 'Liceo Scientifico Sperimentale',
+    subtitle: 'Le basi logico-matematiche-fisiche e i primi approcci alla tecnologia.',
   },
 ];
 
@@ -148,16 +153,19 @@ export const SKILL_DOMAINS: SkillDomain[] = [
     title: 'Linguaggi & Ambienti',
     items: [
       { name: 'Python · C · C++ · Java · C#', detail: 'Oracle Java SE 8 & SE 11' },
-      { name: 'JavaScript · TypeScript · PHP · SQL', detail: 'Web & Database' },
-      { name: 'Swift · Visual Basic · Scratch', detail: 'App iOS & Didattica' },
-      { name: 'Unity · Xcode · VS Code · IntelliJ · Eclipse', detail: 'Code::Blocks · Dev C++ · Vim' },
+      { name: 'JavaScript · TypeScript · PHP · SQL · Visual Basic', detail: 'Web, Automazione & Database' },
+      { name: 'Swift · Scratch', detail: 'App iOS (iPhone, iPad, Mac, Watch) & Didattica' },
+      {
+        name: 'Unity · Xcode · Visual Studio · VS Code · IntelliJ IDEA · Eclipse',
+        detail: 'Android Studio · Code::Blocks · Dev C++ · Vim',
+      },
     ],
   },
   {
     index: '02.',
     title: 'Web, Cloud & Dati',
     items: [
-      { name: 'React · Next.js · Angular · HTML5 · CSS3', detail: 'Bootstrap · Tailwind · jQuery' },
+      { name: 'React · Next.js · Angular · HTML5 · CSS3', detail: 'Bootstrap · Tailwind CSS · jQuery' },
       { name: 'Node.js · Firebase · Supabase', detail: 'API REST & Real-time' },
       { name: 'PostgreSQL · MongoDB · SQL', detail: 'Modelli relazionali e NoSQL' },
       { name: 'Kubernetes (CKA) · Docker · Git · GitHub · GitLab', detail: 'Reti Cisco CCNA & CI/CD' },
@@ -167,10 +175,10 @@ export const SKILL_DOMAINS: SkillDomain[] = [
     index: '03.',
     title: 'Didattica & Robotica',
     items: [
-      { name: 'Robotica Educativa · Arduino · Raspberry Pi', detail: 'Moduli pratici PON' },
-      { name: 'Algoritmi · Problem Solving · Data Analysis', detail: 'Esami & Maturità' },
-      { name: 'Public Speaking · Project Management · Agile', detail: 'Gestione classe e team' },
-      { name: 'Networking · UX/UI · Automazione', detail: 'Cultura digitale' },
+      { name: 'Robotica Educativa · Arduino · Raspberry Pi', detail: 'Moduli pratici PON dalle elementari alle superiori' },
+      { name: 'Algoritmi · Problem Solving · Data Analysis', detail: 'Preparazione esami universitari e Maturità' },
+      { name: 'Public Speaking · Project Management · Agile', detail: 'Gestione classe e lavoro in team' },
+      { name: 'Networking · UX/UI · Automazione', detail: 'Progettazione interfacce e cultura digitale' },
     ],
   },
 ];
@@ -182,9 +190,10 @@ export const PROJECTS: ProjectItem[] = [
     category: 'VR & Giochi',
     year: '2019',
     role: 'Tesi di Laurea · Unity & C#',
-    summary: 'Ambiente in realtà virtuale per guanti Manus VR a 11 sensori e pubblicazione Springer.',
-    challenge: 'Mappare i movimenti naturali di mani e dita senza controller tradizionali.',
-    solution: 'Simulatore Unity/C# con interazione gestuale (WAINA 2019, Springer).',
+    summary:
+      'Ambiente in realtà virtuale per l’approfondimento dei guanti tecnologici Manus VR (undici sensori per mano), sviluppato con Unity e C# per la tesi di laurea e accompagnato dalla pubblicazione scientifica ManDri (WAINA 2019, Springer).',
+    challenge: 'Mappare i movimenti naturali di mani e dita senza controller tradizionali e trasferire i gesti in un ambiente 3D reattivo.',
+    solution: 'Simulatore Unity/C# con interazione gestuale completa, poi esteso nel paper ManDri per comandare con i gesti le funzioni dell’auto durante la guida.',
     impact: 'Pubblicazione scientifica internazionale Springer',
     stack: ['Unity 3D', 'C#', 'Manus VR'],
     links: [
@@ -201,9 +210,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Web',
     year: '2024',
     role: 'Web App · TypeScript & Next.js',
-    summary: 'Web app per tracciare e organizzare film e serie TV in tempo reale.',
-    challenge: 'Catalogazione rapida e interfaccia fluida su smartphone e desktop.',
-    solution: 'Applicazione TypeScript/Next.js pubblicata online.',
+    summary: 'Applicazione web moderna per catalogare, tracciare e organizzare film e serie TV preferite in tempo reale da qualsiasi dispositivo.',
+    challenge: 'Offrire una catalogazione rapida, ricerca istantanea e un’interfaccia fluida sia su smartphone che su desktop.',
+    solution: 'Web app full-stack sviluppata in TypeScript, React e Next.js e pubblicata online su Vercel.',
     impact: 'Live su Vercel',
     stack: ['TypeScript', 'Next.js', 'React'],
     links: [
@@ -218,9 +227,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'iOS',
     year: '2020',
     role: 'Apple Developer Academy · Swift',
-    summary: 'Gioco arcade mobile sviluppato in Swift durante la sfida MC1 in Academy.',
-    challenge: 'Fisica fluida e controlli touch reattivi su iOS.',
-    solution: 'Implementazione nativa in Swift con collisioni e animazioni.',
+    summary: 'Gioco arcade mobile sviluppato in Swift durante la sfida MC1 alla Apple Developer Academy, con fisica personalizzata e livelli progressivi.',
+    challenge: 'Garantire fisica fluida, rilevamento preciso delle collisioni e controlli touch reattivi su iOS.',
+    solution: 'Implementazione nativa in Swift con animazioni, gestione punteggi e feedback visivi in tempo reale.',
     impact: 'Progetto Apple Developer Academy',
     stack: ['Swift', 'iOS', 'Xcode'],
     links: [
@@ -234,9 +243,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Java & C',
     year: '2019',
     role: 'Client, Operator & Web · Java',
-    summary: 'Sistema completo Client, console Operatore in Java e interfaccia Web per gestione code.',
-    challenge: 'Sincronizzare le richieste concorrenti tra utenti e sportelli.',
-    solution: 'Architettura client-server modulare in tre repository.',
+    summary: 'Sistema completo formato da app Client, console Operatore in Java e interfaccia Web per la gestione intelligente di code e prenotazioni agli sportelli.',
+    challenge: 'Sincronizzare le richieste concorrenti tra più utenti in attesa e diversi sportelli operatori in tempo reale.',
+    solution: 'Architettura client-server modulare suddivisa in tre repository dedicati (Client, Operator e Web Portal).',
     impact: 'Suite multipiattaforma completa',
     stack: ['Java', 'Client-Server', 'Web'],
     links: [
@@ -252,9 +261,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'Java & C',
     year: '2018',
     role: 'Sistemi Operativi · C & Thread',
-    summary: 'Gioco multiplayer in C con thread POSIX e programmazione concorrente.',
-    challenge: 'Evitare race condition e deadlock tra più client simultanei.',
-    solution: 'Sincronizzazione con mutex e socket in C.',
+    summary: 'Gioco di battaglia navale multiplayer sviluppato in C con thread POSIX, socket di rete e programmazione concorrente.',
+    challenge: 'Gestire più partite simultanee evitando race condition e deadlock tra i client connessi.',
+    solution: 'Sincronizzazione sicura dei thread tramite mutex e protocollo client-server su socket POSIX in C.',
     impact: 'Progetto universitario Sistemi Operativi',
     stack: ['C', 'POSIX Threads', 'Socket'],
     links: [
@@ -268,9 +277,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'VR & Giochi',
     year: '2020',
     role: 'Matrice in C & Gioco Web',
-    summary: 'Una matrice a colori nata in C (Code::Blocks) e giocabile direttamente online.',
-    challenge: 'Ottimizzare l’espansione flood-fill su griglia bidimensionale.',
-    solution: 'Algoritmo in C con porting web immediato.',
+    summary: 'Una matrice a colori nata in C (Code::Blocks) e portata sul web per poterci giocare subito direttamente dal browser.',
+    challenge: 'Ottimizzare l’espansione flood-fill su griglia bidimensionale minimizzando il numero di mosse necessarie.',
+    solution: 'Algoritmo ricorsivo/iterativo progettato in C e adattato in versione web giocabile online.',
     impact: 'Giocabile online dal browser',
     stack: ['C', 'Code::Blocks', 'Web'],
     links: [
@@ -285,9 +294,9 @@ export const PROJECTS: ProjectItem[] = [
     category: 'VR & Giochi',
     year: '2020',
     role: 'C (Dev C++) & Versione Web',
-    summary: 'Classico rompicapo su matrice numerica 4×4 giocabile subito online.',
-    challenge: 'Validazione mosse adiacenti e controllo vittoria in tempo costante.',
-    solution: 'Struttura a matrice in C portata sul web.',
+    summary: 'Un gioco simpatico e intramontabile realizzato utilizzando una matrice di numeri 4×4 in C (Dev C++) e giocabile subito online.',
+    challenge: 'Validazione delle mosse adiacenti alla casella vuota, mescolamento risolvibile e controllo vittoria.',
+    solution: 'Logica su matrice bidimensionale sviluppata in C e pubblicata anche come web game interattivo.',
     impact: 'Giocabile online',
     stack: ['C', 'Dev C++', 'Web'],
     links: [
@@ -469,8 +478,8 @@ export const PROJECTS: ProjectItem[] = [
 
 export const PON_SCHOOLS: PonSchoolExperience[] = [
   {
-    schoolName: 'Liceo Tito Livio',
-    coursesCount: '2 corsi svolti',
+    schoolName: 'I.C. Tito Livio',
+    coursesCount: '3 corsi svolti',
     studentsCount: '12 studenti',
     subjects: 'Robotica · Programmazione · Informatica',
     photos: [
@@ -528,6 +537,18 @@ export const PON_SCHOOLS: PonSchoolExperience[] = [
 
 export const TEACHING_TRACKS: TeachingTrack[] = [
   {
+    id: 'maturita-scuola',
+    audience: 'studenti',
+    title: 'Scuole Superiori & Maturità',
+    subtitle: 'Supporto pratico per ragazzi alle prime armi o sotto esame',
+    topics: [
+      'Lezioni pratiche di programmazione (Python, C, C++, Java...)',
+      'Siti web (HTML, CSS, JS, React) e logica di base',
+      'Scratch, Arduino e Raspberry Pi',
+    ],
+    bookingSubject: 'Ripetizioni Superiori & Maturità',
+  },
+  {
     id: 'ripetizioni-universita',
     audience: 'studenti',
     title: 'Esami Universitari & Recupero',
@@ -540,18 +561,6 @@ export const TEACHING_TRACKS: TeachingTrack[] = [
     bookingSubject: 'Esami Universitari (C, Java, Python)',
   },
   {
-    id: 'maturita-scuola',
-    audience: 'studenti',
-    title: 'Scuole Superiori, Maturità & Robotica',
-    subtitle: 'Supporto pratico per ragazzi alle prime armi o sotto esame',
-    topics: [
-      'Seconda Prova di Informatica e progetti d’esame',
-      'Siti web (HTML, CSS, JS, React) e logica di base',
-      'Scratch, Arduino e Raspberry Pi',
-    ],
-    bookingSubject: 'Ripetizioni Superiori & Maturità',
-  },
-  {
     id: 'moduli-pon-scuole',
     audience: 'docenti',
     title: 'Docenze PON, PNRR & Laboratori STEM',
@@ -559,7 +568,7 @@ export const TEACHING_TRACKS: TeachingTrack[] = [
     topics: [
       'Robotica educativa con Arduino e Raspberry Pi',
       'Coding pratico in Scratch, Python, C o Web',
-      'Esperienza diretta al Tito Livio, Plinio Seniore e De Carlo',
+      'Esperienza diretta al Tito Livio, Plinio Seniore, De Carlo e altre scuole',
     ],
     bookingSubject: 'Moduli PON / Robotica per Scuole',
   },

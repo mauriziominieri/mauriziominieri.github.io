@@ -16,7 +16,7 @@ export const CertificatesSection: React.FC = () => {
           <div>
             <p className="text-sm font-medium text-accent">Certificazioni</p>
             <h2 className="mt-1 font-display text-3xl font-semibold tracking-tight text-zinc-100">
-              Titoli ufficiali verificabili.
+              Titoli ufficiali.
             </h2>
           </div>
 

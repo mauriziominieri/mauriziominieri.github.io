@@ -8,10 +8,10 @@ interface NavbarProps {
 
 const NAV_LINKS = [
   { href: '#chi-sono', label: 'Chi sono' },
-  { href: '#docenza', label: 'Didattica PON' },
+  { href: '#docenza', label: 'Didattica' },
   { href: '#competenze', label: 'Competenze' },
   { href: '#portfolio', label: 'Progetti' },
-  { href: '#certificati', label: 'Certificati' },
+  { href: '#certificati', label: 'Certificazioni' },
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {

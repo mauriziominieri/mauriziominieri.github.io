@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
 
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-zinc-400">
               Dottore in Informatica (Federico II), Apple Developer Academy, Ingegnere Software e
-              Docente PON. Sviluppo digitale, realtà virtuale e formazione pratica per ragazzi e
+              Docente. Sviluppo digitale, realtà virtuale e formazione pratica per ragazzi e
               scuole.
             </p>
 

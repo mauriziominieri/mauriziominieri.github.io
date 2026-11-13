@@ -35,7 +35,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-medium text-accent">
-              Progetti ({PROJECTS.length})
+              Progetti
             </p>
             <h2 className="mt-1 font-display text-3xl font-semibold tracking-tight text-zinc-100">
               App, giochi, realtà virtuale e codice.
@@ -98,7 +98,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                       {project.title}
                     </h3>
 
-                    <p className="mt-1.5 text-sm leading-relaxed text-zinc-400 line-clamp-2">
+                    <p className="mt-1.5 text-sm leading-relaxed text-zinc-400">
                       {project.summary}
                     </p>
                   </div>

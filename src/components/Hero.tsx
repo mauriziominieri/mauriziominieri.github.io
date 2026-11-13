@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowDown, FileText, GraduationCap, MessageCircle } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, BookOpen, FileText, GraduationCap, MessageCircle } from 'lucide-react';
 import { HERO_METRICS, PROFILE } from '../data/portfolioData';
 import { trackClarityEvent } from '../utils/analytics';
 
@@ -8,12 +8,59 @@ interface HeroProps {
   onBookForAudience: (audience: 'Studente' | 'Docente / Istituto') => void;
 }
 
+const ROLES = [
+  'sviluppatore software',
+  'dottore in informatica',
+  'professore di programmazione e robotica',
+  'appassionato di videogiochi e realtà virtuale',
+];
+
 export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
   const prefersReducedMotion = useReducedMotion();
   const [pointer, setPointer] = useState({ x: 0, y: 0, active: false });
+  const [roleText, setRoleText] = useState(ROLES[0]);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setRoleText(ROLES[0]);
+      return;
+    }
+
+    let roleIndex = 0;
+    let charIndex = ROLES[0].length;
+    let deleting = true;
+    let timerId = window.setTimeout(() => {}, 0);
+
+    const tick = () => {
+      const current = ROLES[roleIndex];
+      if (!deleting) {
+        charIndex += 1;
+        setRoleText(current.slice(0, charIndex));
+        if (charIndex === current.length) {
+          deleting = true;
+          timerId = window.setTimeout(tick, 1400);
+          return;
+        }
+        timerId = window.setTimeout(tick, 55);
+      } else {
+        charIndex -= 1;
+        setRoleText(current.slice(0, charIndex));
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % ROLES.length;
+          timerId = window.setTimeout(tick, 300);
+          return;
+        }
+        timerId = window.setTimeout(tick, 30);
+      }
+    };
+
+    timerId = window.setTimeout(tick, 1400);
+    return () => window.clearTimeout(timerId);
+  }, [prefersReducedMotion]);
 
   const quickWaUrl = `https://wa.me/${PROFILE.whatsappNumber}?text=${encodeURIComponent(
-    'Ciao Maurizio, vorrei informazioni per prenotare una lezione di informatica.'
+    'Ciao Maurizio, vorrei prenotare una lezione di informatica.'
   )}`;
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -36,21 +83,28 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
             <div className="mb-4 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-medium text-zinc-400">
               <span className="text-accent">Software Engineer</span>
               <span aria-hidden="true">·</span>
-              <span>Docente PON</span>
+              <span>Virtual Reality</span>
               <span aria-hidden="true">·</span>
-              <span>Lezioni 1-a-1</span>
+              <span>Docente</span>
             </div>
 
             <h1
               className="font-display text-3xl font-semibold tracking-tight text-zinc-100 sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
               style={{ textWrap: 'balance' }}
             >
-              <span className="text-accent">Maurizio Minieri</span>: ingegnere software e docente PON.
+              <span className="text-accent">Maurizio Minieri</span> Ingegnere software.
             </h1>
 
-            <p className="mt-4 sm:mt-5 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-lg">
-              Laureato alla Federico II e Apple Developer Academy. Aiuto studenti, universitari e
-              scuole con lezioni pratiche di programmazione, robotica e preparazione esami.
+            <p className="mt-3 flex min-h-[1.5rem] items-center gap-2 font-mono text-sm text-zinc-300 sm:text-base">
+              <span className="text-accent font-semibold">&gt;</span>
+              <span>{roleText}</span>
+              <span className="inline-block h-4 w-[2px] animate-pulse bg-accent" aria-hidden="true" />
+            </p>
+
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
+              Dottore in informatica laureato alla Federico II e alla Apple Developer Academy. Oggi
+              sviluppo siti e applicazioni in una grande azienda e insegno programmazione, robotica
+              e informatica con passione per studenti, universitari e scuole.
             </p>
 
             <div className="mt-6 sm:mt-7 flex flex-wrap items-center gap-3">
@@ -62,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2.5 whitespace-nowrap rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                <span>Scrivimi su WhatsApp</span>
+                <span>Prenota una lezione</span>
               </a>
 
               <button
@@ -70,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 onClick={() => onBookForAudience('Studente')}
                 className="inline-flex min-h-[48px] flex-1 sm:flex-initial items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-5 py-3 text-sm font-medium text-zinc-100 transition-colors duration-150 hover:border-zinc-700 hover:text-white cursor-pointer"
               >
-                <span>Prenota in 1 clic</span>
+                <span>I miei contatti</span>
                 <ArrowDown className="h-4 w-4 text-accent" aria-hidden="true" />
               </button>
 
@@ -79,17 +133,29 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackClarityEvent('cv_download_click')}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg px-3 py-3 text-sm font-medium text-zinc-400 transition-colors hover:text-zinc-100"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 whitespace-nowrap rounded-lg px-3 py-3 text-sm font-medium text-zinc-300 transition-colors hover:text-zinc-100"
               >
                 <FileText className="h-4 w-4 text-accent" aria-hidden="true" />
-                <span>CV (PDF)</span>
+                <span>Guarda il mio CV</span>
               </a>
             </div>
 
-            <div className="mt-7 border-t border-zinc-800/80 pt-5">
-              <p className="text-xs font-medium text-zinc-400">
-                Nessun modulo da compilare · Primo colloquio conoscitivo gratuito · Risposta rapida
-              </p>
+            <div className="mt-6 flex flex-col gap-3 border-t border-zinc-800/80 pt-5">
+            
+              <a
+                href={PROFILE.springerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit max-w-full items-center gap-2.5 rounded-lg border border-zinc-800 bg-[#121216] px-3.5 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
+              >
+                <BookOpen className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
+                <span className="truncate">
+                  Autore della pubblicazione scientifica Springer · <em>ManDri</em>, WAINA 2019
+                </span>
+                <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
+              </a>
+
+              
             </div>
           </div>
 
@@ -158,7 +224,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
               >
                 <motion.img
                   src="/images/profile_red.png"
-                  alt="Ritratto di Maurizio Minieri, Ingegnere Software e Docente PON"
+                  alt="Ritratto di Maurizio Minieri, Ingegnere Software e Docente"
                   width={842}
                   height={1264}
                   loading="eager"
@@ -179,7 +245,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
                       {PROFILE.name}
                     </p>
                     <p className="text-xs text-zinc-400">
-                      C# · Unity VR · Full-Stack · Docente PON
+                      Full Stack Developer · Docente
                     </p>
                   </div>
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-700/80 bg-[#121216]/90 text-accent transition-transform duration-300 group-hover:scale-105">
