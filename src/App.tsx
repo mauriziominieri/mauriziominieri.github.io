@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -17,39 +17,88 @@ export default function App() {
   const [bookingAudience, setBookingAudience] = useState<BookingAudience>('Studente');
   const [bookingSubject, setBookingSubject] = useState<string>('Lezioni per mio figlio/a');
 
-  useEffect(() => {
-    let cancelled = false;
-
-    const scrollToHash = (behavior: ScrollBehavior = 'smooth') => {
-      if (cancelled) return;
-      const hash = window.location.hash.replace(/^#/, '');
-      if (!hash) return;
-      const target = document.getElementById(decodeURIComponent(hash));
-      if (!target) return;
-      target.scrollIntoView({ behavior, block: 'start' });
+  useLayoutEffect(() => {
+    let userInteracted = false;
+    const markInteracted = () => {
+      userInteracted = true;
     };
 
-    const rafId = window.requestAnimationFrame(() => {
-      window.setTimeout(() => scrollToHash('smooth'), 60);
-    });
-
-    const handleLoad = () => {
-      if (window.scrollY < 40) {
-        scrollToHash('smooth');
+    const revealPage = () => {
+      document.documentElement.classList.remove('hash-pending');
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
       }
     };
-    const handleHashChange = () => scrollToHash('smooth');
 
-    if (document.readyState !== 'complete') {
-      window.addEventListener('load', handleLoad, { once: true });
+    const resolveHashTarget = (): HTMLElement | null => {
+      const rawHash = window.location.hash.replace(/^#/, '');
+      if (!rawHash) return null;
+      try {
+        return document.getElementById(decodeURIComponent(rawHash));
+      } catch {
+        return document.getElementById(rawHash);
+      }
+    };
+
+    const jumpInstantTo = (target: HTMLElement) => {
+      const html = document.documentElement;
+      const prevBehavior = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - 80);
+      window.scrollTo({ top, behavior: 'instant' as ScrollBehavior });
+      html.style.scrollBehavior = prevBehavior;
+    };
+
+    const initialTarget = resolveHashTarget();
+    let raf1 = 0;
+    let raf2 = 0;
+
+    if (initialTarget) {
+      window.addEventListener('wheel', markInteracted, { passive: true, once: true });
+      window.addEventListener('touchstart', markInteracted, { passive: true, once: true });
+      window.addEventListener('keydown', markInteracted, { passive: true, once: true });
+
+      jumpInstantTo(initialTarget);
+      raf1 = window.requestAnimationFrame(() => {
+        jumpInstantTo(initialTarget);
+        revealPage();
+        raf2 = window.requestAnimationFrame(() => {
+          if (!userInteracted) {
+            jumpInstantTo(initialTarget);
+          }
+        });
+      });
+
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(() => {
+          if (!userInteracted) {
+            const target = resolveHashTarget();
+            if (target && Math.abs(target.getBoundingClientRect().top - 80) > 8) {
+              jumpInstantTo(target);
+            }
+          }
+        });
+      }
+    } else {
+      revealPage();
     }
-    window.addEventListener('hashchange', handleHashChange);
 
+    const handleHashChange = () => {
+      const target = resolveHashTarget();
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
     return () => {
-      cancelled = true;
-      window.cancelAnimationFrame(rafId);
-      window.removeEventListener('load', handleLoad);
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+      window.removeEventListener('wheel', markInteracted);
+      window.removeEventListener('touchstart', markInteracted);
+      window.removeEventListener('keydown', markInteracted);
       window.removeEventListener('hashchange', handleHashChange);
+      revealPage();
     };
   }, []);
 
