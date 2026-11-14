@@ -276,10 +276,35 @@
 
     <script>
       (() => {
+        const params = new URLSearchParams(location.search);
+        try {
+          if (params.get("notrack") === "1") {
+            localStorage.setItem("mm_ignore_analytics", "1");
+            params.delete("notrack");
+            const clean = `${location.pathname}${params.toString() ? `?${params.toString()}` : ""}${location.hash}`;
+            history.replaceState(null, "", clean);
+          } else if (params.get("track") === "1") {
+            localStorage.removeItem("mm_ignore_analytics");
+            params.delete("track");
+            const clean = `${location.pathname}${params.toString() ? `?${params.toString()}` : ""}${location.hash}`;
+            history.replaceState(null, "", clean);
+          }
+          if (localStorage.getItem("mm_ignore_analytics") === "1") {
+            window.__MM_SKIP_TRACKING__ = true;
+            return;
+          }
+        } catch {}
+
         const ua = navigator.userAgent || "";
-        if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
+        if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) {
+          window.__MM_SKIP_TRACKING__ = true;
+          return;
+        }
         const host = location.hostname;
-        if (host === "localhost" || host === "127.0.0.1") return;
+        if (host !== "mauriziominieri.github.io") {
+          window.__MM_SKIP_TRACKING__ = true;
+          return;
+        }
         try {
           if (sessionStorage.getItem("visit_sent")) return;
           sessionStorage.setItem("visit_sent", "1");
@@ -304,7 +329,6 @@
           /iPad|Tablet/i.test(ua) ? "Tablet" :
           /Mobi|Android|iPhone/i.test(ua) ? "Mobile" : "Desktop";
 
-        const params = new URLSearchParams(location.search);
         const utmSource = params.get("utm_source") || undefined;
         const utmMedium = params.get("utm_medium") || undefined;
         const utmCampaign = params.get("utm_campaign") || undefined;
@@ -337,6 +361,7 @@
 
     <script type="text/javascript">
       (() => {
+        if (window.__MM_SKIP_TRACKING__) return;
         const ua = navigator.userAgent || "";
         if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) return;
         (function (c, l, a, r, i, t, y) {
