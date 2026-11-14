@@ -296,7 +296,10 @@
         } catch {}
 
         const ua = navigator.userAgent || "";
-        if (/bot|crawl|spider|headless|lighthouse|preview/i.test(ua)) {
+        if (
+          navigator.webdriver ||
+          /\b(bot|crawl|spider|headlesschrome|lighthouse|playwright|puppeteer|slurp|bingpreview)\b|ahrefsbot|semrushbot|facebookexternalhit|linkedinbot|twitterbot|telegrambot|discordbot|applebot/i.test(ua)
+        ) {
           window.__MM_SKIP_TRACKING__ = true;
           return;
         }
@@ -335,10 +338,18 @@
 
         let ref = "Diretto";
         try {
-          if (document.referrer) ref = new URL(document.referrer).origin;
+          if (document.referrer) {
+            ref = new URL(document.referrer).origin;
+          } else if (/Instagram/i.test(ua)) {
+            ref = "Instagram App";
+          } else if (/FBAN|FBAV|FB_IAB/i.test(ua)) {
+            ref = "Facebook App";
+          } else if (/LinkedInApp/i.test(ua)) {
+            ref = "LinkedIn App";
+          }
         } catch {}
 
-        fetch("https://eol87daxqdu9qm7.m.pipedream.net", {
+        fetch("https://site-visit-notify.mauminieri.workers.dev", {
           method: "POST",
           keepalive: true,
           headers: { "Content-Type": "application/json" },
