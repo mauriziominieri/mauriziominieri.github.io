@@ -277,6 +277,8 @@
     <script>
       (() => {
         const params = new URLSearchParams(location.search);
+        let isTestVisit = false;
+        let isReturning = false;
         try {
           if (params.get("notrack") === "1") {
             localStorage.setItem("mm_ignore_analytics", "1");
@@ -285,20 +287,33 @@
             history.replaceState(null, "", clean);
           } else if (params.get("track") === "1") {
             localStorage.removeItem("mm_ignore_analytics");
+            sessionStorage.removeItem("visit_sent");
             params.delete("track");
             const clean = `${location.pathname}${params.toString() ? `?${params.toString()}` : ""}${location.hash}`;
             history.replaceState(null, "", clean);
+          } else if (params.get("test_visit") === "1") {
+            isTestVisit = true;
+            params.delete("test_visit");
+            const clean = `${location.pathname}${params.toString() ? `?${params.toString()}` : ""}${location.hash}`;
+            history.replaceState(null, "", clean);
           }
-          if (localStorage.getItem("mm_ignore_analytics") === "1") {
+
+          if (!isTestVisit && localStorage.getItem("mm_ignore_analytics") === "1") {
             window.__MM_SKIP_TRACKING__ = true;
             return;
+          }
+
+          isReturning = localStorage.getItem("mm_visited_before") === "1";
+          if (!isTestVisit) {
+            localStorage.setItem("mm_visited_before", "1");
           }
         } catch {}
 
         const ua = navigator.userAgent || "";
         if (
-          navigator.webdriver ||
-          /\b(bot|crawl|spider|headlesschrome|lighthouse|playwright|puppeteer|slurp|bingpreview)\b|ahrefsbot|semrushbot|facebookexternalhit|linkedinbot|twitterbot|telegrambot|discordbot|applebot/i.test(ua)
+          !isTestVisit &&
+          (navigator.webdriver ||
+            /\b(bot|crawl|spider|headlesschrome|lighthouse|playwright|puppeteer|slurp|bingpreview)\b|ahrefsbot|semrushbot|facebookexternalhit|linkedinbot|twitterbot|telegrambot|discordbot|applebot/i.test(ua))
         ) {
           window.__MM_SKIP_TRACKING__ = true;
           return;
@@ -309,8 +324,8 @@
           return;
         }
         try {
-          if (sessionStorage.getItem("visit_sent")) return;
-          sessionStorage.setItem("visit_sent", "1");
+          if (!isTestVisit && sessionStorage.getItem("visit_sent")) return;
+          if (!isTestVisit) sessionStorage.setItem("visit_sent", "1");
         } catch {}
 
         const browser =
@@ -335,6 +350,7 @@
         const utmSource = params.get("utm_source") || undefined;
         const utmMedium = params.get("utm_medium") || undefined;
         const utmCampaign = params.get("utm_campaign") || undefined;
+        const conn = navigator.connection && navigator.connection.effectiveType ? navigator.connection.effectiveType : undefined;
 
         let ref = "Diretto";
         try {
@@ -362,6 +378,11 @@
             device,
             lingua: navigator.language,
             host,
+            path: `${location.pathname}${location.hash}`,
+            screen: `${screen.width}x${screen.height}`,
+            visitorType: isReturning ? "Di ritorno" : "Nuovo",
+            ...(conn ? { connection: conn } : {}),
+            ...(isTestVisit ? { isTest: true } : {}),
             ...(utmSource ? { utmSource } : {}),
             ...(utmMedium ? { utmMedium } : {}),
             ...(utmCampaign ? { utmCampaign } : {})
