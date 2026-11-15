@@ -107,8 +107,8 @@ export const Hero: React.FC<HeroProps> = ({ onBookForAudience }) => {
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-300 sm:text-base sm:leading-relaxed">
               Dottore in Informatica alla Federico II, diplomato alla Apple Developer Academy. Oggi
-              sviluppo siti e applicazioni in una grande azienda e insegno programmazione, robotica
-              e informatica con passione a studenti, universitari e scuole.
+              lavoro come Ingegnere Software in Indra e insegno programmazione, robotica e
+              informatica con passione a studenti, universitari e scuole.
             </p>
 
             <div className="mt-6 flex flex-col gap-2.5 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">

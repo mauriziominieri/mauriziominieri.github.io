@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Check, School, Camera, MessageCircle } from 'lucide-react';
+import { BookOpen, Check, ExternalLink, School, Camera, MessageCircle } from 'lucide-react';
 import { PON_SCHOOLS, PROFILE, TEACHING_TRACKS } from '../data/portfolioData';
 import { setClarityTag, trackClarityEvent } from '../utils/analytics';
 
@@ -128,7 +128,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                   </ul>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-zinc-800/80">
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800/80 pt-4">
                   <a
                     href={directWaHref}
                     target="_blank"
@@ -139,6 +139,38 @@ export const TeachingSection: React.FC<TeachingSectionProps> = () => {
                     <MessageCircle className="h-4 w-4" aria-hidden="true" />
                     <span>Prenota su WhatsApp</span>
                   </a>
+
+                  {track.id === 'ripetizioni-universita' && (
+                    <div className="flex flex-wrap items-center gap-3 text-xs">
+                      <a
+                        href={PROFILE.eserciziJavaUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-medium text-zinc-300 underline decoration-zinc-700 underline-offset-4 hover:text-white hover:decoration-accent"
+                      >
+                        <span>89 esami Java</span>
+                        <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      </a>
+                      <a
+                        href={PROFILE.eserciziCUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-medium text-zinc-300 underline decoration-zinc-700 underline-offset-4 hover:text-white hover:decoration-accent"
+                      >
+                        <span>Esercizi C</span>
+                        <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      </a>
+                      <a
+                        href={PROFILE.ccnaQuizUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-medium text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                      >
+                        <span>Quiz CCNA1</span>
+                        <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </article>
             );

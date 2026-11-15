@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { CERTIFICATES, CertificateItem } from '../data/portfolioData';
 import { setClarityTag, trackClarityEvent } from '../utils/analytics';
 
 type CertFilter =
-  | 'Principali'
   | 'Tutte'
   | 'Cloud & DevOps'
   | 'Programmazione & App'
@@ -14,7 +13,6 @@ type CertFilter =
   | 'Lingue & Extra';
 
 const CERT_FILTERS: CertFilter[] = [
-  'Principali',
   'Tutte',
   'Cloud & DevOps',
   'Programmazione & App',
@@ -26,8 +24,6 @@ const CERT_FILTERS: CertFilter[] = [
 
 function matchesCertFilter(cert: CertificateItem, filter: CertFilter): boolean {
   switch (filter) {
-    case 'Principali':
-      return Boolean(cert.featured);
     case 'Tutte':
       return true;
     case 'Cloud & DevOps':
@@ -50,11 +46,17 @@ function matchesCertFilter(cert: CertificateItem, filter: CertFilter): boolean {
 }
 
 export const CertificatesSection: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<CertFilter>('Principali');
+  const [activeFilter, setActiveFilter] = useState<CertFilter>('Tutte');
+  const [showAll, setShowAll] = useState(false);
 
-  const visibleCertificates = CERTIFICATES.filter((cert) =>
+  const filteredByCategory = CERTIFICATES.filter((cert) =>
     matchesCertFilter(cert, activeFilter)
   );
+
+  const visibleCertificates =
+    activeFilter === 'Tutte' && !showAll
+      ? filteredByCategory.filter((cert) => cert.featured)
+      : filteredByCategory;
 
   return (
     <section id="certificati" className="border-b border-zinc-800/70 bg-[#0B0B0E]">
@@ -76,7 +78,6 @@ export const CertificatesSection: React.FC = () => {
           >
             {CERT_FILTERS.map((filter) => {
               const isActive = activeFilter === filter;
-              const label = filter === 'Tutte' ? `Tutte (${CERTIFICATES.length})` : filter;
               return (
                 <button
                   key={filter}
@@ -94,7 +95,7 @@ export const CertificatesSection: React.FC = () => {
                       : 'text-zinc-400 hover:text-zinc-100'
                   }`}
                 >
-                  {label}
+                  {filter}
                 </button>
               );
             })}
@@ -103,14 +104,16 @@ export const CertificatesSection: React.FC = () => {
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {visibleCertificates.map((cert) => (
-            <a
+            <article
               key={cert.id}
-              href={cert.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121216] p-5 transition-colors duration-150 hover:border-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="group flex flex-col justify-between rounded-xl border border-zinc-800 bg-[#121216] p-5 transition-colors duration-150 hover:border-zinc-700"
             >
-              <div>
+              <a
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg"
+              >
                 <div className="flex items-center justify-between gap-2 text-xs tabular-nums">
                   <span className="font-medium text-accent">{cert.issuer}</span>
                   <span className="font-mono text-zinc-400">{cert.year}</span>
@@ -119,18 +122,56 @@ export const CertificatesSection: React.FC = () => {
                 <h3 className="mt-2 font-display text-base font-semibold leading-snug text-zinc-100 group-hover:text-white">
                   {cert.title}
                 </h3>
-              </div>
+              </a>
 
-              <div className="mt-4 flex items-center justify-between border-t border-zinc-800/80 pt-3 text-xs font-medium text-zinc-400 group-hover:text-accent">
-                <span className="inline-flex items-center gap-1.5">
+              <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-zinc-800/80 pt-3 text-xs font-medium text-zinc-400">
+                <a
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 transition-colors hover:text-accent"
+                >
                   <Award className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
                   <span>{cert.category}</span>
-                </span>
-                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                  <ExternalLink className="h-3 w-3 opacity-70" aria-hidden="true" />
+                </a>
+                {cert.secondaryLink && (
+                  <a
+                    href={cert.secondaryLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+                  >
+                    <span>{cert.secondaryLink.label}</span>
+                    <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                  </a>
+                )}
               </div>
-            </a>
+            </article>
           ))}
         </div>
+
+        {activeFilter === 'Tutte' && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((prev) => !prev)}
+              aria-expanded={showAll}
+              className="inline-flex min-h-[42px] items-center justify-center gap-2 rounded-lg border border-zinc-800 bg-[#121216] px-5 py-2 text-sm font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white cursor-pointer"
+            >
+              <span>
+                {showAll
+                  ? 'Mostra solo le 6 in evidenza'
+                  : `Vedi tutte le ${CERTIFICATES.length} certificazioni`}
+              </span>
+              {showAll ? (
+                <ChevronUp className="h-4 w-4 text-accent" aria-hidden="true" />
+              ) : (
+                <ChevronDown className="h-4 w-4 text-accent" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

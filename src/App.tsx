@@ -13,7 +13,10 @@ import { ProjectModal } from './components/ProjectModal';
 import { ProjectItem } from './data/portfolioData';
 
 export default function App() {
-  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const [selectedModal, setSelectedModal] = useState<{
+    project: ProjectItem;
+    tab: 'demo' | 'details';
+  } | null>(null);
   const [bookingAudience, setBookingAudience] = useState<BookingAudience>('Studente');
   const [bookingSubject, setBookingSubject] = useState<string>('Lezioni per mio figlio/a');
 
@@ -139,7 +142,11 @@ export default function App() {
             }
           />
           <SkillsSection />
-          <PortfolioSection onSelectProject={setSelectedProject} />
+          <PortfolioSection
+            onSelectProject={(project, tab = 'demo') =>
+              setSelectedModal({ project, tab })
+            }
+          />
           <CertificatesSection />
           <BookingContactSection
             selectedAudience={bookingAudience}
@@ -152,8 +159,9 @@ export default function App() {
         <Footer />
 
         <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
+          project={selectedModal?.project ?? null}
+          initialTab={selectedModal?.tab ?? 'demo'}
+          onClose={() => setSelectedModal(null)}
           onBookSimilar={(topic) => scrollToBooking('Studente', topic)}
         />
       </div>

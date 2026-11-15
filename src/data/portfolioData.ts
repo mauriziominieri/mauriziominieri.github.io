@@ -78,6 +78,10 @@ export interface CertificateItem {
   category: string;
   url: string;
   featured?: boolean;
+  secondaryLink?: {
+    label: string;
+    url: string;
+  };
 }
 
 export const PROFILE = {
@@ -91,6 +95,10 @@ export const PROFILE = {
   springerUrl: 'https://link.springer.com/chapter/10.1007/978-3-030-15035-8_84',
   thesisVideoUrl: 'https://mauriziominieri.github.io/videos/PresentazioneManusVRMinieri.mp4',
   vrGameVideoUrl: 'https://mauriziominieri.github.io/videos/PresentazioneManusVRMinieriCut.mp4',
+  findOneArticleUrl: 'https://medium.com/@mauminieri/findone-f7117d58a3bd',
+  ccnaQuizUrl: 'https://forms.gle/k1bto3Y1S95Wvte47',
+  eserciziJavaUrl: 'https://github.com/mauriziominieri/esercizi-java',
+  eserciziCUrl: 'https://github.com/mauriziominieri/esercizi-c',
   linkedinUrl: 'https://www.linkedin.com/in/maurizio-minieri-0b4992174',
   githubUrl: 'https://github.com/mauriziominieri',
   gitlabUrl: 'https://gitlab.com/DOPPIA3MME',
@@ -119,8 +127,13 @@ export const HERO_METRICS = [
 export const TIMELINE_ENTRIES: TimelineEntry[] = [
   {
     period: 'Oggi',
-    title: 'Ingegnere software, docente',
-    subtitle: 'Sviluppo applicazioni e progetti software/VR in una grande azienda e insegno programmazione e informatica.',
+    title: 'Ingegnere software presso Indra · Docente',
+    subtitle:
+      'Sviluppo software e soluzioni enterprise in Indra (dopo l’esperienza Full-Stack Developer in Protom) e insegno informatica e programmazione.',
+    link: {
+      label: 'Indra',
+      url: 'https://www.indracompany.com/',
+    },
   },
   {
     period: '2019 – 2020',
@@ -237,6 +250,7 @@ export const PROJECTS: ProjectItem[] = [
     links: [
       { label: 'Apri Live', url: 'https://my-tv-doppia3mme.vercel.app' },
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/my-tv' },
+      { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/mytv' },
     ],
     featured: true,
   },
@@ -279,14 +293,19 @@ export const PROJECTS: ProjectItem[] = [
     title: 'BattleBash',
     category: 'Java & C',
     year: '2018',
-    role: 'Sistemi Operativi · C & Thread',
-    summary: 'Gioco di battaglia navale multiplayer sviluppato in C con thread POSIX, socket di rete e programmazione concorrente.',
+    role: 'Laboratorio di Sistemi Operativi · C & Thread',
+    summary:
+      'Gioco di battaglia navale multiplayer sviluppato in C con thread POSIX, socket di rete e programmazione concorrente per l’esame di Laboratorio di Sistemi Operativi.',
     challenge: 'Gestire più partite simultanee evitando race condition e deadlock tra i client connessi.',
     solution: 'Sincronizzazione sicura dei thread tramite mutex e protocollo client-server su socket POSIX in C.',
-    impact: 'Progetto universitario Sistemi Operativi',
+    impact: 'Progetto universitario + Relazione tecnica PDF',
     stack: ['C', 'POSIX Threads', 'Socket'],
     links: [
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/BattleBash' },
+      {
+        label: 'Relazione PDF',
+        url: 'https://github.com/mauriziominieri/mauriziominieri.github.io/blob/archivio-sito-precedente/2022/static/2020/articoli/BattleBash.pdf',
+      },
     ],
     featured: true,
   },
@@ -295,15 +314,16 @@ export const PROJECTS: ProjectItem[] = [
     title: 'Change Color',
     category: 'VR & Giochi',
     year: '2020',
-    role: 'Matrice in C & Gioco Web',
-    summary: 'Una matrice a colori nata in C (Code::Blocks) e portata sul web per poterci giocare subito direttamente dal browser.',
-    challenge: 'Ottimizzare l’espansione flood-fill su griglia bidimensionale minimizzando il numero di mosse necessarie.',
-    solution: 'Algoritmo ricorsivo/iterativo progettato in C e adattato in versione web giocabile online.',
-    impact: 'Giocabile online dal browser',
-    stack: ['C', 'Code::Blocks', 'Web'],
+    role: 'Matrice in C & Risolutore automatico',
+    summary:
+      'Gioco su matrice 2×2, 4×4 e 8×8 nato in C (Code::Blocks) con regola a tre colori (Rosso, Verde, Bianco) e algoritmo ricorsivo/a blocchi che risolve automaticamente qualsiasi configurazione.',
+    challenge: 'Unificare tutta la matrice combinando celle adiacenti di colore diverso nel terzo colore disponibile.',
+    solution: 'Replica interattiva fedele al sorgente C originale (Risoluzione2x2, U_Orizzontale_4x4 e U_Verticale_4x4) con gioco manuale e risolutore C passo-passo.',
+    impact: 'Replica fedele C giocabile nel sito',
+    stack: ['C', 'Code::Blocks', 'Matrici'],
     links: [
-      { label: 'Gioca ora', url: 'https://mauriziominieri.github.io/ChangeColor/' },
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/ChangeColor' },
+      { label: 'Versione Web 2020', url: 'https://mauriziominieri.github.io/ChangeColor/' },
     ],
     featured: true,
   },
@@ -312,15 +332,16 @@ export const PROJECTS: ProjectItem[] = [
     title: 'Il Gioco del 15',
     category: 'VR & Giochi',
     year: '2020',
-    role: 'C (Dev-C++) & Versione Web',
-    summary: 'Un gioco simpatico e intramontabile realizzato utilizzando una matrice di numeri 4×4 in C (Dev-C++) e giocabile subito online.',
-    challenge: 'Validazione delle mosse adiacenti alla casella vuota, mescolamento risolvibile e controllo vittoria.',
-    solution: 'Logica su matrice bidimensionale sviluppata in C e pubblicata anche come web game interattivo.',
-    impact: 'Giocabile online',
-    stack: ['C', 'Dev-C++', 'Web'],
+    role: 'C (Dev-C++ / Xcode) · Matrice 4×4',
+    summary:
+      'Implementazione su matrice 4×4 in C con controlli W/A/S/D, elenco dinamico delle mosse valide adiacenti alla casella vuota [    ] e verdetto finale basato sul numero di mosse.',
+    challenge: 'Gestire scambi su matrice dinamica, validazione direzionale della casella vuota e verifica della sequenza ordinata 1–15.',
+    solution: 'Replica fedele al programma C Esercizio-13.7 con vista terminale C, suggerimento mosse adiacenti, supporto tastiera WASD/Frecce e valutazione punteggio.',
+    impact: 'Replica fedele C giocabile nel sito',
+    stack: ['C', 'Dev-C++', 'Matrici 4×4'],
     links: [
-      { label: 'Gioca ora', url: 'https://mauriziominieri.github.io/GiocoDelQuindici/' },
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/GiocoDelQuindici' },
+      { label: 'Versione Web 2020', url: 'https://mauriziominieri.github.io/GiocoDelQuindici/' },
     ],
   },
   {
@@ -343,13 +364,15 @@ export const PROJECTS: ProjectItem[] = [
     title: 'FindOne',
     category: 'iOS',
     year: '2020',
-    role: 'Apple Developer Academy · Swift',
-    summary: 'App iOS sviluppata alla Apple Developer Academy con articolo tecnico su Medium.',
-    challenge: 'Progettazione UX nativa secondo le linee guida Apple.',
-    solution: 'App Swift modulare e pulita.',
+    role: 'Apple Developer Academy · NC3 & Medium',
+    summary:
+      'App iOS realizzata durante la sfida NC3 alla Apple Developer Academy, raccontata anche nell’articolo tecnico pubblicato su Medium.',
+    challenge: 'Progettare un’esperienza mobile intuitiva per scoprire luoghi ed eventi attorno all’utente.',
+    solution: 'App Swift modulare secondo le Human Interface Guidelines e caso studio pubblicato su Medium.',
     impact: 'Progetto Academy + Articolo Medium',
     stack: ['Swift', 'iOS', 'UX'],
     links: [
+      { label: 'Articolo Medium', url: 'https://medium.com/@mauminieri/findone-f7117d58a3bd' },
       { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/nc3-findone' },
     ],
   },
@@ -416,6 +439,25 @@ export const PROJECTS: ProjectItem[] = [
       { label: 'ABR Tree', url: 'https://github.com/mauriziominieri/ABR_Tree' },
       { label: 'Graph', url: 'https://github.com/mauriziominieri/Graph' },
       { label: 'MinPath', url: 'https://github.com/mauriziominieri/Graph_minPath' },
+      { label: 'Relazione PDF', url: 'https://github.com/mauriziominieri/Graph/blob/master/rel3gr13.pdf' },
+    ],
+  },
+  {
+    id: 'esercizi-java',
+    title: 'Archivio Esami Java (2006–2023)',
+    category: 'Java & C',
+    year: '2024',
+    role: 'Raccolta esami universitari & OCA/OCP · GitHub',
+    summary:
+      '89 tracce d’esame svolte in Java assegnate dal professore negli anni (2006–2023), affiancate da dispense OCA/OCP 11, socket, thread e dall’archivio esercizi in C.',
+    challenge: 'Organizzare anni di prove d’esame universitarie e test pratici in soluzioni chiare e consultabili per chi prepara gli esami.',
+    solution: 'Repository GitHub pubblico ordinato per data d’appello più dispense PDF e moduli dedicati (OCP11, Servers, Rational, Genealogia).',
+    impact: '89 appelli risolti usati dagli studenti',
+    stack: ['Java', 'Esami Federico II', 'OCP 11'],
+    links: [
+      { label: 'GitHub Java', url: 'https://github.com/mauriziominieri/esercizi-java' },
+      { label: 'GitHub C', url: 'https://github.com/mauriziominieri/esercizi-c' },
+      { label: 'OCA-8 PDF', url: 'https://github.com/mauriziominieri/esercizi-java/blob/master/OCA-8.pdf' },
     ],
   },
   {
@@ -562,8 +604,8 @@ export const TEACHING_TRACKS: TeachingTrack[] = [
     subtitle: 'Supporto pratico per ragazzi alle prime armi o sotto esame',
     topics: [
       'Lezioni pratiche di programmazione (Python, C, C++, Java...)',
-      'Siti web (HTML, CSS, JS, React) e logica di base',
-      'Scratch, Arduino e Raspberry Pi',
+      'Siti web (HTML, CSS, JS, React) e diagrammi di flusso (Flowgorithm)',
+      'Scratch, KTurtle, Arduino e robotica con Thymio / Raspberry Pi',
     ],
     bookingSubject: 'Ripetizioni Superiori & Maturità',
   },
@@ -574,8 +616,8 @@ export const TEACHING_TRACKS: TeachingTrack[] = [
     subtitle: 'Informatica, Ingegneria e Istituti Tecnici',
     topics: [
       'C, C++, Java, Python, JavaScript e TypeScript',
-      'Algoritmi, Strutture Dati, Puntatori e SQL',
-      'Sistemi Operativi, Reti e Basi di Dati',
+      'Algoritmi, Strutture Dati (ABR, Grafi), Puntatori e SQL',
+      'Sistemi Operativi, Reti (Cisco CCNA) e Basi di Dati',
     ],
     bookingSubject: 'Esami Universitari (C, Java, Python)',
   },
@@ -585,8 +627,8 @@ export const TEACHING_TRACKS: TeachingTrack[] = [
     title: 'Docenze PON, PNRR & Laboratori STEM',
     subtitle: 'Esperto Esterno dalle elementari alle superiori',
     topics: [
-      'Robotica educativa con Arduino e Raspberry Pi',
-      'Coding pratico in Scratch, Python, C o Web',
+      'Robotica educativa con Thymio, Arduino e Raspberry Pi',
+      'Coding pratico con Scratch, KTurtle, Flowgorithm, Python o Web',
       'Esperienza diretta al Tito Livio, Plinio Seniore, De Carlo e altre scuole',
     ],
     bookingSubject: 'Moduli PON / Robotica per Scuole',
@@ -659,6 +701,10 @@ export const CERTIFICATES: CertificateItem[] = [
     category: 'Networking',
     url: 'https://mauriziominieri.github.io/documents/ITN20.pdf',
     featured: true,
+    secondaryLink: {
+      label: 'Quiz esercitazione CCNA1',
+      url: 'https://forms.gle/k1bto3Y1S95Wvte47',
+    },
   },
   {
     id: 'udemy-cka',

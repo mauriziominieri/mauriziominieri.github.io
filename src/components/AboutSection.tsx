@@ -71,41 +71,41 @@ export const AboutSection: React.FC = () => {
               </p>
             </blockquote>
 
-            <div className="mt-5 flex flex-wrap items-center gap-2.5">
+            <div className="mt-5 grid grid-cols-1 gap-2.5 min-[380px]:grid-cols-2">
               <a
                 href={PROFILE.thesisVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg bg-accent px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-accent-hover"
+                className="inline-flex min-h-[42px] items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-accent px-3.5 py-2 text-xs font-semibold text-white transition-colors hover:bg-accent-hover"
               >
-                <Play className="h-3.5 w-3.5" aria-hidden="true" />
+                <Play className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                 <span>La mia tesi</span>
               </a>
               <a
                 href={PROFILE.vrGameVideoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
+                className="inline-flex min-h-[42px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-3.5 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <Play className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+                <Play className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
                 <span>Gioco VR</span>
               </a>
               <a
                 href={PROFILE.springerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
+                className="inline-flex min-h-[42px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-3.5 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <ExternalLink className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
-                <span>Il paper su Springer</span>
+                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
+                <span>Paper su Springer</span>
               </a>
               <a
                 href={PROFILE.cvUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[42px] sm:min-h-[38px] items-center gap-1.5 rounded-lg border border-zinc-800 bg-[#121216] px-3 py-1.5 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
+                className="inline-flex min-h-[42px] items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-zinc-800 bg-[#121216] px-3.5 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-700 hover:text-white"
               >
-                <FileText className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+                <FileText className="h-3.5 w-3.5 shrink-0 text-accent" aria-hidden="true" />
                 <span>Scarica CV</span>
               </a>
             </div>

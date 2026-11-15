@@ -251,6 +251,34 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({ projectId }) => 
         </div>
       );
 
+    case 'esercizi-java':
+      return (
+        <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
+          <div className="w-full max-w-[265px] rounded-xl border border-zinc-800 bg-[#111116] p-4 font-mono">
+            <div className="flex items-center justify-between gap-2 border-b border-zinc-800 pb-2 text-[10px]">
+              <span className="font-semibold text-zinc-200">esercizi-java</span>
+              <span className="text-accent">89 ESAMI · 2006–23</span>
+            </div>
+            <div className="mt-2.5 grid grid-cols-2 gap-1.5 text-[10px] text-zinc-300">
+              {['2023-04-20/', '2022-09-26/', 'OCP11/', 'Rational/', 'Servers/', 'OCA-8.pdf'].map(
+                (item, idx) => (
+                  <div
+                    key={item}
+                    className={`truncate rounded border px-2 py-1 ${
+                      idx === 0 || idx === 2
+                        ? 'border-accent/40 bg-accent/10 text-zinc-100'
+                        : 'border-zinc-800 bg-[#09090C] text-zinc-400'
+                    }`}
+                  >
+                    {item}
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      );
+
     case 'nasa-game':
       return (
         <div className="flex h-full w-full items-center justify-center bg-[#09090C] p-4 sm:p-6">
