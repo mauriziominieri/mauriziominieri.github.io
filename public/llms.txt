@@ -14,7 +14,7 @@
 
 ## Profili & Contatti
 - GitHub: https://github.com/mauriziominieri
-- GitLab: https://gitlab.com/DOPPIA3MME
+- GitLab: https://gitlab.com/mauriziominieri
 - LinkedIn: https://www.linkedin.com/in/maurizio-minieri-0b4992174
 - Credly (CKA): https://www.credly.com/badges/c7a04ede-108b-4c66-b5b3-1a431752e5ab/linked_in_profile
 - Email: mauminieri@gmail.com

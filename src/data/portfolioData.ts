@@ -101,7 +101,7 @@ export const PROFILE = {
   eserciziCUrl: 'https://github.com/mauriziominieri/esercizi-c',
   linkedinUrl: 'https://www.linkedin.com/in/maurizio-minieri-0b4992174',
   githubUrl: 'https://github.com/mauriziominieri',
-  gitlabUrl: 'https://gitlab.com/DOPPIA3MME',
+  gitlabUrl: 'https://gitlab.com/mauriziominieri',
   motto: 'Beyond the common vision',
 };
 
@@ -250,7 +250,7 @@ export const PROJECTS: ProjectItem[] = [
     links: [
       { label: 'Apri Live', url: 'https://my-tv-doppia3mme.vercel.app' },
       { label: 'GitHub', url: 'https://github.com/mauriziominieri/my-tv' },
-      { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/mytv' },
+      { label: 'GitLab', url: 'https://gitlab.com/mauriziominieri/mytv' },
     ],
     featured: true,
   },
@@ -373,7 +373,7 @@ export const PROJECTS: ProjectItem[] = [
     stack: ['Swift', 'iOS', 'UX'],
     links: [
       { label: 'Articolo Medium', url: 'https://medium.com/@mauminieri/findone-f7117d58a3bd' },
-      { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/nc3-findone' },
+      { label: 'GitLab', url: 'https://gitlab.com/mauriziominieri/nc3-findone' },
     ],
   },
   {
@@ -388,7 +388,7 @@ export const PROJECTS: ProjectItem[] = [
     impact: 'Progetto Apple Developer Academy',
     stack: ['Swift', 'Xcode', 'iOS'],
     links: [
-      { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/mc1-notonlypasta' },
+      { label: 'GitLab', url: 'https://gitlab.com/mauriziominieri/mc1-notonlypasta' },
     ],
   },
   {
@@ -403,7 +403,7 @@ export const PROJECTS: ProjectItem[] = [
     impact: 'Progetto Apple Developer Academy',
     stack: ['Swift', 'MapKit', 'iOS'],
     links: [
-      { label: 'GitLab', url: 'https://gitlab.com/DOPPIA3MME/cabway-official' },
+      { label: 'GitLab', url: 'https://gitlab.com/mauriziominieri/cabway-official' },
     ],
   },
   {
@@ -418,10 +418,10 @@ export const PROJECTS: ProjectItem[] = [
     impact: '4 repository iOS su GitLab',
     stack: ['Swift', 'ARKit', 'Core Data'],
     links: [
-      { label: 'AR Images', url: 'https://gitlab.com/DOPPIA3MME/personal-arimages' },
-      { label: 'GeoAll', url: 'https://gitlab.com/DOPPIA3MME/personal-geoall' },
-      { label: 'Core Data', url: 'https://gitlab.com/DOPPIA3MME/mylibrarywithcoredata' },
-      { label: 'API Holidays', url: 'https://gitlab.com/DOPPIA3MME/personal-api-holidays' },
+      { label: 'AR Images', url: 'https://gitlab.com/mauriziominieri/personal-arimages' },
+      { label: 'GeoAll', url: 'https://gitlab.com/mauriziominieri/personal-geoall' },
+      { label: 'Core Data', url: 'https://gitlab.com/mauriziominieri/mylibrarywithcoredata' },
+      { label: 'API Holidays', url: 'https://gitlab.com/mauriziominieri/personal-api-holidays' },
     ],
   },
   {
